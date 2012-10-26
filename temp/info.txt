@@ -1,5 +1,2 @@
-<<<<<<< HEAD
 Carpeta temporar para pruebas
-=======
-Probando 2
->>>>>>> branch 'master' of https://github.com/RaDiu5/sit2012-13.git
+
