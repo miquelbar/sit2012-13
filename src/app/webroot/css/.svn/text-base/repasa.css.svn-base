@@ -1,0 +1,10 @@
+/*#footer {
+	border-top:#595959 2px solid;
+	width:100%;
+	margin-left:0px;
+}
+*/
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+} 

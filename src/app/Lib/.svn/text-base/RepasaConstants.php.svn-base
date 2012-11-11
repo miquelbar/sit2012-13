@@ -1,0 +1,9 @@
+<?
+
+class RepasaConstants {
+	
+	const ROL_USUARIO = 0;
+	const ROL_CLIENTE = 1;
+	const ROL_PROFESOR = 2;
+	
+}
