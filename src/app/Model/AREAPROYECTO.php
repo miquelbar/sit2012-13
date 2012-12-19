@@ -5,6 +5,7 @@ App::uses('AppModel', 'Model');
  *
  * @property Proyecto $Proyecto
  * @property AreaFuncional $AreaFuncional
+ * @property  $
  */
 class AREAPROYECTO extends AppModel {
 
@@ -16,11 +17,11 @@ class AREAPROYECTO extends AppModel {
 	public $useTable = 'AREA_PROYECTO';
 
 /**
- * Primary key field
+ * Display field
  *
  * @var string
  */
-	public $primaryKey = 'proyecto_id';
+	public $displayField = 'id';
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -46,4 +47,26 @@ class AREAPROYECTO extends AppModel {
 			'order' => ''
 		)
 	);
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'' => array(
+			'className' => '',
+			'foreignKey' => 'a_r_e_a_p_r_o_y_e_c_t_o_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
 }

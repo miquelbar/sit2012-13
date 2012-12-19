@@ -513,3 +513,105 @@
 #12 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AREAPERSONAsController), Object(CakeRequest), Object(CakeResponse))
 #13 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #14 {main}
+2012-12-17 15:49:00 Error: [MissingConnectionException] Database connection "SQLSTATE[HY000] [1045] Access denied for user 'admin'@'localhost' (using password: YES)" is missing, or could not be created.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3158): ConnectionManager::getDataSource('default')
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1092): Model->setDataSource('default')
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('PERSONA')
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2631): Model->getDataSource()
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Component/PaginatorComponent.php(173): Model->find('all', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(1082): PaginatorComponent->paginate(NULL, Array, Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/PERSONAsController.php(17): Controller->paginate()
+#9 [internal function]: PERSONAsController->index()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PERSONAsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PERSONAsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2012-12-17 16:24:38 Error: [MissingTableException] Table area_funcionals for model AreaFuncional was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('area_funcionals')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/AREAPERSONAsController.php(50): Model->find('list')
+#9 [internal function]: AREAPERSONAsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(AREAPERSONAsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AREAPERSONAsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2012-12-17 16:25:47 Error: [MissingTableException] Table area_funcionals for model AreaFuncional was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('area_funcionals')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/AREAPERSONAsController.php(50): Model->find('list')
+#9 [internal function]: AREAPERSONAsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(AREAPERSONAsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AREAPERSONAsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2012-12-17 16:27:05 Error: [MissingTableException] Table area_funcionals for model AreaFuncional was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('area_funcionals')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/AREAPERSONAsController.php(50): Model->find('list')
+#9 [internal function]: AREAPERSONAsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(AREAPERSONAsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AREAPERSONAsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2012-12-17 16:29:01 Error: [MissingTableException] Table area_funcionals for model AreaFuncional was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('area_funcionals')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/AREAPERSONAsController.php(50): Model->find('list')
+#9 [internal function]: AREAPERSONAsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(AREAPERSONAsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AREAPERSONAsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2012-12-17 16:29:17 Error: [MissingControllerException] Controller class LoginController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-17 16:29:23 Error: [MissingControllerException] Controller class LoginController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-17 16:29:26 Error: Fatal Error (64): Cannot use [] for reading in [/home/mike/git/sit2012-13/src/app/Controller/UsuarioController.php, line 41]
+2012-12-17 16:29:26 Error: [FatalErrorException] Cannot use [] for reading
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', '/home/mike/git/...', 41)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', '/home/mike/git/...', 41, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', '/home/mike/git/...', 41, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-17 16:55:13 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/mike/git/sit2012-13/src/app/View/AREAFUNCIONALs/index.ctp, line 17]
+2012-12-17 16:55:14 Error: [FatalErrorException] syntax error, unexpected ')'
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mike/git/...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mike/git/...', 17, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mike/git/...', 17, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
