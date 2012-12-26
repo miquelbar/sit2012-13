@@ -16,11 +16,11 @@ class AREAPERSONA extends AppModel {
 	public $useTable = 'AREA_PERSONA';
 
 /**
- * Primary key field
+ * Display field
  *
  * @var string
  */
-	public $primaryKey = 'area_funcional_id';
+	public $displayField = 'id';
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -39,7 +39,7 @@ class AREAPERSONA extends AppModel {
 			'order' => ''
 		),
 		'Persona' => array(
-			'className' => 'PERSONA',
+			'className' => 'Persona',
 			'foreignKey' => 'persona_id',
 			'conditions' => '',
 			'fields' => '',

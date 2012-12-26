@@ -16,18 +16,11 @@ class AREAPROPUESTum extends AppModel {
 	public $useTable = 'AREA_PROPUESTA';
 
 /**
- * Primary key field
- *
- * @var string
- */
-	public $primaryKey = 'area_funcional_id';
-
-/**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'area_funcional_id';
+	public $displayField = 'id';
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed

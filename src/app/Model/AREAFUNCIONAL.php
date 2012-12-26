@@ -14,6 +14,13 @@ class AREAFUNCIONAL extends AppModel {
 	public $useTable = 'AREA_FUNCIONAL';
 
 /**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'nombre';
+
+/**
  * Validation rules
  *
  * @var array
@@ -28,8 +35,8 @@ class AREAFUNCIONAL extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'multiple' => array(
-				'rule' => array('multiple'),
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -40,14 +47,6 @@ class AREAFUNCIONAL extends AppModel {
 		'nombre' => array(
 			'alphanumeric' => array(
 				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-			'notempty' => array(
-				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

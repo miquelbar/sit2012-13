@@ -5,7 +5,7 @@ App::uses('AppModel', 'Model');
  *
  * @property AREA $AREA
  */
-class Persona extends AppModel {
+class PERSONA extends AppModel {
 
 /**
  * Use table
@@ -15,22 +15,29 @@ class Persona extends AppModel {
 	public $useTable = 'PERSONA';
 
 /**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'nombre';
+
+/**
  * Validation rules
  *
  * @var array
  */
 	public $validate = array(
 		'id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'notempty' => array(
-				'rule' => array('notempty'),
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -103,10 +110,10 @@ class Persona extends AppModel {
  */
 	public $hasAndBelongsToMany = array(
 		'AREA' => array(
-			'className' => 'AREAFUNCIONAL',
+			'className' => 'AREA',
 			'joinTable' => 'AREA_PERSONA',
-			'foreignKey' => 'persona_id',
-			'associationForeignKey' => 'area_funcional_id',
+			'foreignKey' => 'p_e_r_s_o_n_a_id',
+			'associationForeignKey' => 'a_r_e_a_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -115,12 +122,8 @@ class Persona extends AppModel {
 			'offset' => '',
 			'finderQuery' => '',
 			'deleteQuery' => '',
-			'insertQuery' => '',
+			'insertQuery' => ''
 		)
-	);
-	
-	public $hasMany = array(
-	
 	);
 
 }
