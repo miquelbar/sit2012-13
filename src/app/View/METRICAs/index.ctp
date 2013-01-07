@@ -50,7 +50,5 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New M E T R I C A'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List V A L O R M E T R I C As'), array('controller' => 'v_a_l_o_r_m_e_t_r_i_c_as', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New V A L O R'), array('controller' => 'v_a_l_o_r_m_e_t_r_i_c_as', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

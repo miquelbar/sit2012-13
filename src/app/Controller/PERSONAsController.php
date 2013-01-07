@@ -122,8 +122,8 @@ class PERSONAsController extends AppController {
 		$this->PERSONA->id = $id;
 		if (!$this->PERSONA->exists()) {
 			throw new NotFoundException(__('Invalid p e r s o n a'));
-		}
 		$this->set('pERSONA', $this->PERSONA->read(null, $id));
+		}
 	}
 
 /**

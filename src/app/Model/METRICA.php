@@ -179,13 +179,13 @@ class METRICA extends AppModel {
  * hasAndBelongsToMany associations
  *
  * @var array
- */
+
 	public $hasAndBelongsToMany = array(
 		'VALOR' => array(
 			'className' => 'VALORMETRICA',
 			'joinTable' => 'VALOR_METRICA',
-			'foreignKey' => 'm_e_t_r_i_c_a_id',
-			'associationForeignKey' => 'v_a_l_o_r_id',
+			'foreignKey' => 'metrica_id',
+			'associationForeignKey' => 'valor_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -197,5 +197,5 @@ class METRICA extends AppModel {
 			'insertQuery' => ''
 		)
 	);
-
+ */
 }

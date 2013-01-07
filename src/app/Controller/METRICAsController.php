@@ -47,8 +47,6 @@ class METRICAsController extends AppController {
 				$this->Session->setFlash(__('The m e t r i c a could not be saved. Please, try again.'));
 			}
 		}
-		$vALORs = $this->METRICA->VALOR->find('list');
-		$this->set(compact('vALORs'));
 	}
 
 /**
@@ -73,8 +71,6 @@ class METRICAsController extends AppController {
 		} else {
 			$this->request->data = $this->METRICA->read(null, $id);
 		}
-		$vALORs = $this->METRICA->VALOR->find('list');
-		$this->set(compact('vALORs'));
 	}
 
 /**
@@ -141,8 +137,6 @@ class METRICAsController extends AppController {
 				$this->Session->setFlash(__('The m e t r i c a could not be saved. Please, try again.'));
 			}
 		}
-		$vALORs = $this->METRICA->VALOR->find('list');
-		$this->set(compact('vALORs'));
 	}
 
 /**
@@ -167,8 +161,6 @@ class METRICAsController extends AppController {
 		} else {
 			$this->request->data = $this->METRICA->read(null, $id);
 		}
-		$vALORs = $this->METRICA->VALOR->find('list');
-		$this->set(compact('vALORs'));
 	}
 
 /**
