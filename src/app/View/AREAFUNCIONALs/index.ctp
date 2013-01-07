@@ -1,6 +1,6 @@
 <div class="aREAFUNCIONALs index">
 	<h2><?php echo __('A R E A F U N C I O N A Ls'); ?></h2>
-	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
+	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
@@ -12,9 +12,9 @@
 		<td><?php echo h($aREAFUNCIONAL['AREAFUNCIONAL']['id']); ?>&nbsp;</td>
 		<td><?php echo h($aREAFUNCIONAL['AREAFUNCIONAL']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $aREAFUNCIONAL['AREAFUNCIONAL']['id']),array('class' => 'btn btn-success')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $aREAFUNCIONAL['AREAFUNCIONAL']['id']),array('class' =>'btn btn-warning')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $aREAFUNCIONAL['AREAFUNCIONAL']['id']), array('class' =>'btn btn-danger'), __('Are you sure you want to delete # %s?', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $aREAFUNCIONAL['AREAFUNCIONAL']['id']), null, __('Are you sure you want to delete # %s?', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -37,6 +37,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Nueva Area Funcional'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New A R E A F U N C I O N A L'), array('action' => 'add')); ?></li>
 	</ul>
 </div>
