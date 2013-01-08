@@ -39,14 +39,7 @@ class USUARIO extends AppModel {
 			),
 		),
 		'correo' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+
 			'email' => array(
 				'rule' => array('email'),
 				//'message' => 'Your custom message here',
@@ -113,7 +106,7 @@ class USUARIO extends AppModel {
  */
 	public $belongsTo = array(
 		'Persona' => array(
-			'className' => 'Persona',
+			'className' => 'PERSONA',
 			'foreignKey' => 'persona_id',
 			'conditions' => '',
 			'fields' => '',
@@ -130,8 +123,8 @@ class USUARIO extends AppModel {
 		'PERFIL' => array(
 			'className' => 'PERFIL',
 			'joinTable' => 'PERFIL_USUARIO',
-			'foreignKey' => 'u_s_u_a_r_i_o_id',
-			'associationForeignKey' => 'p_e_r_f_i_l_id',
+			'foreignKey' => 'usuario_id',
+			'associationForeignKey' => 'perfil_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

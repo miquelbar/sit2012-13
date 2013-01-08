@@ -33,24 +33,24 @@ App::uses('RepasaConstants', '');
  */
 class AppController extends Controller {
 	
-	 /*var $components = array(
+	 var $components = array(
 		'Auth' => array(
 			'loginAction' => array(
-				'controller' => 'login', 
+				'controller' => 'usuario', 
 				'action' => 'login'
 			),
 			'loginRedirect' => array(
-				'controller' => 'usuario', 
-				'action' => 'perfil'
+				'controller' => 'pages', 
+				'action' => 'index'
 			),
 			'logoutRedirect' => '/',
 			'loginError' => 'No username and password was found with that combination.',
 			'authenticate' => array(
 				'all' => array(
-					'userModel' => 'Usuario',
+					'userModel' => 'USUARIO',
 					'fields' => array(
-						'username' => 'email_usu', 
-						'password' => 'password_usu'
+						'username' => 'correo', 
+						'password' => 'clave'
 					),
 				),
 				'Form'
@@ -59,7 +59,6 @@ class AppController extends Controller {
 		'Acl',
 		'Session'
 	);
-	*/
 	
 	var $helpers = array('CrudActions');
 	
@@ -134,15 +133,14 @@ class AppController extends Controller {
 	}
 	
 	function beforeFilter() { 
-		//	Security::setHash('md5');
+		Security::setHash('md5');
 		
 		//Antes de renderizar la vista todas las paginas necesitan al usuario
-		/*$usuario = $this->Auth->user();
+		$usuario = $this->Auth->user();
 		if (isset($usuario)){
-			$usua	io['credito'] = $usuario['credito_recarga_usu'] + $usuario['credito_invitaciones_usu'];
 	    	$this->set('usuario', $usuario);
 			$this->usuario = $usuario;
-		}*/
+		}
 	}
 	
 

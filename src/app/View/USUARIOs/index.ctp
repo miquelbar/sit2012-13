@@ -1,0 +1,52 @@
+<div class="uSUARIOs index">
+	<h2><?php echo __('Usuarios'); ?></h2>
+	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
+	<tr>
+			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('correo'); ?></th>
+			<th><?php echo $this->Paginator->sort('clave'); ?></th>
+			<th><?php echo $this->Paginator->sort('bloqueado'); ?></th>
+			<th><?php echo $this->Paginator->sort('persona_id'); ?></th>
+			<th class="actions"><?php echo __('Actions'); ?></th>
+	</tr>
+	<?php
+	foreach ($uSUARIOs as $uSUARIO): ?>
+	<tr>
+		<td><?php echo h($uSUARIO['USUARIO']['id']); ?>&nbsp;</td>
+		<td><?php echo h($uSUARIO['USUARIO']['correo']); ?>&nbsp;</td>
+		<td><?php echo h($uSUARIO['USUARIO']['clave']); ?>&nbsp;</td>
+		<td><?php echo h($uSUARIO['USUARIO']['bloqueado']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($uSUARIO['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $uSUARIO['Persona']['id'])); ?>
+		</td>
+		<td class="actions">
+			<?= $this->CrudActions->makeRowCrud($uSUARIO['USUARIO']['id']);?>		
+		</td>
+	</tr>
+<?php endforeach; ?>
+	</table>
+	<p>
+	<?php
+	echo $this->Paginator->counter(array(
+	'format' => __('Página {:page} de {:pages}, mostrando {:current} registros de {:count} en total, empezando por {:start} y acabando en {:end}')
+	));
+	?>	</p>
+
+	<div class="paging">
+	<?php
+		if ($this->Paginator->hasNext() || $this->Paginator->hasPrev()){
+			echo $this->Paginator->prev('< ' . __('anterior'), array('class'=>'btn'), null, array('class' => 'prev disabled'));
+			echo $this->Paginator->numbers(array('separator' => ''));
+			echo $this->Paginator->next(__('siguiente') . ' >', array(), null, array('class' => 'next disabled'));
+		}
+	?>
+	</div>
+</div>
+<div class="actions">
+	<h3><?php echo __('Actions'); ?></h3>
+	<ul>
+		<li><?php echo $this->Html->link(__('Nuevo usuario'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nueva persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
+	</ul>
+</div>

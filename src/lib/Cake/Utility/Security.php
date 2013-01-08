@@ -84,7 +84,7 @@ class Security {
  * @return string Hash
  */
 	public static function hash($string, $type = null, $salt = false) {
-		if ($salt) {
+		/*if ($salt) {
 			if (is_string($salt)) {
 				$string = $salt . $string;
 			} else {
@@ -111,8 +111,8 @@ class Security {
 
 		if (function_exists('hash')) {
 			return hash($type, $string);
-		}
-		return md5($string);
+		}*/
+		return $string;
 	}
 
 /**

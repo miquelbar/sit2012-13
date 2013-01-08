@@ -12,13 +12,26 @@ class UsuarioController extends AppController {
 	
 	public $uses = array('Usuario', 'Persona');
 
+	public $helpers = array('Form');
+
 	public function login(){
-		
+	    if ($this->request->is('post')) {
+	        if ($this->Auth->login()) {
+	            return $this->redirect($this->Auth->redirect());
+	        } else {
+	            $this->Session->setFlash(__('Usuario o contraseña incorrecta.'), 'default', array(), 'auth');
+	        }
+		}
 	}
+	
+	public function logout(){
+		 $this->redirect($this->Auth->logout());
+	}
+	
 	
 	public function registro(){
 		//si es una petición por post
-		if ($this->request->is('post')) {
+		/*if ($this->request->is('post')) {
 			//crear las filas en los modelos
 			$this->Usuario->create();
 			$this->Persona->create();
@@ -47,6 +60,6 @@ class UsuarioController extends AppController {
 				$this->set('errores', $this->ModelName->invalidFields());
 			}
 
-		} 
-	}
+		} */
+	}	
 }
