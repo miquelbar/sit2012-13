@@ -130,7 +130,7 @@ class OBJETIVOESTRATEGICO extends AppModel {
  */
 	public $belongsTo = array(
 		'PrincipioTic' => array(
-			'className' => 'PrincipioTic',
+			'className' => 'PRINCIPIOTIC',
 			'foreignKey' => 'principio_tic_id',
 			'conditions' => '',
 			'fields' => '',

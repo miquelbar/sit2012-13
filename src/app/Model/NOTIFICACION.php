@@ -112,14 +112,14 @@ class NOTIFICACION extends AppModel {
  */
 	public $belongsTo = array(
 		'Persona' => array(
-			'className' => 'Persona',
+			'className' => 'PERSONA',
 			'foreignKey' => 'persona_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'TipoNotificacion' => array(
-			'className' => 'TipoNotificacion',
+			'className' => 'TIPONOTIFICACION',
 			'foreignKey' => 'tipo_notificacion_id',
 			'conditions' => '',
 			'fields' => '',
@@ -134,7 +134,7 @@ class NOTIFICACION extends AppModel {
  */
 	public $hasAndBelongsToMany = array(
 		'TIPO' => array(
-			'className' => 'TIPO',
+			'className' => 'TIPONOTIFICACION',
 			'joinTable' => 'TIPO_NOTIFICACION',
 			'foreignKey' => 'n_o_t_i_f_i_c_a_c_i_o_n_id',
 			'associationForeignKey' => 't_i_p_o_id',
