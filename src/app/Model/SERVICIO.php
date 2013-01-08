@@ -114,7 +114,7 @@ class SERVICIO extends AppModel {
  */
 	public $belongsTo = array(
 		'Responsable' => array(
-			'className' => 'Responsable',
+			'className' => 'PERSONA',
 			'foreignKey' => 'responsable_id',
 			'conditions' => '',
 			'fields' => '',
@@ -128,8 +128,8 @@ class SERVICIO extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
-		'AREA' => array(
-			'className' => 'AREA',
+		'AREAFUNCIONAL' => array(
+			'className' => 'AREAFUNCIONAL',
 			'joinTable' => 'AREA_SERVICIO',
 			'foreignKey' => 's_e_r_v_i_c_i_o_id',
 			'associationForeignKey' => 'a_r_e_a_id',

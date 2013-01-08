@@ -42,7 +42,7 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New P E R S O N A'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List A R E A P E R S O N As'), array('controller' => 'a_r_e_a_p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New A R E A'), array('controller' => 'a_r_e_a_p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List A R E A F U N C I O N A Ls'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New A R E A F U N C I O N A L'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

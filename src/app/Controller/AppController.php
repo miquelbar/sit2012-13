@@ -60,6 +60,9 @@ class AppController extends Controller {
 		'Session'
 	);
 	*/
+	
+	var $helpers = array('CrudActions');
+	
 	protected $usuario;
 	
 	function beforeRender() {

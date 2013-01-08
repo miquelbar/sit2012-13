@@ -31,15 +31,15 @@ class AREAPERSONA extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'AreaFuncional' => array(
-			'className' => 'AreaFuncional',
+		'AREAFUNCIONAL' => array(
+			'className' => 'AREAFUNCIONAL',
 			'foreignKey' => 'area_funcional_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
-		'Persona' => array(
-			'className' => 'Persona',
+		'PERSONA' => array(
+			'className' => 'PERSONA',
 			'foreignKey' => 'persona_id',
 			'conditions' => '',
 			'fields' => '',

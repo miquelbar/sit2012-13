@@ -47,8 +47,8 @@ class PERSONAsController extends AppController {
 				$this->Session->setFlash(__('The p e r s o n a could not be saved. Please, try again.'));
 			}
 		}
-		$aREAs = $this->PERSONA->AREA->find('list');
-		$this->set(compact('aREAs'));
+		$aREAFUNCIONALs = $this->PERSONA->AREAFUNCIONAL->find('list');
+		$this->set(compact('aREAFUNCIONALs'));
 	}
 
 /**
@@ -73,8 +73,8 @@ class PERSONAsController extends AppController {
 		} else {
 			$this->request->data = $this->PERSONA->read(null, $id);
 		}
-		$aREAs = $this->PERSONA->AREA->find('list');
-		$this->set(compact('aREAs'));
+		$aREAFUNCIONALs = $this->PERSONA->AREAFUNCIONAL->find('list');
+		$this->set(compact('aREAFUNCIONALs'));
 	}
 
 /**
@@ -141,8 +141,8 @@ class PERSONAsController extends AppController {
 				$this->Session->setFlash(__('The p e r s o n a could not be saved. Please, try again.'));
 			}
 		}
-		$aREAs = $this->PERSONA->AREA->find('list');
-		$this->set(compact('aREAs'));
+		$aREAFUNCIONALs = $this->PERSONA->AREAFUNCIONAL->find('list');
+		$this->set(compact('aREAFUNCIONALs'));
 	}
 
 /**
@@ -167,8 +167,8 @@ class PERSONAsController extends AppController {
 		} else {
 			$this->request->data = $this->PERSONA->read(null, $id);
 		}
-		$aREAs = $this->PERSONA->AREA->find('list');
-		$this->set(compact('aREAs'));
+		$aREAFUNCIONALs = $this->PERSONA->AREAFUNCIONAL->find('list');
+		$this->set(compact('aREAFUNCIONALs'));
 	}
 
 /**

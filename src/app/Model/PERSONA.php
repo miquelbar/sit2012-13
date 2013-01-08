@@ -14,6 +14,7 @@ class PERSONA extends AppModel {
  */
 	public $useTable = 'PERSONA';
 
+
 /**
  * Display field
  *
@@ -100,20 +101,17 @@ class PERSONA extends AppModel {
 			),
 		),
 	);
-
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
-
 /**
  * hasAndBelongsToMany associations
  *
  * @var array
  */
 	public $hasAndBelongsToMany = array(
-		'AREA' => array(
-			'className' => 'AREA',
+		'AREAFUNCIONAL' => array(
+			'className' => 'AREAFUNCIONAL',
 			'joinTable' => 'AREA_PERSONA',
-			'foreignKey' => 'p_e_r_s_o_n_a_id',
-			'associationForeignKey' => 'a_r_e_a_id',
+			'foreignKey' => 'persona_id',
+			'associationForeignKey' => 'area_funcional_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

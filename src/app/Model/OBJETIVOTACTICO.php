@@ -122,7 +122,7 @@ class OBJETIVOTACTICO extends AppModel {
  */
 	public $belongsTo = array(
 		'ObjetivoEstrategico' => array(
-			'className' => 'ObjetivoEstrategico',
+			'className' => 'OBJETIVOESTRATEGICO',
 			'foreignKey' => 'objetivo_estrategico_id',
 			'conditions' => '',
 			'fields' => '',

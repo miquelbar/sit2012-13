@@ -1,22 +1,24 @@
-<div class="pERSONAs index">
-	<h2><?php echo __('Personas'); ?></h2>
+<div class="pRINCIPIOTICs index">
+	<h2><?php echo __('Principios TIC'); ?></h2>
 	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th><?php echo $this->Paginator->sort('apellido1'); ?></th>
-			<th><?php echo $this->Paginator->sort('apellido2'); ?></th>
+			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
+			<th><?php echo $this->Paginator->sort('fecha_inicio'); ?></th>
+			<th><?php echo $this->Paginator->sort('fecha_fin'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
-	foreach ($pERSONAs as $pERSONA): ?>
+	foreach ($pRINCIPIOTICs as $pRINCIPIOTIC): ?>
 	<tr>
-		<td><?php echo h($pERSONA['PERSONA']['id']); ?>&nbsp;</td>
-		<td><?php echo h($pERSONA['PERSONA']['nombre']); ?>&nbsp;</td>
-		<td><?php echo h($pERSONA['PERSONA']['apellido1']); ?>&nbsp;</td>
-		<td><?php echo h($pERSONA['PERSONA']['apellido2']); ?>&nbsp;</td>
+		<td><?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['id']); ?>&nbsp;</td>
+		<td><?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['nombre']); ?>&nbsp;</td>
+		<td><?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['descripcion']); ?>&nbsp;</td>
+		<td><?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['fecha_inicio']); ?>&nbsp;</td>
+		<td><?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['fecha_fin']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($pERSONA['PERSONA']['id']);?>		
+			<?= $this->CrudActions->makeRowCrud($pRINCIPIOTIC['PRINCIPIOTIC']['id']);?>		
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -41,9 +43,6 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Nueva persona'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Listar personas'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Listar áreas funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nueva área funcional.'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo principio TIC'), array('action' => 'add')); ?></li>
 	</ul>
 </div>

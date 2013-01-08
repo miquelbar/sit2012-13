@@ -7,7 +7,7 @@
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('apellido1');
 		echo $this->Form->input('apellido2');
-		echo $this->Form->input('AREA');
+		echo $this->Form->input('AREAFUNCIONAL');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -18,7 +18,7 @@
 
 		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('PERSONA.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('PERSONA.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('List P E R S O N As'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List A R E A P E R S O N As'), array('controller' => 'a_r_e_a_p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New A R E A'), array('controller' => 'a_r_e_a_p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List A R E A F U N C I O N A Ls'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New A R E A F U N C I O N A L'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
