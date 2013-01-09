@@ -79,7 +79,7 @@ class AppController extends Controller {
 				array(
 					array(
 						'titulo' => 'Login'
-						,'url'=> '/login/login/'
+						,'url'=> '/usuario/login/'
 						,'rol' => 0
 					),
 					array(

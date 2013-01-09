@@ -365,3 +365,82 @@
 2013-01-08 21:30:32 Error: [MissingControllerException] Controller class LoginController could not be found.
 #0 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-09 15:34:01 Error: [MissingControllerException] Controller class LoginController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 15:34:24 Error: [MissingControllerException] Controller class LoginController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 15:34:55 Error: [MissingControllerException] Controller class LoginController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 15:34:59 Error: [MissingControllerException] Controller class LoginController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 15:39:12 Error: [MissingControllerException] Controller class LoginController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 15:43:49 Error: [MissingActionException] Action UsuarioController::index() could not be found.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsuarioController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-09 15:43:49 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [/home/mike/git/sit2012-13/src/app/View/Layouts/default.ctp, line 48]
+2013-01-09 15:43:49 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mike/git/...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mike/git/...', 48, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mike/git/...', 48, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-09 15:43:57 Error: [MissingActionException] Action UsuarioController::index() could not be found.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsuarioController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-09 15:44:27 Error: Fatal Error (1): Call to undefined function iiset() in [/home/mike/git/sit2012-13/src/app/View/Layouts/default.ctp, line 45]
+2013-01-09 15:44:27 Error: [FatalErrorException] Call to undefined function iiset()
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/mike/git/...', 45)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/mike/git/...', 45, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/mike/git/...', 45, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-09 16:04:39 Error: Fatal Error (4): syntax error, unexpected 'reach' (T_STRING) in [/home/mike/git/sit2012-13/src/app/View/PERSONAs/view.ctp, line 42]
+2013-01-09 16:04:39 Error: [FatalErrorException] syntax error, unexpected 'reach' (T_STRING)
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mike/git/...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mike/git/...', 42, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mike/git/...', 42, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-09 16:04:45 Error: Fatal Error (4): syntax error, unexpected 'reach' (T_STRING) in [/home/mike/git/sit2012-13/src/app/View/PERSONAs/view.ctp, line 42]
+2013-01-09 16:04:45 Error: [FatalErrorException] syntax error, unexpected 'reach' (T_STRING)
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mike/git/...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mike/git/...', 42, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mike/git/...', 42, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-09 16:04:46 Error: Fatal Error (4): syntax error, unexpected 'reach' (T_STRING) in [/home/mike/git/sit2012-13/src/app/View/PERSONAs/view.ctp, line 42]
+2013-01-09 16:04:46 Error: [FatalErrorException] syntax error, unexpected 'reach' (T_STRING)
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mike/git/...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mike/git/...', 42, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mike/git/...', 42, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-09 16:07:28 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/home/mike/git/sit2012-13/src/app/View/PERSONAs/view.ctp, line 3]
+2013-01-09 16:07:28 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mike/git/...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mike/git/...', 3, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mike/git/...', 3, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-09 16:43:23 Error: [MissingControllerException] Controller class Logo.pngController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 16:43:37 Error: [MissingControllerException] Controller class Logo.pngController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

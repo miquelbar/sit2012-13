@@ -1,6 +1,4 @@
-<?php
-echo $this->Session->flash('auth');
-?>
+
 <div class="span6 offset3">
 	<h1>Identificación de Usuario</h1>
 	<div class="alert alert-success span5">
@@ -19,6 +17,20 @@ echo $this->Session->flash('auth');
 				<input type="password" id="clave" name="data[USUARIO][clave]" placeholder="Contraseña">
 			</div>
 		</div>
+		<?php
+		$error = $this->Session->flash('auth');
+		if ($error){
+				
+		?>
+		<div class="alert alert-error">
+			<strong>Error</strong>
+			<?=$error?>	
+		</div>
+		<?
+				
+		}
+			
+		?>
 		<div class="controls">
 			<button type="submit" value="Usuario" class="btn btn-primary btn-large">Login</button>
 		</div>
