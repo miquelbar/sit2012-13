@@ -444,3 +444,18 @@
 2013-01-09 16:43:37 Error: [MissingControllerException] Controller class Logo.pngController could not be found.
 #0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-09 18:27:03 Error: [MissingControllerException] Controller class AreaFuncionalsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 18:28:16 Error: [MissingControllerException] Controller class PersonasController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 18:41:13 Error: [MissingControllerException] Controller class TIPONOTIFICACIONsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 18:45:20 Error: [MissingControllerException] Controller class PRINCIPIOSTICsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-09 18:45:36 Error: [MissingControllerException] Controller class PRINCIPIOSTICsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

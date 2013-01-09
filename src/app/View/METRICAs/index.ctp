@@ -1,6 +1,20 @@
 <div class="mETRICAs index">
-	<h2><?php echo __('M E T R I C As'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<div class="row-fluid">
+		<div class="span10"><h2><?php echo __('M&eacute;tricas'); ?></h2></div>
+		<div class="span1">
+			<div class="btn-group">
+		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+		    		Acciones
+		    		<span class="caret"></span>
+		  		</a>
+		  		<ul class="dropdown-menu">
+					<li><?php echo $this->Html->link(__('Nueva Metrica'), array('action' => 'add')); ?></li>
+				</ul>
+		  	</div>
+		</div>
+	</div>
+	<!--<h2><?php echo __('M E T R I C As'); ?></h2>-->
+	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('titulo'); ?></th>
@@ -24,9 +38,7 @@
 		<td><?php echo h($mETRICA['METRICA']['unidades']); ?>&nbsp;</td>
 		<td><?php echo h($mETRICA['METRICA']['dominio']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $mETRICA['METRICA']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $mETRICA['METRICA']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $mETRICA['METRICA']['id']), null, __('Are you sure you want to delete # %s?', $mETRICA['METRICA']['id'])); ?>
+			<?= $this->CrudActions->makeRowCrud($mETRICA['METRICA']['id']);?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -47,8 +59,10 @@
 	</div>
 </div>
 <div class="actions">
+<!--
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New M E T R I C A'), array('action' => 'add')); ?></li>
 	</ul>
+-->
 </div>

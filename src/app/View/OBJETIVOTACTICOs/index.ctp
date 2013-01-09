@@ -1,5 +1,21 @@
 <div class="oBJETIVOTACTICOs index">
-	<h2><?php echo __('Objectivos Tacticos'); ?></h2>
+	<div class="row-fluid">
+		<div class="span10"><h2><?php echo __('Objetivos Tacticos'); ?></h2></div>
+		<div class="span1">
+			<div class="btn-group">
+		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+		    		Acciones
+		    		<span class="caret"></span>
+		  		</a>
+		  		<ul class="dropdown-menu">
+		<li><?php echo $this->Html->link(__('Nuevo objetivo táctico'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar objetivos estratégicos'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo objetivo estratégico'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'add')); ?> </li>
+				</ul>
+		  	</div>
+		</div>
+	</div>
+
 	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -45,10 +61,10 @@
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+<!--	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Nuevo objetivo táctico'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Listar objetivos estratégicos'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Nuevo objetivo estratégico'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'add')); ?> </li>
-	</ul>
+	</ul>-->
 </div>

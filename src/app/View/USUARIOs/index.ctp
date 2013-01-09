@@ -1,5 +1,21 @@
 <div class="uSUARIOs index">
-	<h2><?php echo __('Usuarios'); ?></h2>
+	<div class="row-fluid">
+		<div class="span10"><h2><?php echo __('Usuarios'); ?></h2></div>
+		<div class="span1">
+			<div class="btn-group">
+		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+		    		Acciones
+		    		<span class="caret"></span>
+		  		</a>
+		  		<ul class="dropdown-menu">
+					<li><?php echo $this->Html->link(__('Nuevo usuario'), array('action' => 'add')); ?></li>
+					<li><?php echo $this->Html->link(__('Listar personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('Nueva persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
+				</ul>
+		  	</div>
+		</div>
+	</div>
+
 	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -43,10 +59,10 @@
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+<!--	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Nuevo usuario'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Listar personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Nueva persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
-	</ul>
+		<li><?php echo $this->Html->link(__('Listar personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
+	</ul>-->
 </div>

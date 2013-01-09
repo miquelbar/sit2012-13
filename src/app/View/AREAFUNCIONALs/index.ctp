@@ -1,6 +1,20 @@
 <div class="aREAFUNCIONALs index">
-	<h2><?php echo __('A R E A F U N C I O N A Ls'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<div class="row-fluid">
+		<div class="span10"><h2><?php echo __('&Aacute;reas funcionales'); ?></h2></div>
+		<div class="span1">
+			<div class="btn-group">
+		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+		    		Acciones
+		    		<span class="caret"></span>
+		  		</a>
+		  		<ul class="dropdown-menu">
+					<li><?php echo $this->Html->link(__('New A R E A F U N C I O N A L'), array('action' => 'add')); ?></li>
+				</ul>
+		  	</div>
+		</div>
+	</div>
+	<!--<h2><?php echo __('A R E A F U N C I O N A Ls'); ?></h2>-->
+	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
@@ -12,9 +26,7 @@
 		<td><?php echo h($aREAFUNCIONAL['AREAFUNCIONAL']['id']); ?>&nbsp;</td>
 		<td><?php echo h($aREAFUNCIONAL['AREAFUNCIONAL']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $aREAFUNCIONAL['AREAFUNCIONAL']['id']), null, __('Are you sure you want to delete # %s?', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?>
+			<?= $this->CrudActions->makeRowCrud($aREAFUNCIONAL['AREAFUNCIONAL']['id']);?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -35,8 +47,8 @@
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+<!--	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New A R E A F U N C I O N A L'), array('action' => 'add')); ?></li>
-	</ul>
+	</ul>-->
 </div>

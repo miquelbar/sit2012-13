@@ -1,6 +1,21 @@
 <div class="oBJETIVOESTRATEGICOs index">
-	<h2><?php echo __('O B J E T I V O E S T R A T E G I C Os'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<div class="row-fluid">
+		<div class="span10"><h2><?php echo __('Objetivos Estrategicos'); ?></h2></div>
+		<div class="span1">
+			<div class="btn-group">
+		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+		    		Acciones
+		    		<span class="caret"></span>
+		  		</a>
+		  		<ul class="dropdown-menu">
+							<li><?php echo $this->Html->link(__('New O B J E T I V O E S T R A T E G I C O'), array('action' => 'add')); ?></li>
+							<li><?php echo $this->Html->link(__('List P R I N C I P I O T I Cs'), array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'index')); ?> </li>
+							<li><?php echo $this->Html->link(__('New Principio Tic'), array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'add')); ?> </li>
+				</ul>
+		  	</div>
+		</div>
+	</div>
+	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
@@ -22,9 +37,7 @@
 		<td><?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['fecha_inicio']); ?>&nbsp;</td>
 		<td><?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['fecha_fin']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id']), null, __('Are you sure you want to delete # %s?', $oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id'])); ?>
+			<?= $this->CrudActions->makeRowCrud($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id']);?>
 		</td>
 	</tr>
 <?php endforeach; ?>

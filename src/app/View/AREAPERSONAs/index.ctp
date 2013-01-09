@@ -1,6 +1,24 @@
 <div class="aREAPERSONAs index">
-	<h2><?php echo __('A R E A P E R S O N As'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+	<div class="row-fluid">
+		<div class="span10"><h2><?php echo __('&Aacute;rea Persona'); ?></h2></div>
+		<div class="span1">
+			<div class="btn-group">
+		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+		    		Acciones
+		    		<span class="caret"></span>
+		  		</a>
+		  		<ul class="dropdown-menu">
+					<li><?php echo $this->Html->link(__('New A R E A P E R S O N A'), array('action' => 'add')); ?></li>
+					<li><?php echo $this->Html->link(__('List Area Funcionals'), array('controller' => 'area_funcionals', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('New Area Funcional'), array('controller' => 'area_funcionals', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('List Personas'), array('controller' => 'personas', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('New Persona'), array('controller' => 'personas', 'action' => 'add')); ?> </li>
+				</ul>
+		  	</div>
+		</div>
+	</div>
+	<!--<h2><?php echo __('&Aacute;rea Persona'); ?></h2>-->
+	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('area_funcional_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('persona_id'); ?></th>
@@ -10,15 +28,13 @@
 	foreach ($aREAPERSONAs as $aREAPERSONA): ?>
 	<tr>
 		<td>
-			<?php echo $this->Html->link($aREAPERSONA['AreaFuncional']['id'], array('controller' => 'area_funcionals', 'action' => 'view', $aREAPERSONA['AreaFuncional']['id'])); ?>
-		</td>
+			<?php echo $this->Html->link($aREAPERSONA['AREAFUNCIONAL']['nombre'], array('controller' => 'area_funcionals', 'action' => 'view', $aREAPERSONA['AREAFUNCIONAL']['id'])); ?>
+		 </td>
 		<td>
-			<?php echo $this->Html->link($aREAPERSONA['Persona']['id'], array('controller' => 'personas', 'action' => 'view', $aREAPERSONA['Persona']['id'])); ?>
+			<?php echo $this->Html->link($aREAPERSONA['PERSONA']['nombre'], array('controller' => 'personas', 'action' => 'view', $aREAPERSONA['PERSONA']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $aREAPERSONA['AREAPERSONA']['area_funcional_id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $aREAPERSONA['AREAPERSONA']['area_funcional_id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $aREAPERSONA['AREAPERSONA']['area_funcional_id']), null, __('Are you sure you want to delete # %s?', $aREAPERSONA['AREAPERSONA']['area_funcional_id'])); ?>
+			<?= $this->CrudActions->makeRowCrud($aREAPERSONA['AREAPERSONA']['id']);?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -39,12 +55,12 @@
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+<!--	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New A R E A P E R S O N A'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Area Funcionals'), array('controller' => 'area_funcionals', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Area Funcional'), array('controller' => 'area_funcionals', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Personas'), array('controller' => 'personas', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Persona'), array('controller' => 'personas', 'action' => 'add')); ?> </li>
-	</ul>
+	</ul>-->
 </div>
