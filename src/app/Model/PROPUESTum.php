@@ -1,7 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * PROPUESTum Model
+ * PROPUESTA Model
  *
  * @property Solicitante $Solicitante
  * @property Cartera $Cartera
@@ -13,7 +13,7 @@ App::uses('AppModel', 'Model');
  * @property AREA $AREA
  * @property OBJETIVO $OBJETIVO
  */
-class PROPUESTA extends AppModel {
+class PROPUESTum extends AppModel {
 
 /**
  * Use table
@@ -218,21 +218,21 @@ class PROPUESTA extends AppModel {
  */
 	public $belongsTo = array(
 		'Solicitante' => array(
-			'className' => 'Solicitante',
+			'className' => 'USUARIO',
 			'foreignKey' => 'solicitante_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Cartera' => array(
-			'className' => 'Cartera',
+			'className' => 'CARTERA',
 			'foreignKey' => 'cartera_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'ValoracionCio' => array(
-			'className' => 'ValoracionCio',
+			'className' => 'VALORACIONCIO',
 			'foreignKey' => 'valoracion_cio_id',
 			'conditions' => '',
 			'fields' => '',
@@ -240,27 +240,27 @@ class PROPUESTA extends AppModel {
 		),
 		'Tecnico' => array(
 			'className' => 'USUARIO',
-			'foreignKey' => 'u_s_u_a_r_i_o_id',
+			'foreignKey' => 'tecnico_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Patrocinador' => array(
 			'className' => 'USUARIO',
-			'foreignKey' => 'u_s_u_a_r_i_o_id',
+			'foreignKey' => 'patrocinador_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Responsable' => array(
 			'className' => 'USUARIO',
-			'foreignKey' => 'u_s_u_a_r_i_o_id',
+			'foreignKey' => 'responsable_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'TipoPro' => array(
-			'className' => 'TipoPro',
+			'className' => 'TIPOPRO',
 			'foreignKey' => 'tipo_pro_id',
 			'conditions' => '',
 			'fields' => '',
@@ -275,10 +275,10 @@ class PROPUESTA extends AppModel {
  */
 	public $hasAndBelongsToMany = array(
 		'AREA' => array(
-			'className' => 'AREA',
+			'className' => 'AREAFUNCIONAL',
 			'joinTable' => 'AREA_PROPUESTA',
-			'foreignKey' => 'p_r_o_p_u_e_s_tum_id',
-			'associationForeignKey' => 'a_r_e_a_id',
+			'foreignKey' => 'propuesta_id',
+			'associationForeignKey' => 'area_funcional_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -290,10 +290,10 @@ class PROPUESTA extends AppModel {
 			'insertQuery' => ''
 		),
 		'OBJETIVO' => array(
-			'className' => 'OBJETIVO',
+			'className' => 'OBJETIVOTACTICO',
 			'joinTable' => 'OBJETIVO_PROPUESTA',
-			'foreignKey' => 'p_r_o_p_u_e_s_tum_id',
-			'associationForeignKey' => 'o_b_j_e_t_i_v_o_id',
+			'foreignKey' => 'propuesta_id',
+			'associationForeignKey' => 'objetivo_tactico_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
