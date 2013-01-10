@@ -21,7 +21,7 @@ class NOTIFICACION extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'id';
+	public $displayField = 'texto';
 
 /**
  * Validation rules
@@ -30,16 +30,16 @@ class NOTIFICACION extends AppModel {
  */
 	public $validate = array(
 		'id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'n' => array(
-				'rule' => array('n'),
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -66,14 +66,6 @@ class NOTIFICACION extends AppModel {
 			),
 		),
 		'tipo_notificacion_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -82,18 +74,26 @@ class NOTIFICACION extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-		),
-		'texto' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'numeric' => array(
-				'rule' => array('numeric'),
+		),
+		'texto' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+			'alphanumeric' => array(
+				'rule' => array('alphanumeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -134,10 +134,10 @@ class NOTIFICACION extends AppModel {
  */
 	public $hasAndBelongsToMany = array(
 		'TIPO' => array(
-			'className' => 'TIPONOTIFICACION',
+			'className' => 'TIPO',
 			'joinTable' => 'TIPO_NOTIFICACION',
-			'foreignKey' => 'n_o_t_i_f_i_c_a_c_i_o_n_id',
-			'associationForeignKey' => 't_i_p_o_id',
+			'foreignKey' => 'notificacion_id',
+			'associationForeignKey' => 'tipo_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

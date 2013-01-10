@@ -459,3 +459,151 @@
 2013-01-09 18:45:36 Error: [MissingControllerException] Controller class PRINCIPIOSTICsController could not be found.
 #0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-09 18:52:14 Error: [MissingControllerException] Controller class TIPONOTIFICACIONsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-10 16:03:39 Error: [MissingControllerException] Controller class LoginController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-10 16:05:19 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/mike/git/sit2012-13/src/app/Controller/AREAPERSONAsController.php, line 50]
+2013-01-10 16:05:19 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/mike/git/...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/mike/git/...', 50, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/mike/git/...', 50, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-10 16:05:58 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/mike/git/sit2012-13/src/app/Controller/AREAPERSONAsController.php, line 50]
+2013-01-10 16:05:58 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/mike/git/...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/mike/git/...', 50, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/mike/git/...', 50, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-10 16:06:33 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/mike/git/sit2012-13/src/app/Controller/AREAPERSONAsController.php, line 50]
+2013-01-10 16:06:33 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/mike/git/...', 50)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/mike/git/...', 50, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/mike/git/...', 50, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-10 16:08:28 Error: [MissingControllerException] Controller class PersonasController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-10 16:41:53 Error: [MissingControllerException] Controller class TIPONOTIFICACIONsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-10 16:49:14 Error: [MissingTableException] Table personas for model Persona was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('personas')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(1068): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2631): DboSource->read(Object(NOTIFICACION), Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Component/PaginatorComponent.php(173): Model->find('all', Array)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(1082): PaginatorComponent->paginate(NULL, Array, Array)
+#5 /home/mike/git/sit2012-13/src/app/Controller/NOTIFICACIONsController.php(17): Controller->paginate()
+#6 [internal function]: NOTIFICACIONsController->index()
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(NOTIFICACIONsController), Array)
+#8 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
+#10 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-01-10 16:50:06 Error: [MissingTableException] Table t_i_p_os for model TIPO was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('t_i_p_os')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/NOTIFICACIONsController.php(52): Model->find('list')
+#9 [internal function]: NOTIFICACIONsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(NOTIFICACIONsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-01-10 16:52:19 Error: [MissingTableException] Table t_i_p_os for model TIPO was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('t_i_p_os')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/NOTIFICACIONsController.php(52): Model->find('list')
+#9 [internal function]: NOTIFICACIONsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(NOTIFICACIONsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-01-10 16:52:33 Error: [MissingTableException] Table t_i_p_os for model TIPO was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('t_i_p_os')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/NOTIFICACIONsController.php(52): Model->find('list')
+#9 [internal function]: NOTIFICACIONsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(NOTIFICACIONsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-01-10 16:52:44 Error: [MissingTableException] Table t_i_p_os for model TIPO was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('t_i_p_os')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/NOTIFICACIONsController.php(52): Model->find('list')
+#9 [internal function]: NOTIFICACIONsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(NOTIFICACIONsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-01-10 17:13:07 Error: [MissingControllerException] Controller class PROYECTOsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-10 17:33:03 Error: [MissingTableException] Table t_i_p_os for model TIPO was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('t_i_p_os')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/NOTIFICACIONsController.php(52): Model->find('list')
+#9 [internal function]: NOTIFICACIONsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(NOTIFICACIONsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-01-10 17:34:29 Error: [MissingTableException] Table t_i_p_os for model TIPO was not found in datasource default.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(3180): Model->setSource('t_i_p_os')
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1301): Model->getDataSource()
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1389): Model->schema()
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(1375): Model->hasField('title', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(863): Model->hasField(Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2776): Model->__get('displayField')
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2668): Model->_findList('before', Array)
+#7 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2626): Model->buildQuery('list', Array)
+#8 /home/mike/git/sit2012-13/src/app/Controller/NOTIFICACIONsController.php(52): Model->find('list')
+#9 [internal function]: NOTIFICACIONsController->add()
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(NOTIFICACIONsController), Array)
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
+#13 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}

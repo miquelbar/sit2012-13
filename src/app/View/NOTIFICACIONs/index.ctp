@@ -1,23 +1,6 @@
 <div class="nOTIFICACIONs index">
-	<div class="row-fluid">
-		<div class="span10"><h2><?php echo __('Notificaciones'); ?></h2></div>
-		<div class="span1">
-			<div class="btn-group">
-		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
-		    		Acciones
-		    		<span class="caret"></span>
-		  		</a>
-		  		<ul class="dropdown-menu">
-					<li><?php echo $this->Html->link(__('New N O T I F I C A C I O N'), array('action' => 'add')); ?></li>
-					<li><?php echo $this->Html->link(__('List P E R S O N As'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New Persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
-					<li><?php echo $this->Html->link(__('List T I P O N O T I F I C A C I O Ns'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New Tipo Notificacion'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'add')); ?> </li>
-				</ul>
-		  	</div>
-		</div>
-	</div>
-	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
+	<h2><?php echo __('N O T I F I C A C I O Ns'); ?></h2>
+	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('persona_id'); ?></th>
@@ -30,14 +13,16 @@
 	<tr>
 		<td><?php echo h($nOTIFICACION['NOTIFICACION']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($nOTIFICACION['PERSONA']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $nOTIFICACION['Persona']['id'])); ?>
+			<?php echo $this->Html->link($nOTIFICACION['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $nOTIFICACION['Persona']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($nOTIFICACION['TipoNotificacion']['id'], array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'view', $nOTIFICACION['TipoNotificacion']['id'])); ?>
 		</td>
 		<td><?php echo h($nOTIFICACION['NOTIFICACION']['texto']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($nOTIFICACION['NOTIFICACION']['id']);?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $nOTIFICACION['NOTIFICACION']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $nOTIFICACION['NOTIFICACION']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $nOTIFICACION['NOTIFICACION']['id']), null, __('Are you sure you want to delete # %s?', $nOTIFICACION['NOTIFICACION']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -58,12 +43,12 @@
 	</div>
 </div>
 <div class="actions">
-<!--	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New N O T I F I C A C I O N'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List P E R S O N As'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List T I P O N O T I F I C A C I O Ns'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Tipo Notificacion'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'add')); ?> </li>
-	</ul>-->
+	</ul>
 </div>

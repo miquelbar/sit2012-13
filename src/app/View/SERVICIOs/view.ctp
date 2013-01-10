@@ -1,5 +1,26 @@
+<ul class="breadcrumb">
+  <li><a href="/SERVICIOs/index">Servicios</a> <span class="divider">/</span></li>
+  <li class="active">Ver<span class="divider">/</span></li>
+</ul>
 <div class="sERVICIOs view">
-<h2><?php  echo __('Servicio'); ?></h2>
+	<legend>
+		<div class="row-fluid">
+			<div class="span2">
+					<strong><?php echo __('Ver Servicio'); ?></strong>
+			</div>
+			<div class="span1">
+				<div class="btn-group">
+			  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+			    		Acciones
+			    		<span class="caret"></span>
+			  		</a>
+			  		<ul class="dropdown-menu">
+						<li><?php echo $this->Html->link(__('New P R O Y E C T O'), array('controller' => 'p_r_o_y_e_c_t_os', 'action' => 'add')); ?> </li>
+			  		</ul>
+			  </div>
+			</div>
+		</div>
+		</legend>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
@@ -126,8 +147,8 @@
 <?php endif; ?>
 
 	<div class="actions">
-		<ul>
+<!--		<ul>
 			<li><?php echo $this->Html->link(__('New P R O Y E C T O'), array('controller' => 'p_r_o_y_e_c_t_os', 'action' => 'add')); ?> </li>
-		</ul>
+</ul>-->
 	</div>
 </div>

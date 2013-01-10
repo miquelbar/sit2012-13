@@ -3,6 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Admin Add A R E A P E R S O N A'); ?></legend>
 	<?php
+		echo $this->Form->input('area_funcional_id');
 		echo $this->Form->input('persona_id');
 	?>
 	</fieldset>
@@ -13,9 +14,9 @@
 	<ul>
 
 		<li><?php echo $this->Html->link(__('List A R E A P E R S O N As'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Area Funcionals'), array('controller' => 'area_funcionals', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Area Funcional'), array('controller' => 'area_funcionals', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Personas'), array('controller' => 'personas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Persona'), array('controller' => 'personas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List A R E A F U N C I O N A Ls'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Area Funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List P E R S O N As'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
