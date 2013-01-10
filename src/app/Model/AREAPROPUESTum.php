@@ -1,7 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * AREAPROPUESTum Model
+ * AREAPROPUESTA Model
  *
  * @property AreaFuncional $AreaFuncional
  * @property Propuesta $Propuesta
@@ -32,14 +32,14 @@ class AREAPROPUESTum extends AppModel {
  */
 	public $belongsTo = array(
 		'AreaFuncional' => array(
-			'className' => 'AreaFuncional',
+			'className' => 'AREAFUNCIONAL',
 			'foreignKey' => 'area_funcional_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Propuesta' => array(
-			'className' => 'Propuesta',
+			'className' => 'PROPUESTum	',
 			'foreignKey' => 'propuesta_id',
 			'conditions' => '',
 			'fields' => '',

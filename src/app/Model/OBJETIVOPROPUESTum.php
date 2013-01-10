@@ -1,7 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * OBJETIVOPROPUESTum Model
+ * OBJETIVOPROPUEST Model
  *
  * @property ObjetivoTactico $ObjetivoTactico
  * @property Propuesta $Propuesta
@@ -93,14 +93,14 @@ class OBJETIVOPROPUESTum extends AppModel {
  */
 	public $belongsTo = array(
 		'ObjetivoTactico' => array(
-			'className' => 'ObjetivoTactico',
+			'className' => 'OBJETIVOTACTICO',
 			'foreignKey' => 'objetivo_tactico_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Propuesta' => array(
-			'className' => 'Propuesta',
+			'className' => 'PROPUESTum',
 			'foreignKey' => 'propuesta_id',
 			'conditions' => '',
 			'fields' => '',

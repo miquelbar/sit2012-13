@@ -83,7 +83,7 @@ class PROYECTOsController extends AppController {
 			$this->request->data = $this->PROYECTO->read(null, $id);
 		}
 		$carteras = $this->PROYECTO->Cartera->find('list');
-		$propuestas = $this->PROYECTO->Propuestum->find('list');
+		$propuestas = $this->PROYECTO->Propuesta->find('list');
 		$tipoPros = $this->PROYECTO->TipoPro->find('list');
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');
 		$patrocinadors = $this->PROYECTO->Patrocinador->find('list');
@@ -160,7 +160,7 @@ class PROYECTOsController extends AppController {
 			}
 		}
 		$carteras = $this->PROYECTO->Cartera->find('list');
-		$propuestas = $this->PROYECTO->Propuestum->find('list');
+		$propuestas = $this->PROYECTO->Propuesta->find('list');
 		$tipoPros = $this->PROYECTO->TipoPro->find('list');
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');
 		$patrocinadors = $this->PROYECTO->Patrocinador->find('list');
@@ -195,7 +195,7 @@ class PROYECTOsController extends AppController {
 			$this->request->data = $this->PROYECTO->read(null, $id);
 		}
 		$carteras = $this->PROYECTO->Cartera->find('list');
-		$propuestas = $this->PROYECTO->Propuestum->find('list');
+		$propuestas = $this->PROYECTO->Propuesta->find('list');
 		$tipoPros = $this->PROYECTO->TipoPro->find('list');
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');
 		$patrocinadors = $this->PROYECTO->Patrocinador->find('list');

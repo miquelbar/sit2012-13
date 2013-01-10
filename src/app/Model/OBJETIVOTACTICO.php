@@ -19,7 +19,7 @@ class OBJETIVOTACTICO extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'id';
+	public $displayField = 'nombre';
 
 /**
  * Validation rules
