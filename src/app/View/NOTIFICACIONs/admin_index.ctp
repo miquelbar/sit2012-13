@@ -16,7 +16,7 @@
 			<?php echo $this->Html->link($nOTIFICACION['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $nOTIFICACION['Persona']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($nOTIFICACION['TipoNotificacion']['id'], array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'view', $nOTIFICACION['TipoNotificacion']['id'])); ?>
+			<?php echo $this->Html->link($nOTIFICACION['TipoNotificacion']['mensaje'], array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'view', $nOTIFICACION['TipoNotificacion']['id'])); ?>
 		</td>
 		<td><?php echo h($nOTIFICACION['NOTIFICACION']['texto']); ?>&nbsp;</td>
 		<td class="actions">

@@ -18,7 +18,7 @@ class TIPONOTIFICACION extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'id';
+	public $displayField = 'mensaje';
 
 /**
  * Validation rules

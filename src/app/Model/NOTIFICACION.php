@@ -127,27 +127,4 @@ class NOTIFICACION extends AppModel {
 		)
 	);
 
-/**
- * hasAndBelongsToMany associations
- *
- * @var array
- */
-	public $hasAndBelongsToMany = array(
-		'TIPO' => array(
-			'className' => 'TIPO',
-			'joinTable' => 'TIPO_NOTIFICACION',
-			'foreignKey' => 'notificacion_id',
-			'associationForeignKey' => 'tipo_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
-		)
-	);
-
 }

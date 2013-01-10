@@ -4,6 +4,7 @@ App::uses('AppController', 'Controller');
  * NOTIFICACIONs Controller
  *
  * @property NOTIFICACION $NOTIFICACION
+ * @property nComponent $n
  */
 class NOTIFICACIONsController extends AppController {
 
@@ -49,8 +50,7 @@ class NOTIFICACIONsController extends AppController {
 		}
 		$personas = $this->NOTIFICACION->Persona->find('list');
 		$tipoNotificacions = $this->NOTIFICACION->TipoNotificacion->find('list');
-		$tIPOs = $this->NOTIFICACION->TIPO->find('list');
-		$this->set(compact('personas', 'tipoNotificacions', 'tIPOs'));
+		$this->set(compact('personas', 'tipoNotificacions'));
 	}
 
 /**
@@ -77,8 +77,7 @@ class NOTIFICACIONsController extends AppController {
 		}
 		$personas = $this->NOTIFICACION->Persona->find('list');
 		$tipoNotificacions = $this->NOTIFICACION->TipoNotificacion->find('list');
-		$tIPOs = $this->NOTIFICACION->TIPO->find('list');
-		$this->set(compact('personas', 'tipoNotificacions', 'tIPOs'));
+		$this->set(compact('personas', 'tipoNotificacions'));
 	}
 
 /**
@@ -147,8 +146,7 @@ class NOTIFICACIONsController extends AppController {
 		}
 		$personas = $this->NOTIFICACION->Persona->find('list');
 		$tipoNotificacions = $this->NOTIFICACION->TipoNotificacion->find('list');
-		$tIPOs = $this->NOTIFICACION->TIPO->find('list');
-		$this->set(compact('personas', 'tipoNotificacions', 'tIPOs'));
+		$this->set(compact('personas', 'tipoNotificacions'));
 	}
 
 /**
@@ -175,8 +173,7 @@ class NOTIFICACIONsController extends AppController {
 		}
 		$personas = $this->NOTIFICACION->Persona->find('list');
 		$tipoNotificacions = $this->NOTIFICACION->TipoNotificacion->find('list');
-		$tIPOs = $this->NOTIFICACION->TIPO->find('list');
-		$this->set(compact('personas', 'tipoNotificacions', 'tIPOs'));
+		$this->set(compact('personas', 'tipoNotificacions'));
 	}
 
 /**

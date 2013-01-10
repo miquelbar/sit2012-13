@@ -13,7 +13,7 @@
 		</dd>
 		<dt><?php echo __('Tipo Notificacion'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($nOTIFICACION['TipoNotificacion']['id'], array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'view', $nOTIFICACION['TipoNotificacion']['id'])); ?>
+			<?php echo $this->Html->link($nOTIFICACION['TipoNotificacion']['mensaje'], array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'view', $nOTIFICACION['TipoNotificacion']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Texto'); ?></dt>
@@ -35,35 +35,4 @@
 		<li><?php echo $this->Html->link(__('List T I P O N O T I F I C A C I O Ns'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Tipo Notificacion'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
-<div class="related">
-	<h3><?php echo __('Related T I P O N O T I F I C A C I O Ns'); ?></h3>
-	<?php if (!empty($nOTIFICACION['TIPO'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Mensaje'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php
-		$i = 0;
-		foreach ($nOTIFICACION['TIPO'] as $tIPO): ?>
-		<tr>
-			<td><?php echo $tIPO['id']; ?></td>
-			<td><?php echo $tIPO['mensaje']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'view', $tIPO['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'edit', $tIPO['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'delete', $tIPO['id']), null, __('Are you sure you want to delete # %s?', $tIPO['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New T I P O'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>

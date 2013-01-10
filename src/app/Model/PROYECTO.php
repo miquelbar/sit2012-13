@@ -353,19 +353,32 @@ class PROYECTO extends AppModel {
 			'order' => ''
 		),
 		'Patrocinador' => array(
-			'className' => 'Patrocinador',
+			'className' => 'USUARIO',
 			'foreignKey' => 'patrocinador_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Responsable' => array(
-			'className' => 'Responsable',
+			'className' => 'USUARIO',
 			'foreignKey' => 'responsable_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		)
+		),
+		'ESTADO' => array(
+			'className' => 'ESTADOPROYECTO',
+			'foreignKey' => 'estado_proyecto_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		),
 	);
 
 /**
@@ -375,7 +388,7 @@ class PROYECTO extends AppModel {
  */
 	public $hasAndBelongsToMany = array(
 		'AREA' => array(
-			'className' => 'AREA',
+			'className' => 'AREAFUNCIONAL',
 			'joinTable' => 'AREA_PROYECTO',
 			'foreignKey' => 'p_r_o_y_e_c_t_o_id',
 			'associationForeignKey' => 'a_r_e_a_id',
@@ -389,23 +402,8 @@ class PROYECTO extends AppModel {
 			'deleteQuery' => '',
 			'insertQuery' => ''
 		),
-		'ESTADO' => array(
-			'className' => 'ESTADO',
-			'joinTable' => 'ESTADO_PROYECTO',
-			'foreignKey' => 'p_r_o_y_e_c_t_o_id',
-			'associationForeignKey' => 'e_s_t_a_d_o_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
-		),
 		'OBJETIVO' => array(
-			'className' => 'OBJETIVO',
+			'className' => 'OBJETIVOESTRATEGICO',
 			'joinTable' => 'OBJETIVO_PROYECTO',
 			'foreignKey' => 'p_r_o_y_e_c_t_o_id',
 			'associationForeignKey' => 'o_b_j_e_t_i_v_o_id',

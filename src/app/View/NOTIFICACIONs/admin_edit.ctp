@@ -7,7 +7,6 @@
 		echo $this->Form->input('persona_id');
 		echo $this->Form->input('tipo_notificacion_id');
 		echo $this->Form->input('texto');
-		echo $this->Form->input('TIPO');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

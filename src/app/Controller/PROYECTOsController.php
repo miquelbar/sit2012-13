@@ -48,16 +48,16 @@ class PROYECTOsController extends AppController {
 			}
 		}
 		$carteras = $this->PROYECTO->Cartera->find('list');
-		$propuestas = $this->PROYECTO->Propuestum->find('list');
+		$propuestas = $this->PROYECTO->Propuesta->find('list');
 		$tipoPros = $this->PROYECTO->TipoPro->find('list');
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');
 		$patrocinadors = $this->PROYECTO->Patrocinador->find('list');
 		$responsables = $this->PROYECTO->Responsable->find('list');
-		$aREAs = $this->PROYECTO->AREA->find('list');
 		$eSTADOs = $this->PROYECTO->ESTADO->find('list');
+		$aREAs = $this->PROYECTO->AREA->find('list');
 		$oBJETIVOs = $this->PROYECTO->OBJETIVO->find('list');
 		$sERVICIOs = $this->PROYECTO->SERVICIO->find('list');
-		$this->set(compact('carteras', 'propuestas', 'tipoPros', 'estadoProyectos', 'patrocinadors', 'responsables', 'aREAs', 'eSTADOs', 'oBJETIVOs', 'sERVICIOs'));
+		$this->set(compact('carteras', 'propuestas', 'tipoPros', 'estadoProyectos', 'patrocinadors', 'responsables', 'eSTADOs', 'aREAs', 'oBJETIVOs', 'sERVICIOs'));
 	}
 
 /**
@@ -88,11 +88,11 @@ class PROYECTOsController extends AppController {
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');
 		$patrocinadors = $this->PROYECTO->Patrocinador->find('list');
 		$responsables = $this->PROYECTO->Responsable->find('list');
-		$aREAs = $this->PROYECTO->AREA->find('list');
 		$eSTADOs = $this->PROYECTO->ESTADO->find('list');
+		$aREAs = $this->PROYECTO->AREA->find('list');
 		$oBJETIVOs = $this->PROYECTO->OBJETIVO->find('list');
 		$sERVICIOs = $this->PROYECTO->SERVICIO->find('list');
-		$this->set(compact('carteras', 'propuestas', 'tipoPros', 'estadoProyectos', 'patrocinadors', 'responsables', 'aREAs', 'eSTADOs', 'oBJETIVOs', 'sERVICIOs'));
+		$this->set(compact('carteras', 'propuestas', 'tipoPros', 'estadoProyectos', 'patrocinadors', 'responsables', 'eSTADOs', 'aREAs', 'oBJETIVOs', 'sERVICIOs'));
 	}
 
 /**
@@ -165,11 +165,11 @@ class PROYECTOsController extends AppController {
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');
 		$patrocinadors = $this->PROYECTO->Patrocinador->find('list');
 		$responsables = $this->PROYECTO->Responsable->find('list');
-		$aREAs = $this->PROYECTO->AREA->find('list');
 		$eSTADOs = $this->PROYECTO->ESTADO->find('list');
+		$aREAs = $this->PROYECTO->AREA->find('list');
 		$oBJETIVOs = $this->PROYECTO->OBJETIVO->find('list');
 		$sERVICIOs = $this->PROYECTO->SERVICIO->find('list');
-		$this->set(compact('carteras', 'propuestas', 'tipoPros', 'estadoProyectos', 'patrocinadors', 'responsables', 'aREAs', 'eSTADOs', 'oBJETIVOs', 'sERVICIOs'));
+		$this->set(compact('carteras', 'propuestas', 'tipoPros', 'estadoProyectos', 'patrocinadors', 'responsables', 'eSTADOs', 'aREAs', 'oBJETIVOs', 'sERVICIOs'));
 	}
 
 /**
@@ -200,11 +200,11 @@ class PROYECTOsController extends AppController {
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');
 		$patrocinadors = $this->PROYECTO->Patrocinador->find('list');
 		$responsables = $this->PROYECTO->Responsable->find('list');
-		$aREAs = $this->PROYECTO->AREA->find('list');
 		$eSTADOs = $this->PROYECTO->ESTADO->find('list');
+		$aREAs = $this->PROYECTO->AREA->find('list');
 		$oBJETIVOs = $this->PROYECTO->OBJETIVO->find('list');
 		$sERVICIOs = $this->PROYECTO->SERVICIO->find('list');
-		$this->set(compact('carteras', 'propuestas', 'tipoPros', 'estadoProyectos', 'patrocinadors', 'responsables', 'aREAs', 'eSTADOs', 'oBJETIVOs', 'sERVICIOs'));
+		$this->set(compact('carteras', 'propuestas', 'tipoPros', 'estadoProyectos', 'patrocinadors', 'responsables', 'eSTADOs', 'aREAs', 'oBJETIVOs', 'sERVICIOs'));
 	}
 
 /**

@@ -6,14 +6,14 @@ App::uses('AppModel', 'Model');
  * @property Solicitante $Solicitante
  * @property Cartera $Cartera
  * @property ValoracionCio $ValoracionCio
- * @property Tecnico $Tecnico
- * @property Patrocinador $Patrocinador
- * @property Responsable $Responsable
+ * @property USUARIO $Tecnico
+ * @property USUARIO $Patrocinador
+ * @property USUARIO $Responsable
  * @property TipoPro $TipoPro
  * @property AREA $AREA
  * @property OBJETIVO $OBJETIVO
  */
-class PROPUESTum extends AppModel {
+class PROPUESTA extends AppModel {
 
 /**
  * Use table
@@ -239,22 +239,22 @@ class PROPUESTum extends AppModel {
 			'order' => ''
 		),
 		'Tecnico' => array(
-			'className' => 'Tecnico',
-			'foreignKey' => 'tecnico_id',
+			'className' => 'USUARIO',
+			'foreignKey' => 'u_s_u_a_r_i_o_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Patrocinador' => array(
-			'className' => 'Patrocinador',
-			'foreignKey' => 'patrocinador_id',
+			'className' => 'USUARIO',
+			'foreignKey' => 'u_s_u_a_r_i_o_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Responsable' => array(
-			'className' => 'Responsable',
-			'foreignKey' => 'responsable_id',
+			'className' => 'USUARIO',
+			'foreignKey' => 'u_s_u_a_r_i_o_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
