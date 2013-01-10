@@ -91,6 +91,16 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
+	$(document).ready(function(){
+		$(".box").hover(
+			function() {
+				$(this).stop().animate({"opacity": ".3"}, "slow");
+			},
+			function() {
+				$(this).stop().animate({"opacity": "0"}, "slow");
+			});
+
+	});
 	$(".box_top").click(function(){
      	window.location=$(this).find("a").attr("href"); 
 	    return false;
