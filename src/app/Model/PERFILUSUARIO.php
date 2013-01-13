@@ -25,14 +25,14 @@ class PERFILUSUARIO extends AppModel {
  */
 	public $belongsTo = array(
 		'Usuario' => array(
-			'className' => 'Usuario',
+			'className' => 'USUARIO',
 			'foreignKey' => 'usuario_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Perfil' => array(
-			'className' => 'Perfil',
+			'className' => 'PERFIL',
 			'foreignKey' => 'perfil_id',
 			'conditions' => '',
 			'fields' => '',

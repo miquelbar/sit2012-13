@@ -332,7 +332,7 @@ class PROYECTO extends AppModel {
 			'order' => ''
 		),
 		'Propuesta' => array(
-			'className' => 'PROPUESTA',
+			'className' => 'PROPUESTum',
 			'foreignKey' => 'propuesta_id',
 			'conditions' => '',
 			'fields' => '',

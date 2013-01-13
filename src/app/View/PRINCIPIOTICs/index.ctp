@@ -1,5 +1,5 @@
 <div class="pRINCIPIOTICs index">
-		<div class="row-fluid">
+	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('Principios TIC'); ?></h2></div>
 		<div class="span1">
 			<div class="btn-group">

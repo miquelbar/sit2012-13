@@ -14,6 +14,7 @@ class PERFIL extends AppModel {
  */
 	public $useTable = 'PERFIL';
 
+	var $primaryKey = 'id';
 /**
  * Display field
  *

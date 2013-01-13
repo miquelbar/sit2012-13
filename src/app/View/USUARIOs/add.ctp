@@ -3,8 +3,6 @@
   <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
 <div class="uSUARIOs form">
-<?php echo $this->Form->create('USUARIO'); ?>
-	<fieldset>
 		<legend>
 		<div class="row-fluid">
 			<div class="span3">
@@ -27,6 +25,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('USUARIO'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('correo');
 		echo $this->Form->input('clave');
@@ -35,7 +35,7 @@
 		echo $this->Form->input('PERFIL');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(array('label'=>'Crear', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

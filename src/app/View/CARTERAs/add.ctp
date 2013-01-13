@@ -3,8 +3,6 @@
   <li class="active">A&ntilde;dir<span class="divider">/</span></li>
 </ul>
 <div class="cARTERAs form">
-<?php echo $this->Form->create('CARTERA'); ?>
-	<fieldset>
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
@@ -23,6 +21,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('CARTERA'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('fecha_creacion');
 		echo $this->Form->input('fecha_inicio_periodo');

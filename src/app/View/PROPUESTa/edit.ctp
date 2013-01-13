@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+  <li><a href="/PROPUESTa/index">Propuesta</a> <span class="divider">/</span></li>
+  <li class="active">Editar Propuesta<span class="divider">/</span></li>
+</ul>
 <div class="pROPUESTa form">
 <?php echo $this->Form->create('PROPUESTum'); ?>
 	<fieldset>

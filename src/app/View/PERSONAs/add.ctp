@@ -3,8 +3,6 @@
   <li class="active">A&ntilde;dir persona<span class="divider">/</span></li>
 </ul>
 <div class="pERSONAs form">
-<?php echo $this->Form->create('PERSONA'); ?>
-	<fieldset>
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
@@ -27,6 +25,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('PERSONA'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('apellido1');

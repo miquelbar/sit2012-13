@@ -3,8 +3,6 @@
   <li class="active">Editar<span class="divider">/</span></li>
 </ul>
 <div class="sERVICIOs form">
-<?php echo $this->Form->create('SERVICIO'); ?>
-	<fieldset>
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
@@ -30,6 +28,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('SERVICIO'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('fecha_inicio');

@@ -3,8 +3,6 @@
   <li class="active">A&ntilde;dir<span class="divider">/</span></li>
 </ul>
 <div class="oBJETIVOESTRATEGICOs form">
-<?php echo $this->Form->create('OBJETIVOESTRATEGICO'); ?>
-	<fieldset>
 		<legend>
 		<div class="row-fluid">
 			<div class="span4">
@@ -25,6 +23,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('OBJETIVOESTRATEGICO'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('descripcion');

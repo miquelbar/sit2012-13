@@ -3,8 +3,6 @@
   <li class="active">Editar<span class="divider">/</span></li>
 </ul>
 <div class="tIPONOTIFICACIONs form">
-<?php echo $this->Form->create('TIPONOTIFICACION'); ?>
-	<fieldset>
 		<legend>
 		<div class="row-fluid">
 			<div class="span3">
@@ -24,6 +22,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('TIPONOTIFICACION'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('mensaje');

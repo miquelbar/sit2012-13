@@ -1,10 +1,11 @@
 <ul class="breadcrumb">
   <li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li class="active">Propuestas<span class="divider">/</span></li>
+  <li><a href="/PROPUESTa/index">Propuesta</a> <span class="divider">/</span></li>
+  <li class="active">Pendientes de valoración técnica<span class="divider">/</span></li>
 </ul>
 <div class="pROPUESTa index">
 	<div class="row-fluid">
-		<div class="span10"><h2><?php echo __('Propuestas'); ?></h2></div>
+		<div class="span10"><h2><?php echo __('Propuestas pendientes de valoración'); ?></h2></div>
 		<div class="span1">
 			<div class="btn-group">
 		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
@@ -26,7 +27,11 @@
 		  	</div>
 		</div>
 	</div>
+<? 
+
+if (count($pROPUESTa) > 0) {
 	
+	?>
 	<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span12">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -43,10 +48,9 @@
 			<th><?php echo $this->Paginator->sort('patrocinador_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('responsable_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('tipo_pro_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Acciones'); ?></th>
 	</tr>
 	<?php
-
 	foreach ($pROPUESTa as $pROPUESTum): ?>
 	<tr class="<?=$colores[$pROPUESTum['PROPUESTum']['estado']]?>">
 		<td><?php echo h($pROPUESTum['PROPUESTum']['id']); ?>&nbsp;</td>
@@ -78,7 +82,7 @@
 			<?php echo $this->Html->link($pROPUESTum['TipoPro']['nombre'], array('controller' => 't_i_p_o_p_r_os', 'action' => 'view', $pROPUESTum['TipoPro']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($pROPUESTum['PROPUESTum']['id']);?>		
+			<a href="/PROPUESTa/asignartec/<?=$pROPUESTum['PROPUESTum']['id']?>" class="btn btn-inverse">Valorar</a>		
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -99,5 +103,18 @@
 		}
 	?>
 	</div>
+	<?
+	
+} else {
+	
+	?>
+    <div class="alert alert-info">
+    	<h4>¡No hay propuestas pendientes!</h4>
+    	No hay propuestas pendientes de valoración. Vuelva en otro momento para revisar si hay propuestas o espere a que le aparezca una notificación.
+    </div>
+	<?
+}
+
+?>
 </div>
 

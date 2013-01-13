@@ -85,7 +85,7 @@ class AppController extends Controller {
 					array(
 						'titulo' => 'Logout'
 						,'url'=> '/login/logout/'
-						,'rol' => 0
+						,'rol' => 1
 					)
 				)
 			),

@@ -3,8 +3,8 @@
   <li class="active">Editar<span class="divider">/</span></li>
 </ul>
 <div class="uSUARIOs form">
-<?php echo $this->Form->create('USUARIO'); ?>
-	<fieldset>
+
+	
 		<legend>
 		<div class="row-fluid">
 			<div class="span3">
@@ -27,6 +27,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('USUARIO'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('correo');

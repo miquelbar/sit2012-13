@@ -83,14 +83,6 @@ class COMENTARIO extends AppModel {
 			),
 		),
 		'comentario' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -129,14 +121,14 @@ class COMENTARIO extends AppModel {
  */
 	public $belongsTo = array(
 		'Propuesta' => array(
-			'className' => 'Propuesta',
+			'className' => 'PROPUESTum',
 			'foreignKey' => 'propuesta_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Persona' => array(
-			'className' => 'Persona',
+			'className' => 'PERSONA',
 			'foreignKey' => 'persona_id',
 			'conditions' => '',
 			'fields' => '',

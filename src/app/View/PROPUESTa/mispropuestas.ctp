@@ -1,6 +1,7 @@
 <ul class="breadcrumb">
   <li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li class="active">Propuestas<span class="divider">/</span></li>
+  <li><a href="/PROPUESTa/index">Propuesta</a> <span class="divider">/</span></li>
+  <li class="active">Mis propuestas<span class="divider">/</span></li>
 </ul>
 <div class="pROPUESTa index">
 	<div class="row-fluid">
@@ -43,10 +44,9 @@
 			<th><?php echo $this->Paginator->sort('patrocinador_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('responsable_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('tipo_pro_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Acciones'); ?></th>
 	</tr>
 	<?php
-
 	foreach ($pROPUESTa as $pROPUESTum): ?>
 	<tr class="<?=$colores[$pROPUESTum['PROPUESTum']['estado']]?>">
 		<td><?php echo h($pROPUESTum['PROPUESTum']['id']); ?>&nbsp;</td>

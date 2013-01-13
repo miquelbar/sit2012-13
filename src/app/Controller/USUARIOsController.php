@@ -70,6 +70,7 @@ class USUARIOsController extends AppController {
 			throw new NotFoundException(__('Invalid u s u a r i o'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
+			//print_r($this->request->data);die();
 			if ($this->USUARIO->save($this->request->data)) {
 				$this->Session->setFlash(__('The u s u a r i o has been saved'));
 				$this->redirect(array('action' => 'index'));

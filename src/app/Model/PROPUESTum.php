@@ -38,7 +38,7 @@ class PROPUESTum extends AppModel {
 		'id' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -64,9 +64,9 @@ class PROPUESTum extends AppModel {
 			),
 		),
 		'descripcion' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
+			'notempty' => array(
+				'rule' => array('notempty'),
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -74,17 +74,9 @@ class PROPUESTum extends AppModel {
 			),
 		),
 		'resumen' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -92,9 +84,9 @@ class PROPUESTum extends AppModel {
 			),
 		),
 		'justificacion' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
+			'notempty' => array(
+				'rule' => array('notempty'),
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -104,9 +96,9 @@ class PROPUESTum extends AppModel {
 		'fecha_limite' => array(
 			'datetime' => array(
 				'rule' => array('datetime'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
+				'message' => 'Debe insertar una fecha válida',
+				'allowEmpty' => true,
+				'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
@@ -134,44 +126,28 @@ class PROPUESTum extends AppModel {
 		'cartera_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				'message' => 'El id debe ser un número.',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'valoracion_cio_id' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				'message' => 'El id debe ser un número.',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
 		'tecnico_id' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+			'numeric' => array(
+				'rule' => array('numeric'),
+				'message' => 'El id debe ser un número.',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -180,8 +156,8 @@ class PROPUESTum extends AppModel {
 		'patrocinador_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				'message' => 'El id debe ser un número.',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -190,8 +166,8 @@ class PROPUESTum extends AppModel {
 		'responsable_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
+				'message' => 'El id debe ser un número.',
+				'allowEmpty' => true,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
@@ -218,7 +194,7 @@ class PROPUESTum extends AppModel {
  */
 	public $belongsTo = array(
 		'Solicitante' => array(
-			'className' => 'USUARIO',
+			'className' => 'PERSONA',
 			'foreignKey' => 'solicitante_id',
 			'conditions' => '',
 			'fields' => '',
@@ -239,21 +215,21 @@ class PROPUESTum extends AppModel {
 			'order' => ''
 		),
 		'Tecnico' => array(
-			'className' => 'USUARIO',
+			'className' => 'PERSONA',
 			'foreignKey' => 'tecnico_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Patrocinador' => array(
-			'className' => 'USUARIO',
+			'className' => 'PERSONA',
 			'foreignKey' => 'patrocinador_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Responsable' => array(
-			'className' => 'USUARIO',
+			'className' => 'PERSONA',
 			'foreignKey' => 'responsable_id',
 			'conditions' => '',
 			'fields' => '',

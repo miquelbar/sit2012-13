@@ -3,8 +3,6 @@
   <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
 <div class="pRINCIPIOTICs form">
-<?php echo $this->Form->create('PRINCIPIOTIC'); ?>
-	<fieldset>
 		<legend>
 		<div class="row-fluid">
 			<div class="span3">
@@ -23,6 +21,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('PRINCIPIOTIC'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('nombre');
 		echo $this->Form->input('descripcion');
