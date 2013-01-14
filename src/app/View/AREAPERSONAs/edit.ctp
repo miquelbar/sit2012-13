@@ -1,4 +1,5 @@
 <ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/AREAPERSONAs/index">&Aacute;rea Persona</a> <span class="divider">/</span></li>
   <li class="active">Editar<span class="divider">/</span></li>
 </ul>

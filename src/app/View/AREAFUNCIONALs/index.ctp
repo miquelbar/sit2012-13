@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+  <li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">Areas Funcionales<span class="divider">/</span></li>
+</ul>
 <div class="aREAFUNCIONALs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('&Aacute;reas funcionales'); ?></h2></div>

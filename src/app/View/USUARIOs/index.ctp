@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">Usuarios<span class="divider">/</span></li>
+</ul>
 <div class="uSUARIOs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('Usuarios'); ?></h2></div>

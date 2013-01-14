@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+  <li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">Areas Personas<span class="divider">/</span></li>
+</ul>
 <div class="aREAPERSONAs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('&Aacute;rea Persona'); ?></h2></div>

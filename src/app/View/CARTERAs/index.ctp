@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">Carteras<span class="divider">/</span></li>
+</ul>
 <div class="cARTERAs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('Carteras'); ?></h2></div>

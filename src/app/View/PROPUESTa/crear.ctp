@@ -1,4 +1,5 @@
 <ul class="breadcrumb">
+  <li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/PROPUESTa/index">Propuesta</a> <span class="divider">/</span></li>
   <li class="active">Realizar Propuesta<span class="divider">/</span></li>
 </ul>
