@@ -2396,3 +2396,9 @@
 2013-01-13 14:43:46 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-14 18:27:35 Error: [MissingControllerException] Controller class Imagen.pngController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-14 18:27:56 Error: [MissingControllerException] Controller class Imagen.pngController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
