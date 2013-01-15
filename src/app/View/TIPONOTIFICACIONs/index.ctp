@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">Tipo Notificaci&oacute;n<span class="divider">/</span></li>
+</ul>
 <div class="tIPONOTIFICACIONs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('Tipo Notificaci&oacute;n'); ?></h2></div>

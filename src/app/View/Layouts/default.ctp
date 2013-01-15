@@ -23,12 +23,42 @@
 		echo $this->fetch('script');
 		
 	?>
+	<style type="text/css" scoped="scoped">
+		.box {
+			background: black;
+			opacity: .0;
+		}
+		.box_top{
+			width: 100px;
+			height: 115px;
+			cursor: pointer;
+			overflow: hidden;
+		}
+		.box_top_bottom {
+			width: 100px;
+			height: 28px;
+			cursor: pointer;
+			overflow: hidden;
+		}
+		.box_middle{
+			width: 90px;
+			height: 150px;
+			cursor: pointer;
+			overflow: hidden;
+		}
+		.box_bottom{
+			width: 225px;
+			height: 85px;
+			cursor: pointer;
+			overflow: hidden;
+		}
+	</style>
   </head>
   <body>
 	<div id="top-bar" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="/"><img src="/logo.png" style="width:auto;height: 24px;"class="img-square">SIT</a>
+				<a class="brand" href="/"><img src="logo.png" style="width:auto;height: 24px;"class="img-square">SIT</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 					<? 
@@ -46,7 +76,8 @@
 						?>
 							<li><div><a href="/usuario/login/" class="btn btn-info">Login</a></div></li>
 						<? } else { ?>
-							<li><div class="btn-group">
+							<li>
+							<div class="btn-group">
 							  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
 							  	<i class="icon-user icon-white"></i>
 							    <?=$usuario['Persona']['nombre'] ?> (<?= $usuario['correo'] ?>)
@@ -55,10 +86,14 @@
 							  <ul class="dropdown-menu">
 							    <li><a href="/USUARIOs/view/<?= $usuario['id'] ?>">Informaci&oacute;n de cuenta</a></li>
 							    <li><a href="/PERSONAs/view/<?= $usuario['Persona']['id'] ?>">Informaci&oacute;n personal</a></li>
+							    <li><a href="#">Bandeja de entrada</a></li>
 							    <li><a href="/Usuario/logout">Logout</a></li>
 							  </ul>
-							</div></li>
-							
+							</div>
+							</li>
+							<li>
+								
+							</li>
 							<!--<li><div><a href="/USUARIOs/view/<?= $usuario['id'] ?>" class="btn btn-info"><?=$usuario['Persona']['nombre'] ?>(<?= $usuario['correo'] ?>)</a></div></li>-->
 						<? } ?>
 						<li><div class="divider-vertical"></div></li>
@@ -68,8 +103,16 @@
 				</div>
 			</div>
 		</div>
+		
 	</div>
+	
 	<div class="container">
+		<!-- Alerta de Notificacion -->
+		<div class="alert alert-info fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Tienes una nueva notificaci&oacute;n.</strong> <a href="#">Revise su bandeja de entrada</a>
+         </div>
+         <!-- Fin alerta de Notificación -->
 		<div class="row">
 			<div class="span12">
 					<?php echo $this->fetch('content'); ?>

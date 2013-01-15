@@ -1,4 +1,5 @@
 <ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/METRICAs/index">M&eacute;tricas</a> <span class="divider">/</span></li>
   <li class="active">Ver<span class="divider">/</span></li>
 </ul>
@@ -15,10 +16,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('Edit M E T R I C A'), array('action' => 'edit', $mETRICA['METRICA']['id'])); ?> </li>
-						<li><?php echo $this->Form->postLink(__('Delete M E T R I C A'), array('action' => 'delete', $mETRICA['METRICA']['id']), null, __('Are you sure you want to delete # %s?', $mETRICA['METRICA']['id'])); ?> </li>
-						<li><?php echo $this->Html->link(__('List M E T R I C As'), array('action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('New M E T R I C A'), array('action' => 'add')); ?> </li>
+						<li><?php echo $this->Html->link(__('Editar M&eacute;tricas'), array('action' => 'edit', $mETRICA['METRICA']['id'])); ?> </li>
+						<li><?php echo $this->Form->postLink(__('Eliminar M&eacute;trica'), array('action' => 'delete', $mETRICA['METRICA']['id']), null, __('Are you sure you want to delete # %s?', $mETRICA['METRICA']['id'])); ?> </li>
+						<li><?php echo $this->Html->link(__('Ver M&eacute;tricas'), array('action' => 'index')); ?> </li>
+						<li><?php echo $this->Html->link(__('A&ntilde;adir M&eacute;tricas'), array('action' => 'add')); ?> </li>
 			  		</ul>
 			  </div>
 			</div>

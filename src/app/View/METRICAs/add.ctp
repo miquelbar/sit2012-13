@@ -1,4 +1,5 @@
 <ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/METRICAs/index">M&eacute;tricas</a> <span class="divider">/</span></li>
   <li class="active">A&ntilde;dir<span class="divider">/</span></li>
 </ul>
@@ -17,7 +18,7 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('List M E T R I C As'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver M&eacute;tricas'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>

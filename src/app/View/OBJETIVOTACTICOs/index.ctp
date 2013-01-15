@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">Objetivos Tacticos<span class="divider">/</span></li>
+</ul>
 <div class="oBJETIVOTACTICOs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('Objetivos Tacticos'); ?></h2></div>

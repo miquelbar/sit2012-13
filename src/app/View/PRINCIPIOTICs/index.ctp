@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">Principios TIC<span class="divider">/</span></li>
+</ul>
 <div class="pRINCIPIOTICs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('Principios TIC'); ?></h2></div>

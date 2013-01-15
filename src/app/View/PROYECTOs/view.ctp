@@ -1,5 +1,42 @@
+<ul class="breadcrumb">
+  <li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li><a href="/PROYECTOs/index">Proyectos</a> <span class="divider">/</span></li>
+  <li class="active">Ver<span class="divider">/</span></li>
+</ul>
 <div class="pROYECTOs view">
-<h2><?php  echo __('P R O Y E C T O'); ?></h2>
+<fieldset>
+		<legend>
+			<div class="row-fluid">
+			<div class="span2">
+					<strong><?php echo __('Ver Proyecto'); ?></strong>
+			</div>
+			<div class="span1">
+				<div class="btn-group">
+			  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+			    		Acciones
+			    		<span class="caret"></span>
+			  		</a>
+			  		<ul class="dropdown-menu">
+						<li><?php echo $this->Html->link(__('List P R O Y E C T Os'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('List C A R T E R As'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'index')); ?> </li>
+						<li><?php echo $this->Html->link(__('List P R O P U E S T As'), array('controller' => 'p_r_o_p_u_e_s_t_as', 'action' => 'index')); ?> </li>
+						
+						<li><?php echo $this->Html->link(__('List T I P O P R Os'), array('controller' => 't_i_p_o_p_r_os', 'action' => 'index')); ?> </li>
+						
+						
+						<li><?php echo $this->Html->link(__('List U S U A R I Os'), array('controller' => 'u_s_u_a_r_i_os', 'action' => 'index')); ?> </li>
+						
+						<li><?php echo $this->Html->link(__('List A R E A F U N C I O N A Ls'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+						
+						<li><?php echo $this->Html->link(__('List O B J E T I V O E S T R A T E G I C Os'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'index')); ?> </li>
+						
+						<li><?php echo $this->Html->link(__('List S E R V I C I Os'), array('controller' => 's_e_r_v_i_c_i_os', 'action' => 'index')); ?> </li>
+
+			  		</ul>
+			  </div>
+			</div>
+		</div>
+		</legend>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
@@ -205,8 +242,8 @@
 <?php endif; ?>
 
 	<div class="actions">
-		<ul>
+<!--		<ul>
 			<li><?php echo $this->Html->link(__('New S E R V I C I O'), array('controller' => 's_e_r_v_i_c_i_os', 'action' => 'add')); ?> </li>
-		</ul>
+</ul>-->
 	</div>
 </div>

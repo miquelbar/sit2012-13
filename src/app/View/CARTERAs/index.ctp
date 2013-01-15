@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+	<li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">Carteras<span class="divider">/</span></li>
+</ul>
 <div class="cARTERAs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('Carteras'); ?></h2></div>
@@ -8,7 +12,7 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
-					<li><?php echo $this->Html->link(__('New C A R T E R A'), array('action' => 'add')); ?></li>
+					<li><?php echo $this->Html->link(__('Nueva Cartera'), array('action' => 'add')); ?></li>
 				</ul>
 		  	</div>
 		</div>

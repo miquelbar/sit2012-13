@@ -1,3 +1,7 @@
+<ul class="breadcrumb">
+  <li><a href="/">Home</a> <span class="divider">/</span></li>
+  <li class="active">&Aacute;reas Funcionales<span class="divider">/</span></li>
+</ul>
 <div class="aREAFUNCIONALs index">
 	<div class="row-fluid">
 		<div class="span10"><h2><?php echo __('&Aacute;reas funcionales'); ?></h2></div>
@@ -8,7 +12,7 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
-					<li><?php echo $this->Html->link(__('New A R E A F U N C I O N A L'), array('action' => 'add')); ?></li>
+					<li><?php echo $this->Html->link(__('A&ntilde;adir &Aacute;rea FUncional'), array('action' => 'add')); ?></li>
 				</ul>
 		  	</div>
 		</div>

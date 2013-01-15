@@ -20,21 +20,24 @@ if (Configure::read('debug') == 0):
 endif;
 App::uses('Debugger', 'Utility');
 ?>
-<iframe src="http://cakephp.org/bake-banner" width="830" height="160" style="overflow:hidden; border:none;">
+<!--<iframe src="http://cakephp.org/bake-banner" width="830" height="160" style="overflow:hidden; border:none;">
 	<p>For updates and important announcements, visit http://cakefest.org</p>
 </iframe>
 <h2><?php echo __d('cake_dev', 'Release Notes for CakePHP %s.', Configure::version()); ?></h2>
 <a href="http://cakephp.org/changelogs/<?php echo Configure::version(); ?>"><?php echo __d('cake_dev', 'Read the changelog'); ?> </a>
+-->
 <?php
 if (Configure::read('debug') > 0):
 	Debugger::checkSecurityKeys();
 endif;
 ?>
-<p id="url-rewriting-warning" style="background-color:#e32; color:#fff;">
+
+<!--<p id="url-rewriting-warning" style="background-color:#e32; color:#fff;">
 	<?php echo __d('cake_dev', 'URL rewriting is not properly configured on your server.'); ?>
 	1) <a target="_blank" href="http://book.cakephp.org/2.0/en/installation/advanced-installation.html#apache-and-mod-rewrite-and-htaccess" style="color:#fff;">Help me configure it</a>
 	2) <a target="_blank" href="http://book.cakephp.org/2.0/en/development/configuration.html#cakephp-core-configuration" style="color:#fff;">I don't / can't use URL rewriting</a>
 </p>
+
 <p>
 <?php
 	if (version_compare(PHP_VERSION, '5.2.8', '>=')):
@@ -186,3 +189,94 @@ You can also add some CSS styles for your pages at: APP/webroot/css.');
 	<li><a href="http://cakephp.lighthouseapp.com/"><?php echo __d('cake_dev', 'CakePHP Lighthouse'); ?> </a>
 	<ul><li><?php echo __d('cake_dev', 'CakePHP Tickets, Wiki pages, Roadmap'); ?></li></ul></li>
 </ul>
+-->
+<div class="row">
+	<div class="span3 offset3">
+		<div id="imgHOver" style="position: relative;width: 500px; margin: 0 auto;">
+			<!--top-->
+				<!--left -->
+				<div><img src="/iso38500.png" style="width: 500px; height: 457px;"></div>
+				<div style="position: absolute; left:25px; top: 0px;">
+					<div class="box box_top"><a href="#topleft">&nbsp;	</a></div>
+				</div>
+				<!-- right -->
+				<div style="position: absolute; left:375px; top: 0px;">
+					<div class="box box_top"><a href="#topright">&nbsp;	</a></div>
+				</div>
+			<!--/top-->
+			<!--top bottom-->
+				<!-- left -->
+				<div style="position: absolute; left:78px; top: 132px;">
+					<div class="box box_top_bottom"><a href="#topbottomleft">&nbsp;	</a></div>
+				</div>
+				<!-- right -->
+				<div style="position: absolute; left:322px; top: 130px;">
+					<div class="box box_top_bottom"><a href="#topbottomright">&nbsp;	</a></div>
+				</div>
+				<!-- top -->
+				<div style="position: absolute; left:205px; top: 90px;">
+					<div class="box box_top_bottom"><a href="#topbottomtop">&nbsp;	</a></div>
+				</div>
+			<!--/top bottom-->
+			<!-- middle-->
+				<!--left-->
+				<div style="position: absolute; left:83px; top: 163px;">
+					<div class="box box_middle"><a href="#middleleft">&nbsp;	</a></div>
+				</div>
+				<!--rigth-->
+				<div style="position: absolute; left:328px; top: 163px;">
+					<div class="box box_middle"><a href="#middleright">&nbsp;	</a></div>
+				</div>
+				<!--center-->
+				<div style="position: absolute; left:212px; top: 130px;">
+					<div class="box box_middle" style="width:82px; height:180px;"><a href="#middlecenter">&nbsp;	</a></div>
+				</div>
+			<!-- /middle-->
+			<!--bottom-->
+				<!--left-->
+				<div style="position: absolute; left:15px; top: 330px;">
+					<div class="box box_bottom"><a href="#bottomleft">&nbsp;	</a></div>
+				</div>
+				<!--right-->
+				<div style="position: absolute; left:260px; top: 328px;">
+					<div class="box box_bottom"><a href="#bottomright">&nbsp;	</a></div>
+				</div>
+			<!--/bottom-->
+		</div>
+	</div>
+</div>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$(".box").hover(
+			function() {
+				$(this).stop().animate({"opacity": ".3"}, "slow");
+			},
+			function() {
+				$(this).stop().animate({"opacity": "0"}, "slow");
+			});
+
+		});
+
+	$(".box_top").click(function(){
+     	window.location=$(this).find("a").attr("href"); 
+	    return false;
+	});
+	$(".box_top_bottom").click(function(){
+     	window.location=$(this).find("a").attr("href"); 
+	    return false;
+	});
+	$(".box_middle").click(function(){
+     	window.location=$(this).find("a").attr("href"); 
+	    return false;
+	});
+	$(".box_bottom").click(function(){
+     	window.location=$(this).find("a").attr("href"); 
+	    return false;
+	});
+	$(".box_top").mouseover(function() {
+    	$(this).fadeIn("slow");
+	});
+</script>
