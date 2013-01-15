@@ -18,7 +18,7 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('List M E T R I C As'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver M&eacute;tricas'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>

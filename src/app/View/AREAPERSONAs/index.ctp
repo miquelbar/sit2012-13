@@ -1,6 +1,6 @@
 <ul class="breadcrumb">
   <li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li class="active">Areas Personas<span class="divider">/</span></li>
+  <li class="active">Area Persona<span class="divider">/</span></li>
 </ul>
 <div class="aREAPERSONAs index">
 	<div class="row-fluid">
@@ -12,11 +12,11 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
-					<li><?php echo $this->Html->link(__('New A R E A P E R S O N A'), array('action' => 'add')); ?></li>
-					<li><?php echo $this->Html->link(__('List A R E A F U N C I O N A Ls'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New Area Funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
-					<li><?php echo $this->Html->link(__('List P E R S O N As'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('New Persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('Nueva &Aacute;rea Persona'), array('action' => 'add')); ?></li>
+					<li><?php echo $this->Html->link(__('Ver &Aacute;reas Funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('A&ntilde;adir Area Funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('Ver Personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('A&ntilde;adir Persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
 				</ul>
 		  	</div>
 		</div>

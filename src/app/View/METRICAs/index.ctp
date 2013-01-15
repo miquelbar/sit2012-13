@@ -12,7 +12,7 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
-					<li><?php echo $this->Html->link(__('Nueva Metrica'), array('action' => 'add')); ?></li>
+					<li><?php echo $this->Html->link(__('Nueva M&eacute;trica'), array('action' => 'add')); ?></li>
 				</ul>
 		  	</div>
 		</div>

@@ -18,8 +18,8 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('METRICA.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('METRICA.id'))); ?></li>
-						<li><?php echo $this->Html->link(__('List M E T R I C As'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('METRICA.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('METRICA.id'))); ?></li>
+						<li><?php echo $this->Html->link(__('Ver M&eacute;tricas'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>

@@ -1,6 +1,6 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li><a href="/AREAFUNCIONALs/index">&Aacute;rea Funcional</a> <span class="divider">/</span></li>
+  <li><a href="/AREAFUNCIONALs/index">&Aacute;reas Funcionales</a> <span class="divider">/</span></li>
   <li class="active">Ver<span class="divider">/</span></li>
 </ul>
 <div class="aREAFUNCIONALs view">
@@ -18,10 +18,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('Edit A R E A F U N C I O N A L'), array('action' => 'edit', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?> </li>
-						<li><?php echo $this->Form->postLink(__('Delete A R E A F U N C I O N A L'), array('action' => 'delete', $aREAFUNCIONAL['AREAFUNCIONAL']['id']), null, __('Are you sure you want to delete # %s?', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?> </li>
-						<li><?php echo $this->Html->link(__('List A R E A F U N C I O N A Ls'), array('action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('New A R E A F U N C I O N A L'), array('action' => 'add')); ?> </li>
+						<li><?php echo $this->Html->link(__('Editar &Aacute;rea Funcional'), array('action' => 'edit', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?> </li>
+						<li><?php echo $this->Form->postLink(__('Eliminar &Aacute;rea Funcional'), array('action' => 'delete', $aREAFUNCIONAL['AREAFUNCIONAL']['id']), null, __('Are you sure you want to delete # %s?', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?> </li>
+						<li><?php echo $this->Html->link(__('Ver &Aacute;reas Funcionales'), array('action' => 'index')); ?> </li>
+						<li><?php echo $this->Html->link(__('A&ntilde;adir &Aacute;rea Funcional'), array('action' => 'add')); ?> </li>
 			  		</ul>
 			  </div>
 			</div>

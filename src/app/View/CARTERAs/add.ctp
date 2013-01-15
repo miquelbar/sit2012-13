@@ -1,6 +1,6 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li><a href="/CARTERAs/index">Cartera</a> <span class="divider">/</span></li>
+  <li><a href="/CARTERAs/index">Carteras</a> <span class="divider">/</span></li>
   <li class="active">A&ntilde;dir<span class="divider">/</span></li>
 </ul>
 <div class="cARTERAs form">
@@ -16,7 +16,7 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('List C A R T E R As'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver Carteras'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>

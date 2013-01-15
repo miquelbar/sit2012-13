@@ -14,17 +14,17 @@
 		  		</a>
 		  		<ul class="dropdown-menu">
 					<li><?php echo $this->Html->link(__('Realizar propuesta'), array('action' => 'add')); ?></li>
-					<li><?php echo $this->Html->link(__('Listar usuarios'), array('controller' => 'u_s_u_a_r_i_os', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('Ver usuarios'), array('controller' => 'u_s_u_a_r_i_os', 'action' => 'index')); ?> </li>
 					<li><?php echo $this->Html->link(__('Editar propuesta'), array('action' => 'edit', $pROPUESTum['PROPUESTum']['id'])); ?> </li>
 					<li><?php echo $this->Form->postLink(__('Eliminar propuesta'), array('action' => 'delete', $pROPUESTum['PROPUESTum']['id']), null, __('¿Estás seguro de querer eliminar esta propuesta?')); ?> </li>
 					<li><?php echo $this->Html->link(__('Ver carteras'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('Nueva Cartera'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('A&ntilde;adir Cartera'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'add')); ?> </li>
 					<li><?php echo $this->Html->link(__('Ver tipos de propuesta'), array('controller' => 't_i_p_o_p_r_os', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('Nuevo tipo de propuesta'), array('controller' => 't_i_p_o_p_r_os', 'action' => 'add')); ?> </li>
-					<li><?php echo $this->Html->link(__('Listar areas funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('Nueva área funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
-					<li><?php echo $this->Html->link(__('Listar objetivos tácticos'), array('controller' => 'o_b_j_e_t_i_v_o_t_a_c_t_i_c_os', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('Nuevo objetivo'), array('controller' => 'o_b_j_e_t_i_v_o_t_a_c_t_i_c_os', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('A&ntilde;adir tipo de propuesta'), array('controller' => 't_i_p_o_p_r_os', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('Ver areas funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('A&ntilde;adir área funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('Ver objetivos tácticos'), array('controller' => 'o_b_j_e_t_i_v_o_t_a_c_t_i_c_os', 'action' => 'index')); ?> </li>
+					<li><?php echo $this->Html->link(__('A&ntilde;adir objetivo'), array('controller' => 'o_b_j_e_t_i_v_o_t_a_c_t_i_c_os', 'action' => 'add')); ?> </li>
 				</ul>
 		  	</div>
 		</div>
