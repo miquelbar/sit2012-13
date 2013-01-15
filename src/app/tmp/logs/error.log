@@ -2396,6 +2396,7 @@
 2013-01-13 14:43:46 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
 2013-01-15 22:58:54 Error: Fatal Error (1): Call to undefined method GoogleChart::addOption() in [/var/www/sit/src/app/Controller/USUARIOsController.php, line 43]
 2013-01-15 22:58:54 Error: [FatalErrorException] Call to undefined method GoogleChart::addOption()
 #0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 43)
@@ -2966,3 +2967,11 @@
 #3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+=======
+2013-01-14 18:27:35 Error: [MissingControllerException] Controller class Imagen.pngController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-14 18:27:56 Error: [MissingControllerException] Controller class Imagen.pngController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+>>>>>>> 2f9701f5083217a3c270b8c35330b28f53644b31
