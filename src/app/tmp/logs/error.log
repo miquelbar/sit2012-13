@@ -2396,3 +2396,573 @@
 2013-01-13 14:43:46 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-15 22:58:54 Error: Fatal Error (1): Call to undefined method GoogleChart::addOption() in [/var/www/sit/src/app/Controller/USUARIOsController.php, line 43]
+2013-01-15 22:58:54 Error: [FatalErrorException] Call to undefined method GoogleChart::addOption()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 43, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 43, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 22:59:10 Error: Fatal Error (1): Call to undefined method GoogleChart::append() in [/var/www/sit/src/app/Lib/GoogleChart.php, line 30]
+2013-01-15 22:59:10 Error: [FatalErrorException] Call to undefined method GoogleChart::append()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 30, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 30, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 22:59:22 Error: Fatal Error (1): Call to undefined method GoogleChart::getCodeForRow() in [/var/www/sit/src/app/Lib/GoogleChart.php, line 67]
+2013-01-15 22:59:22 Error: [FatalErrorException] Call to undefined method GoogleChart::getCodeForRow()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 67, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 67, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 22:59:57 Error: Fatal Error (1): Call to undefined method GoogleChart::getCodeForRow() in [/var/www/sit/src/app/Lib/GoogleChart.php, line 67]
+2013-01-15 22:59:57 Error: [FatalErrorException] Call to undefined method GoogleChart::getCodeForRow()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 67, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 67, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:00:23 Error: Fatal Error (1): Call to undefined method GoogleChart::getCodeForRow() in [/var/www/sit/src/app/Lib/GoogleChart.php, line 67]
+2013-01-15 23:00:23 Error: [FatalErrorException] Call to undefined method GoogleChart::getCodeForRow()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 67, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 67, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:00:23 Error: Fatal Error (1): Call to undefined method GoogleChart::getCodeForRow() in [/var/www/sit/src/app/Lib/GoogleChart.php, line 67]
+2013-01-15 23:00:23 Error: [FatalErrorException] Call to undefined method GoogleChart::getCodeForRow()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 67)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 67, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 67, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:17:49 Error: Fatal Error (64): Cannot redeclare GoogleChart::setWidth() in [/var/www/sit/src/app/Lib/GoogleChart.php, line 156]
+2013-01-15 23:17:49 Error: [FatalErrorException] Cannot redeclare GoogleChart::setWidth()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/var/www/sit/sr...', 156)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/var/www/sit/sr...', 156, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/var/www/sit/sr...', 156, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:30:00 Error: Fatal Error (1): Call to undefined method GoogleChart::_construct() in [/var/www/sit/src/app/Lib/GooglePieChart.php, line 11]
+2013-01-15 23:30:00 Error: [FatalErrorException] Call to undefined method GoogleChart::_construct()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 11)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 11, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 11, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:30:16 Error: [Exception] La fila que se pretende insertar no cumple con la estructura.
+#0 /var/www/sit/src/app/Controller/USUARIOsController.php(43): GoogleChart->addRow(Array)
+#1 [internal function]: USUARIOsController->view('12')
+#2 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(USUARIOsController), Array)
+#3 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#4 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(USUARIOsController), Object(CakeRequest), Object(CakeResponse))
+#5 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-01-15 23:36:38 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list' at line 1
+#0 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('list', Array)
+#2 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('list', Array, Array)
+#3 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(613): DboSource->fetchAll('list', Array, Array)
+#4 /var/www/sit/src/lib/Cake/Model/Model.php(784): DboSource->query('list', Array, Object(PROPUESTum))
+#5 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): Model->__call('list', Array)
+#6 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): PROPUESTum->list('all', Array)
+#7 [internal function]: PROPUESTaController->index()
+#8 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#9 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-01-15 23:36:54 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list' at line 1
+#0 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('list', Array)
+#2 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('list', Array, Array)
+#3 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(613): DboSource->fetchAll('list', Array, Array)
+#4 /var/www/sit/src/lib/Cake/Model/Model.php(784): DboSource->query('list', Array, Object(PROPUESTum))
+#5 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): Model->__call('list', Array)
+#6 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): PROPUESTum->list('all', Array)
+#7 [internal function]: PROPUESTaController->index()
+#8 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#9 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-01-15 23:36:55 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list' at line 1
+#0 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('list', Array)
+#2 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('list', Array, Array)
+#3 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(613): DboSource->fetchAll('list', Array, Array)
+#4 /var/www/sit/src/lib/Cake/Model/Model.php(784): DboSource->query('list', Array, Object(PROPUESTum))
+#5 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): Model->__call('list', Array)
+#6 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): PROPUESTum->list('all', Array)
+#7 [internal function]: PROPUESTaController->index()
+#8 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#9 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-01-15 23:36:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'list' at line 1
+#0 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('list', Array)
+#2 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('list', Array, Array)
+#3 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(613): DboSource->fetchAll('list', Array, Array)
+#4 /var/www/sit/src/lib/Cake/Model/Model.php(784): DboSource->query('list', Array, Object(PROPUESTum))
+#5 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): Model->__call('list', Array)
+#6 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): PROPUESTum->list('all', Array)
+#7 [internal function]: PROPUESTaController->index()
+#8 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#9 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#11 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-01-15 23:37:36 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in field list is ambiguous
+#0 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT COUNT(id...', Array)
+#2 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT COUNT(id...', Array, Array)
+#3 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT COUNT(id...', false)
+#4 /var/www/sit/src/lib/Cake/Model/Model.php(2631): DboSource->read(Object(PROPUESTum), Array)
+#5 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): Model->find('all', Array)
+#6 [internal function]: PROPUESTaController->index()
+#7 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#8 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#10 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-01-15 23:42:40 Error: Fatal Error (64): Cannot use [] for reading in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 88]
+2013-01-15 23:42:40 Error: [FatalErrorException] Cannot use [] for reading
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', '/var/www/sit/sr...', 88)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', '/var/www/sit/sr...', 88, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', '/var/www/sit/sr...', 88, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:42:44 Error: Fatal Error (64): Cannot use [] for reading in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 87]
+2013-01-15 23:42:44 Error: [FatalErrorException] Cannot use [] for reading
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', '/var/www/sit/sr...', 87)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', '/var/www/sit/sr...', 87, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', '/var/www/sit/sr...', 87, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:55:52 Error: Fatal Error (1): Class 'ModelPieChart' not found in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 78]
+2013-01-15 23:55:52 Error: [FatalErrorException] Class 'ModelPieChart' not found
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:56:07 Error: Fatal Error (1): Class 'ModelPieChart' not found in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 78]
+2013-01-15 23:56:07 Error: [FatalErrorException] Class 'ModelPieChart' not found
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:56:12 Error: Fatal Error (1): Class 'ModelPieChart' not found in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 78]
+2013-01-15 23:56:12 Error: [FatalErrorException] Class 'ModelPieChart' not found
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:56:26 Error: Fatal Error (1): Class 'ModelPieChart' not found in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 78]
+2013-01-15 23:56:26 Error: [FatalErrorException] Class 'ModelPieChart' not found
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:56:46 Error: Fatal Error (1): Class 'ModelPieChart' not found in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 78]
+2013-01-15 23:56:46 Error: [FatalErrorException] Class 'ModelPieChart' not found
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'ModelPie...', '/var/www/sit/sr...', 78, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:57:11 Error: Fatal Error (1): Class 'GooglePieChart' not found in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 78]
+2013-01-15 23:57:11 Error: [FatalErrorException] Class 'GooglePieChart' not found
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class 'GooglePi...', '/var/www/sit/sr...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'GooglePi...', '/var/www/sit/sr...', 78, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'GooglePi...', '/var/www/sit/sr...', 78, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-15 23:57:47 Error: Fatal Error (64): Non-abstract method ModelChart::renderContainer() must contain body in [/var/www/sit/src/app/Lib/ModelChart.php, line 13]
+2013-01-15 23:57:47 Error: [FatalErrorException] Non-abstract method ModelChart::renderContainer() must contain body
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(64, 'Non-abstract me...', '/var/www/sit/sr...', 13)
+#1 [internal function]: ErrorHandler::handleError(64, 'Non-abstract me...', '/var/www/sit/sr...', 13, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 64, 'Non-abstract me...', '/var/www/sit/sr...', 13, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:04:24 Error: Fatal Error (1): Call to undefined method ModelPieChart::buildForFieldGroup() in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 80]
+2013-01-16 00:04:24 Error: [FatalErrorException] Call to undefined method ModelPieChart::buildForFieldGroup()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 80)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 80, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 80, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:04:34 Error: Fatal Error (1): Class 'GooglePieChart' not found in [/var/www/sit/src/app/Lib/ModelPieChart.php, line 14]
+2013-01-16 00:04:34 Error: [FatalErrorException] Class 'GooglePieChart' not found
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class 'GooglePi...', '/var/www/sit/sr...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'GooglePi...', '/var/www/sit/sr...', 14, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'GooglePi...', '/var/www/sit/sr...', 14, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:05:03 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/sit/src/app/Lib/ModelPieChart.php, line 40]
+2013-01-16 00:05:03 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 40, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 40, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:05:20 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/sit/src/app/Lib/ModelPieChart.php, line 40]
+2013-01-16 00:05:20 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 40, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 40, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:05:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PROPUESTumid' in 'field list'
+#0 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT COUNT(PR...', Array)
+#2 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT COUNT(PR...', Array, Array)
+#3 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT COUNT(PR...', false)
+#4 /var/www/sit/src/lib/Cake/Model/Model.php(2631): DboSource->read(Object(PROPUESTum), Array)
+#5 /var/www/sit/src/app/Lib/ModelPieChart.php(40): Model->find('all', Array)
+#6 /var/www/sit/src/app/Lib/ModelPieChart.php(17): ModelPieChart->obtainData('estado', 'id')
+#7 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#8 [internal function]: PROPUESTaController->index()
+#9 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#10 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-01-16 00:06:31 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [/var/www/sit/src/lib/Cake/Utility/Debugger.php, line 307]
+2013-01-16 00:06:31 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Maximum executi...', '/var/www/sit/sr...', 307)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', '/var/www/sit/sr...', 307, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', '/var/www/sit/sr...', 307, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:08:39 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [/var/www/sit/src/lib/Cake/Utility/Debugger.php, line 0]
+2013-01-16 00:08:39 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Maximum executi...', '/var/www/sit/sr...', 0)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', '/var/www/sit/sr...', 0, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', '/var/www/sit/sr...', 0, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:09:22 Error: Fatal Error (4): syntax error, unexpected T_OBJECT_OPERATOR, expecting T_STRING or T_VARIABLE or '$' in [/var/www/sit/src/app/Lib/GooglePieChart.php, line 17]
+2013-01-16 00:09:22 Error: [FatalErrorException] syntax error, unexpected T_OBJECT_OPERATOR, expecting T_STRING or T_VARIABLE or '$'
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/sit/sr...', 17)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/sit/sr...', 17, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/sit/sr...', 17, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:09:26 Error: Fatal Error (1): Class name must be a valid object or a string in [/var/www/sit/src/app/Lib/GooglePieChart.php, line 17]
+2013-01-16 00:09:26 Error: [FatalErrorException] Class name must be a valid object or a string
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class name must...', '/var/www/sit/sr...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class name must...', '/var/www/sit/sr...', 17, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class name must...', '/var/www/sit/sr...', 17, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:09:36 Error: [Exception] La columna 1 tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(21): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:10:04 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(21): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:10:39 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(18): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(21): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:14:29 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:14:44 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:14:45 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:14:46 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:14:46 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:15:04 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:15:21 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:15:25 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:15:25 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:15:25 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:15:43 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:15:44 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:15:52 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:16:02 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:16:49 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow(1, '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:17:15 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow('1', '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:17:16 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow('1', '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:17:17 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow('1', '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:18:26 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow('1', '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:18:47 Error: [Exception] La columna 1 no tiene el tipo esperado.
+#0 /var/www/sit/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /var/www/sit/src/app/Lib/ModelPieChart.php(22): GooglePieChart->addRow('1', '3')
+#2 /var/www/sit/src/app/Controller/PROPUESTaController.php(82): ModelPieChart->buildForFieldGrouped('estado', 'id')
+#3 [internal function]: PROPUESTaController->index()
+#4 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROPUESTaController), Array)
+#5 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#7 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-01-16 00:20:07 Error: Fatal Error (1): Call to undefined method ModelPieChart::render() in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 83]
+2013-01-16 00:20:07 Error: [FatalErrorException] Call to undefined method ModelPieChart::render()
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/sit/sr...', 83)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/sit/sr...', 83, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/sit/sr...', 83, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:20:46 Error: Fatal Error (1): Call to a member function render() on a non-object in [/var/www/sit/src/app/Lib/ModelPieChart.php, line 32]
+2013-01-16 00:20:46 Error: [FatalErrorException] Call to a member function render() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 32, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 32, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:21:00 Error: Fatal Error (1): Call to a member function renderChart() on a non-object in [/var/www/sit/src/app/Lib/ModelPieChart.php, line 32]
+2013-01-16 00:21:00 Error: [FatalErrorException] Call to a member function renderChart() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 32)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 32, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 32, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:21:12 Error: Fatal Error (1): Call to a member function setTitle() on a non-object in [/var/www/sit/src/app/Lib/ModelPieChart.php, line 16]
+2013-01-16 00:21:12 Error: [FatalErrorException] Call to a member function setTitle() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 16, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 16, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:31:45 Error: Fatal Error (1): Class name must be a valid object or a string in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 83]
+2013-01-16 00:31:45 Error: [FatalErrorException] Class name must be a valid object or a string
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class name must...', '/var/www/sit/sr...', 83)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class name must...', '/var/www/sit/sr...', 83, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class name must...', '/var/www/sit/sr...', 83, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-16 00:31:57 Error: Fatal Error (1): Undefined class constant 'estados' in [/var/www/sit/src/app/Controller/PROPUESTaController.php, line 83]
+2013-01-16 00:31:57 Error: [FatalErrorException] Undefined class constant 'estados'
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Undefined class...', '/var/www/sit/sr...', 83)
+#1 [internal function]: ErrorHandler::handleError(1, 'Undefined class...', '/var/www/sit/sr...', 83, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Undefined class...', '/var/www/sit/sr...', 83, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

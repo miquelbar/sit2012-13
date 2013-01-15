@@ -2,6 +2,25 @@
   <li><a href="/USUARIOs/index">Usuarios</a> <span class="divider">/</span></li>
   <li class="active">Ver<span class="divider">/</span></li>
 </ul>
+ <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+	
+</script>
+
+<script>
+  // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+		function drawChart(){
+			<?=$test?>
+		}		
+ 	</script>
+
+</script>
 <div class="uSUARIOs view">
 <legend>
 		<div class="row-fluid">
@@ -74,6 +93,7 @@
 	</table>
 <?php endif; ?>
 </div>
+<div id="tst"></div>
 
 <div class="actions">
 <!--	<h3><?php echo __('Acciones'); ?></h3>

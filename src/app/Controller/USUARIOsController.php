@@ -1,5 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('GoogleChart', '');
+App::uses('GooglePieChart', '');
 /**
  * USUARIOs Controller
  *
@@ -34,6 +36,17 @@ class USUARIOsController extends AppController {
 		if (!$this->USUARIO->exists()) {
 			throw new NotFoundException(__('Invalid u s u a r i o'));
 		}
+		
+		$chart = new GooglePieChart('tst');
+		//$chart->addColumn(GoogleChart::TYPE_STRING, 'Prueba');
+		//$chart->addColumn(GoogleChart::TYPE_NUMBER, 'Valor');
+		$chart->addRow(array('Prueba', 10));
+		$chart->addRow(array('Otro', 50));
+		$chart->addRow(array('Potro', 10));
+		$chart->setTitle('Pie Chart');
+		//$chart->setOption('test', 10);
+		//$chart->setOption('test2', 'str');
+		$this->set('test', $chart->render());
 		$this->set('uSUARIO', $this->USUARIO->read(null, $id));
 	}
 

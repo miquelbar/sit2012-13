@@ -7,6 +7,10 @@ App::uses('AppModel', 'Model');
  */
 class METRICA extends AppModel {
 
+
+	const TYPE_FLOAT = 'FLT';
+	const TYPE_INT = 'INT';
+	const TYPE_PCT = 'PCT';
 /**
  * Use table
  *

@@ -100,4 +100,8 @@
 	?>
 	</div>
 </div>
-
+<?=$load_gfx?>
+<?=$container_gfx_estado?>
+<script type="text/javascript">
+	<?=$script_gfx_estado?>
+</script>

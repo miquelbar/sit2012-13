@@ -21,7 +21,6 @@
  */
 
 App::uses('Controller', 'Controller');
-App::uses('RepasaConstants', '');
 /**
  * Application Controller
  *

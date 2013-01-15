@@ -1,5 +1,9 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('GoogleChart', '');
+App::uses('GooglePieChart', '');
+App::uses('ModelChart', '');
+App::uses('ModelPieChart', '');
 /**
  * PROPUESTum Controller
  *
@@ -72,6 +76,15 @@ class PROPUESTaController extends AppController {
 		$this->set('pROPUESTa', $this->paginate());
 		$this->set('estados', self::$estados);
 		$this->set('colores', self::$colores);
+		
+		//$chart = new GooglePieChart('tst');
+		$modelChart = new ModelPieChart($this->PROPUESTum, 'pr');
+		$modelChart->setTitle('Estado de las propuestas:');
+		$modelChart->setFieldDict(self::$estados);
+		$modelChart->buildForFieldGrouped('estado', 'id');
+		$this->set('load_gfx', GoogleChart::loadLibrary());
+		$this->set('script_gfx_estado', $modelChart->renderChart());
+		$this->set('container_gfx_estado', $modelChart->renderContainer());
 	}
 	
 	public function mispropuestas() {
@@ -120,6 +133,7 @@ class PROPUESTaController extends AppController {
 		if (!$this->PROPUESTum->exists()) {
 			throw new NotFoundException(__('Invalid p r o p u e s tum'));
 		}
+		
 		$propuesta = $this->PROPUESTum->read(null, $id);
 		$this->set('pROPUESTum', $propuesta);
 		$this->set('estado', self::$estados[$propuesta['PROPUESTum']['estado']]);
