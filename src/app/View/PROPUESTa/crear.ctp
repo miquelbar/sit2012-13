@@ -25,6 +25,7 @@
 				'type' =>'textarea',
 				'class' => 'span8 offset1'
 			));
+			echo $this->Form->input('cartera_id', array('label'=>'Cartera'));
 			echo $this->Form->input('resumen', array(
 				'label' => 'Resumen',
 				'type' =>'textarea',
