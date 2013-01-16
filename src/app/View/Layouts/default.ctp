@@ -64,6 +64,7 @@
 					<? 
 						$navigation->renderSubTree('topbar',$requested);
 					?>
+						<li class=" "><a href="#">Navegaci&oacute;n</a></li>
 					</ul>
 				    <!--<form class="navbar-form pull-right">
 					    <input type="text" class="span2">
@@ -78,6 +79,10 @@
 						<? } else { ?>
 							<li>
 							<div class="btn-group">
+							<a class="btn btn-warning" href="/NOTIFICACIONs/">
+							  	<i class="icon-envelope icon-white"></i>
+							    <?=count($notificacion) ?>
+							  </a>
 							  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
 							  	<i class="icon-user icon-white"></i>
 							    <?=$usuario['Persona']['nombre'] ?> (<?= $usuario['correo'] ?>)
@@ -107,12 +112,6 @@
 	</div>
 	
 	<div class="container">
-		<!-- Alerta de Notificacion -->
-		<div class="alert alert-info fade in">
-            <button type="button" class="close" data-dismiss="alert">×</button>
-            <strong>Tienes una nueva notificaci&oacute;n.</strong> <a href="#">Revise su bandeja de entrada</a>
-         </div>
-         <!-- Fin alerta de Notificación -->
 		<div class="row">
 			<div class="span12">
 					<?php echo $this->fetch('content'); ?>

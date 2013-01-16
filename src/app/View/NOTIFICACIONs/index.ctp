@@ -12,7 +12,7 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
-					<li><?php echo $this->Html->link(__('Nueva Notificaci&oacute;n'), array('action' => 'add')); ?></li>
+					<!--<li><?php echo $this->Html->link(__('Nueva Notificaci&oacute;n'), array('action' => 'add')); ?></li>-->
 					<li><?php echo $this->Html->link(__('Ver Personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
 					<li><?php echo $this->Html->link(__('A&ntilde;adir Persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
 					<!--<li><?php echo $this->Html->link(__('List T I P O N O T I F I C A C I O Ns'), array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'index')); ?> </li>
@@ -37,11 +37,11 @@
 			<?php echo $this->Html->link($nOTIFICACION['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $nOTIFICACION['Persona']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($nOTIFICACION['TipoNotificacion']['mensaje'], array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'view', $nOTIFICACION['TipoNotificacion']['id'])); ?>
+			<?php echo $nOTIFICACION['TipoNotificacion']['mensaje']; ?>
 		</td>
 		<td><?php echo h($nOTIFICACION['NOTIFICACION']['texto']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($nOTIFICACION['NOTIFICACION']['id']);?>
+			<?=$this->Form->postLink(__('Eliminar'), array('action' => 'delete', $nOTIFICACION['NOTIFICACION']['id']), array('class' =>'btn btn-danger'), __('Estás seguro de que lo quieres eliminar el registro # %s?', $nOTIFICACION['NOTIFICACION']['id'])); ?> 
 		</td>
 	</tr>
 <?php endforeach; ?>

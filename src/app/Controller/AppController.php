@@ -60,11 +60,12 @@ class AppController extends Controller {
 	);
 	
 	var $helpers = array('CrudActions');
+	var $uses = array('NOTIFICACION');
 	
 	protected $usuario;
+	protected $notificacion;
 	
 	function beforeRender() {
-	
 		App::uses('Navigation', '');
 		//iniciar array de navegacio
 		$listaNav = array(
@@ -140,7 +141,15 @@ class AppController extends Controller {
 	    	$this->set('usuario', $usuario);
 			$this->usuario = $usuario;
 		}
+		
+		$options = array(
+			'conditions' => array(
+					'NOTIFICACION.persona_id' => $usuario['persona_id']
+			)	
+		);
+		$this->notificacion = $this->NOTIFICACION->find('all', $options);
+		$this->set('notificacion',$this->notificacion);
+		
 	}
 	
-
 }

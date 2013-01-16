@@ -4,9 +4,7 @@
   <li class="active">Editar<span class="divider">/</span></li>
 </ul>
 <div class="nOTIFICACIONs form">
-<?php echo $this->Form->create('NOTIFICACION'); ?>
-	<fieldset>
-		<legend>
+	<legend>
 		<div class="row-fluid">
 			<div class="span2">
 					<strong><?php echo __('Editar Notificacion'); ?></strong>
@@ -29,6 +27,10 @@
 			</div>
 		</div>
 		</legend>
+	<fieldset>
+<?php echo $this->Form->create('NOTIFICACION'); ?>
+	
+		
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('persona_id');
