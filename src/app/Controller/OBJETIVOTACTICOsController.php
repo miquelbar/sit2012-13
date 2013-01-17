@@ -13,6 +13,7 @@ class OBJETIVOTACTICOsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->OBJETIVOTACTICO->recursive = 0;
 		$this->set('oBJETIVOTACTICOs', $this->paginate());
 	}
@@ -38,6 +39,10 @@ class OBJETIVOTACTICOsController extends AppController {
  * @return void
  */
 	public function add() {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if ($this->request->is('post')) {
 			$this->OBJETIVOTACTICO->create();
 			if ($this->OBJETIVOTACTICO->save($this->request->data)) {
@@ -59,6 +64,10 @@ class OBJETIVOTACTICOsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->OBJETIVOTACTICO->id = $id;
 		if (!$this->OBJETIVOTACTICO->exists()) {
 			throw new NotFoundException(__('Invalid o b j e t i v o t a c t i c o'));
@@ -86,6 +95,10 @@ class OBJETIVOTACTICOsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

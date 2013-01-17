@@ -21,7 +21,7 @@ class USUARIO extends AppModel {
  * @var string
  */
 	public $displayField = 'correo';
-
+public $actsAs = array('Containable');
 /**
  * Validation rules
  *
@@ -108,6 +108,16 @@ class USUARIO extends AppModel {
 		'Persona' => array(
 			'className' => 'PERSONA',
 			'foreignKey' => 'persona_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+	
+	public $hasMany = array(
+		'PERFILUSUARIO' => array(
+			'className' => 'PERFILUSUARIO',
+			'foreignKey' => 'usuario_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

@@ -4,6 +4,7 @@ App::uses('GoogleChart', '');
 App::uses('GooglePieChart', '');
 App::uses('ModelChart', '');
 App::uses('ModelPieChart', '');
+App::uses('MetricaAsociar', '');
 /**
  * PROPUESTum Controller
  *
@@ -18,7 +19,7 @@ class PROPUESTaController extends AppController {
         )
     );
 	
-	public $uses = array('PROPUESTum','COMENTARIO');
+	public $uses = array('PROPUESTum','COMENTARIO', 'METRICA', 'VALORMETRICA');
 	
 	const ESTADO_PENDIENTE_ASIGNAR = 0;
 	const ESTADO_PENDIENTE_VALORACION_TECNICA = 3;
@@ -28,6 +29,11 @@ class PROPUESTaController extends AppController {
 	const ESTADO_PENDIENTE_VALORACION_CIO = 5;
 	const ESTADO_DESCARTADA = 6;
 	const ESTADO_ACEPTADA = 7;
+	const ESTADO_PENDIENTE_JUNTADIRECTIVA = 8;
+	
+	const NOTIFICACION_CAMBIOS = 2;
+	const NOTIFICACION_ACEPTADA = 3;
+	const NOTIFICACION_RECHAZADA = 4;
 	
 	public static $estados = array(
 		self::ESTADO_PENDIENTE_ASIGNAR => 'Pendiente de ser asignada a un técnico.',
@@ -37,7 +43,8 @@ class PROPUESTaController extends AppController {
 		self::ESTADO_PENDIENTE_ACEPTACION_TECNICO => 'La propuesta está pendiente de confirmación técnica.',
 		self::ESTADO_DESCARTADA => 'La propuesta ha sido descartada.',
 		self::ESTADO_ACEPTADA => 'La propuesta ha sido aceptada.',
-		self::ESTADO_PENDIENTE_VALORACION_CIO => 'La propuesta está pendiente de valoración del CIO.'
+		self::ESTADO_PENDIENTE_VALORACION_CIO => 'La propuesta está pendiente de valoración del CIO.',
+		self::ESTADO_PENDIENTE_JUNTADIRECTIVA => 'La propuesta está pendiente de decisión de la dirección.'
 	);
 	
 	public static $colores = array(
@@ -48,7 +55,8 @@ class PROPUESTaController extends AppController {
 		self::ESTADO_PENDIENTE_ACEPTACION_TECNICO => 'info',
 		self::ESTADO_DESCARTADA => 'error',
 		self::ESTADO_ACEPTADA => 'success',
-		self::ESTADO_PENDIENTE_VALORACION_CIO => 'info'
+		self::ESTADO_PENDIENTE_VALORACION_CIO => 'info',
+		self::ESTADO_PENDIENTE_JUNTADIRECTIVA => 'info'
 	);
 	
 	public static $campos = array(
@@ -72,6 +80,7 @@ class PROPUESTaController extends AppController {
  * @return void
  */
 	public function index() {
+		
 		$this->PROPUESTum->recursive = 0;
 		$this->set('pROPUESTa', $this->paginate());
 		$this->set('estados', self::$estados);
@@ -85,9 +94,15 @@ class PROPUESTaController extends AppController {
 		$this->set('load_gfx', GoogleChart::loadLibrary());
 		$this->set('script_gfx_estado', $modelChart->renderChart());
 		$this->set('container_gfx_estado', $modelChart->renderContainer());
+				
 	}
 	
 	public function mispropuestas() {
+		if (!in_array(AppController::ID_PERFIL_SOLICITANTE,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
+		
 		$this->PROPUESTum->recursive = 0;
 		$filter = array(
 			'PROPUESTum.solicitante_id'=> $this->usuario['Persona']['id']
@@ -97,7 +112,43 @@ class PROPUESTaController extends AppController {
 		$this->set('colores', self::$colores);
 	}
 	
+	public function mispatrocinadas() {
+		if (!in_array(AppController::ID_PERFIL_PATROCINADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
+		
+		$this->PROPUESTum->recursive = 0;
+		$filter = array(
+			'PROPUESTum.patrocinador_id'=> $this->usuario['Persona']['id']
+		);
+		$this->set('pROPUESTa', $this->paginate($filter));
+		$this->set('estados', self::$estados);
+		$this->set('colores', self::$colores);
+	}
+	
+	public function miresponsabilidad() {
+		if (!in_array(AppController::ID_PERFIL_RESPONSABLE,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
+		$this->PROPUESTum->recursive = 0;
+		$filter = array(
+			'PROPUESTum.responsable_id'=> $this->usuario['Persona']['id']
+		);
+		$this->set('pROPUESTa', $this->paginate($filter));
+		$this->set('estados', self::$estados);
+		$this->set('colores', self::$colores);
+		
+		$this->render('mispatrocinadas');
+	}
+	
 	public function pendientes() {
+		if (!in_array(AppController::ID_PERFIL_TECNICO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
+		
 		$this->PROPUESTum->recursive = 0;
 		$filter = array(
 			'PROPUESTum.estado'=> array(
@@ -111,10 +162,37 @@ class PROPUESTaController extends AppController {
 		$this->set('colores', self::$colores);
 	}
 	
-	public function pendientescio() {
+	public function asignadas() {
+		if (!in_array(AppController::ID_PERFIL_TECNICO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
+		
 		$this->PROPUESTum->recursive = 0;
 		$filter = array(
-			'PROPUESTum.estado'=> self::ESTADO_PENDIENTE_VALORACION_CIO
+			'PROPUESTum.tecnico_id'=> $this->usuario['id']
+		);
+		$this->set('pROPUESTa', $this->paginate($filter));
+		$this->set('estados', self::$estados);
+		$this->set('colores', self::$colores);
+		
+		$this->render('pendientes');
+	}
+	
+	
+	public function pendientescio() {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
+		
+		$tipo = isset($this->params['url']['t']) ? $this->params['url']['t'] : array(
+			self::ESTADO_PENDIENTE_VALORACION_CIO,
+			self::ESTADO_PENDIENTE_JUNTADIRECTIVA);
+		
+		$this->PROPUESTum->recursive = 0;
+		$filter = array(
+			'PROPUESTum.estado'=> $tipo
 		);
 		$this->set('pROPUESTa', $this->paginate($filter));
 		$this->set('estados', self::$estados);
@@ -135,11 +213,23 @@ class PROPUESTaController extends AppController {
 		}
 		
 		$propuesta = $this->PROPUESTum->read(null, $id);
+		
+		$metricas = $this->METRICA->find('all', array(
+			'conditions' => array('para_propuesta' => 1),
+			'recursive' => 0
+		));
+		$metricas = MetricaAsociar::asociar($propuesta['ValorMetrica'], $metricas);
+		$this->set('metricas', $metricas);
+
 		$this->set('pROPUESTum', $propuesta);
 		$this->set('estado', self::$estados[$propuesta['PROPUESTum']['estado']]);
 	}
 	
 	public function asignartec($id = null){
+		if (!in_array(AppController::ID_PERFIL_TECNICO,$this->usuario['perfiles'])){
+			$this->redirect('/');
+		}
+		
 		try {
 			
 			$this->PROPUESTum->id = $id;
@@ -172,6 +262,9 @@ class PROPUESTaController extends AppController {
 	}
 	
 	public function valorartec($id = null) {
+		if (!in_array(AppController::ID_PERFIL_TECNICO,$this->usuario['perfiles'])){
+			$this->redirect('/');
+		}
 		//comprobar que sea técnico
 		try {
 			$this->PROPUESTum->id = $id;
@@ -180,7 +273,6 @@ class PROPUESTaController extends AppController {
 			}
 			
 			$propuesta = $this->PROPUESTum->read(null, $id);
-			
 			if ($this->request->is('post')){
 				if (isset($this->request->data['respuesta'])){
 					
@@ -206,10 +298,16 @@ class PROPUESTaController extends AppController {
 						throw new Exception("No se ha podido almacenar la valoración");
 					}
 					
+					$this->VALORMETRICA->procesarMetrica(
+						$this->request->data,
+						$propuesta['PROPUESTum']['id'],
+						'propuesta_id'
+					);
+
 					$update = $this->request->data;
 					$mes = (date('m')+4) %12;
 					$year = floor((date('m')+4) /12);
-					
+					$notificacion = null;
 					if ($this->request->data['action'] == 'r'){
 
 						$update['PROPUESTum']['estado'] = self::ESTADO_PENDIENTE_VISTOBUENO;
@@ -222,6 +320,11 @@ class PROPUESTaController extends AppController {
 							'hour' => date('g'),
 							'sec' => date('s')
 						);
+						$notificacion = array(
+							'persona_id' => $propuesta['PROPUESTum']['solicitante_id'],
+							'tipo_notificacion_id' => self::NOTIFICACION_CAMBIOS,
+							'texto' => '<a class="btn btn-success" href="/PROPUESTa/revisarprop/'.$propuesta['PROPUESTum']['id'].'">Ir</a>'
+						);
 						
 					}else if ($this->request->data['action'] == 'a'){
 						if ($propuesta['PROPUESTum']['estado'] !=self::ESTADO_PENDIENTE_ACEPTACION_TECNICO){
@@ -229,15 +332,42 @@ class PROPUESTaController extends AppController {
 						}
 						
 						$update['PROPUESTum']['estado'] = self::ESTADO_PENDIENTE_VALORACION_CIO;
-											
+						
+						//NOTIFICAR AL CIO
+						$options = array(
+							'contain' => array('PERFILUSUARIO' => array(
+								'fields' => array('id', 'perfil_id'),
+								'conditions'=> array('PERFILUSUARIO.perfil_id' => AppController::ID_PERFIL_CIO)
+							)),
+						);
+						
+						//buscar al cio
+						$usu = $this->USUARIO->find('all', $options);
+						foreach ($usu as $key => $value) {
+							if (!empty($value['PERFILUSUARIO'])){
+								$cio = $value['USUARIO']['persona_id'];
+							}
+						}
+						$notificacion = array(
+							'persona_id' => $cio,
+							'tipo_notificacion_id' => self::NOTIFICACION_CAMBIOS,
+							'texto' => '<a class="btn btn-success" href="/PROPUESTa/revisarcio/'.$propuesta['PROPUESTum']['id'].'">Ir</a>'
+						);
+				
+	
 					}else if ($this->request->data['action'] == 'd'){
 						$update['PROPUESTum']['estado'] = self::ESTADO_DESCARTADA;
 					}
+					
 					
 					if (!$this->PROPUESTum->save($update)){
 						throw new Exception("No se ha podido actualizar el estado de la propuesta.");
 					}
 					
+					if ($notificacion != null) {
+						$this->NOTIFICACION->create();
+						$this->NOTIFICACION->save($notificacion);	
+					}
 				}
 				
 				$propuesta = $this->PROPUESTum->read(null, $id);
@@ -253,6 +383,15 @@ class PROPUESTaController extends AppController {
 			}
 			$mostrarAceptacion = $propuesta['PROPUESTum']['estado'] == self::ESTADO_PENDIENTE_ACEPTACION_TECNICO;
 			
+			//METRICAS
+			$metricas = $this->METRICA->find('all', array(
+				'conditions' => array('para_propuesta' => 1),
+				'recursive' => 0
+			));
+			
+			$metricas = MetricaAsociar::asociar($propuesta['ValorMetrica'], $metricas);
+			$this->set('metricas', $metricas);
+			
 			$options = array(
 				'order' => array(
 					'COMENTARIO.fecha DESC'
@@ -262,6 +401,7 @@ class PROPUESTaController extends AppController {
 				)
 			);
 			
+			
 			$comentarios = $this->COMENTARIO->find('all', $options);
 			$this->set('comentarios', $comentarios);
 			$this->set('pROPUESTum', $propuesta);
@@ -270,12 +410,14 @@ class PROPUESTaController extends AppController {
 			$this->set('mostrarAceptacion', $mostrarAceptacion);
 		}catch(Exception $e){
 			$this->Session->setFlash(__($e->getMessage()));
-			die($e);
 		}
 	}
 
 	public function revisarprop($id = null) {
-		//comprobar que sea técnico
+		if (!in_array(AppController::ID_PERFIL_SOLICITANTE,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
 		try {
 			$this->PROPUESTum->id = $id;
 			if (!$this->PROPUESTum->exists()) {
@@ -358,6 +500,15 @@ class PROPUESTaController extends AppController {
 					'COMENTARIO.propuesta_id' => $id
 				)
 			);
+			
+			//METRICAS
+			$metricas = $this->METRICA->find('all', array(
+				'conditions' => array('para_propuesta' => 1),
+				'recursive' => 0
+			));
+			$metricas = MetricaAsociar::asociar($propuesta['ValorMetrica'], $metricas);
+			$this->set('metricas', $metricas);
+			
 			$this->request->data = $propuesta;
 			$solicitantes = $this->PROPUESTum->Solicitante->find('list');
 			$carteras = $this->PROPUESTum->Cartera->find('list');
@@ -381,6 +532,10 @@ class PROPUESTaController extends AppController {
 	}
 
 	public function valorarcio($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		//comprobar que sea técnico
 		try {
 			$this->PROPUESTum->id = $id;
@@ -416,6 +571,12 @@ class PROPUESTaController extends AppController {
 						throw new Exception("No se ha podido almacenar la valoración");
 					}
 					
+					$this->VALORMETRICA->procesarMetrica(
+						$this->request->data,
+						$propuesta['PROPUESTum']['id'],
+						'propuesta_id'
+					);
+					
 					$update = $this->request->data;
 					$mes = (date('m')+4) %12;
 					$year = floor((date('m')+4) /12);
@@ -440,8 +601,14 @@ class PROPUESTaController extends AppController {
 							throw new Exception("Todavía no se puede aceptar esta propuesta.");
 						}
 						
+						$update['PROPUESTum']['estado'] = self::ESTADO_PENDIENTE_JUNTADIRECTIVA;
+					}else if ($this->request->data['action'] == 'jd'){
+						if ($propuesta['PROPUESTum']['estado'] !=self::ESTADO_PENDIENTE_JUNTADIRECTIVA){
+							throw new Exception("Todavía no se puede aceptar esta propuesta.");
+						}
+						
 						$update['PROPUESTum']['estado'] = self::ESTADO_ACEPTADA;
-											
+						
 					}else if ($this->request->data['action'] == 'd'){
 						$update['PROPUESTum']['estado'] = self::ESTADO_DESCARTADA;
 					}
@@ -457,6 +624,7 @@ class PROPUESTaController extends AppController {
 				$propuesta = $this->PROPUESTum->read(null, $id);
 			}	
 			
+			$pendienteResolucion = $propuesta['PROPUESTum']['estado'] == self::ESTADO_PENDIENTE_JUNTADIRECTIVA;
 			$puedeContestar = $propuesta['PROPUESTum']['estado'] == self::ESTADO_PENDIENTE_VALORACION_CIO;
 			
 			$options = array(
@@ -467,6 +635,15 @@ class PROPUESTaController extends AppController {
 					'COMENTARIO.propuesta_id' => $id
 				)
 			);
+			
+			//METRICAS
+			$metricas = $this->METRICA->find('all', array(
+				'conditions' => array('para_propuesta' => 1),
+				'recursive' => 0
+			));
+			$metricas = MetricaAsociar::asociar($propuesta['ValorMetrica'], $metricas);
+			$this->set('metricas', $metricas);
+			
 			$this->request->data = $propuesta;
 			$solicitantes = $this->PROPUESTum->Solicitante->find('list');
 			$carteras = $this->PROPUESTum->Cartera->find('list');
@@ -483,6 +660,7 @@ class PROPUESTaController extends AppController {
 			$this->set('pROPUESTum', $propuesta);
 			$this->set('estado', self::$estados[$propuesta['PROPUESTum']['estado']]);
 			$this->set('puedeContestar', $puedeContestar);
+			$this->set('pendienteResolucion', $pendienteResolucion);
 		}catch(Exception $e){
 			$this->Session->setFlash(__($e->getMessage()));
 			die($e);
@@ -495,6 +673,11 @@ class PROPUESTaController extends AppController {
  * @return void
  */
 	public function add() {
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
+		
 		if ($this->request->is('post')) {
 			$this->PROPUESTum->create();
 			if ($this->PROPUESTum->save($this->request->data)) {
@@ -519,6 +702,11 @@ class PROPUESTaController extends AppController {
 	}
 
 	public function crear() {
+		if (!in_array(AppController::ID_PERFIL_SOLICITANTE,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
+		
 		if ($this->request->is('post')) {
 			$this->PROPUESTum->create();
 			$this->request->data['PROPUESTum']['estado'] = self::ESTADO_PENDIENTE_ASIGNAR;
@@ -534,7 +722,8 @@ class PROPUESTaController extends AppController {
 			$this->request->data['PROPUESTum']['solicitante_id'] = $this->usuario['Persona']['id'];
 			if ($this->PROPUESTum->save($this->request->data)) {
 				$this->Session->setFlash(__('The p r o p u e s tum has been saved'));
-				$this->redirect(array('action' => 'index'));
+	
+				$this->redirect(array('controller' => 'PROPUESTa', 'action' => 'mispropuestas'));
 			} else {
 				$this->Session->setFlash(__('The p r o p u e s tum could not be saved. Please, try again.'));
 			}
@@ -598,6 +787,10 @@ class PROPUESTaController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));	
+			$this->redirect('/');
+		}
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

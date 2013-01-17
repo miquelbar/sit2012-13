@@ -40,22 +40,6 @@ class SERVICIO extends AppModel {
 			),
 		),
 		'fecha_inicio' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -66,14 +50,6 @@ class SERVICIO extends AppModel {
 			),
 		),
 		'fecha_final' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 		),
 		'responsable_id' => array(
 			'notempty' => array(
@@ -84,14 +60,7 @@ class SERVICIO extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'boolean' => array(
-				'rule' => array('boolean'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+
 		),
 		'nombre' => array(
 			'alphanumeric' => array(
@@ -131,8 +100,8 @@ class SERVICIO extends AppModel {
 		'AREAFUNCIONAL' => array(
 			'className' => 'AREAFUNCIONAL',
 			'joinTable' => 'AREA_SERVICIO',
-			'foreignKey' => 's_e_r_v_i_c_i_o_id',
-			'associationForeignKey' => 'a_r_e_a_id',
+			'foreignKey' => 'servicio_id',
+			'associationForeignKey' => 'area_funcional_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -146,8 +115,8 @@ class SERVICIO extends AppModel {
 		'PROYECTO' => array(
 			'className' => 'PROYECTO',
 			'joinTable' => 'PROYECTO_SERVICIO',
-			'foreignKey' => 's_e_r_v_i_c_i_o_id',
-			'associationForeignKey' => 'p_r_o_y_e_c_t_o_id',
+			'foreignKey' => 'servicio_id',
+			'associationForeignKey' => 'proyecto_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -159,5 +128,14 @@ class SERVICIO extends AppModel {
 			'insertQuery' => ''
 		)
 	);
+	
+	public $hasMany = array(
+		'ValorMetrica' => array(
+			'className' => 'VALORMETRICA',
+			'foreignKey' => 'servicio_id',
+			'recursive' => 1,
+			'order' => 'fecha DESC'
+		),
+	);	
 
 }

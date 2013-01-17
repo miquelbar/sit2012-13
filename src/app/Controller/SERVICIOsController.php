@@ -1,5 +1,13 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('MetricaAsociar', '');
+App::uses('GoogleChart', '');
+App::uses('GooglePieChart', '');
+App::uses('GoogleHistograma', '');
+App::uses('ModelChart', '');
+App::uses('ModelPieChart', '');
+App::uses('ModelHistogramChart', '');
+App::uses('MetricaAsociar', '');
 /**
  * SERVICIOs Controller
  *
@@ -7,6 +15,8 @@ App::uses('AppController', 'Controller');
  */
 class SERVICIOsController extends AppController {
 
+	public $uses = array('SERVICIO','METRICA', 'VALORMETRICA');
+	
 /**
  * index method
  *
@@ -29,7 +39,47 @@ class SERVICIOsController extends AppController {
 		if (!$this->SERVICIO->exists()) {
 			throw new NotFoundException(__('Invalid s e r v i c i o'));
 		}
+		
+		$servicio = $this->SERVICIO->read(null, $id);
+		$metricas = $this->METRICA->find('all', array(
+			'conditions' => array('para_servicio' => 1),
+			'recursive' => 0,
+		));
+		
+		$metricas = MetricaAsociar::asociar($servicio['ValorMetrica'], $metricas);
+		$this->set('metricas', $metricas);
 		$this->set('sERVICIO', $this->SERVICIO->read(null, $id));
+		
+		//$chart = new GooglePieChart('tst');
+		$buildGFX = array(
+			array('id'=>2, 'type'=> 'h', 'titulo' => $metricas[2]['titulo']),
+			array('id'=>3, 'type'=> 'h', 'titulo' => $metricas[3]['titulo']),
+			array('id'=>5, 'type'=> 'h', 'titulo' => $metricas[5]['titulo'])
+		);
+		
+		$gfx = array();
+		foreach ($buildGFX as $key => $value) {
+			if ($value['type']=='h'){
+				$modelChart = new ModelHistogramChart($this->VALORMETRICA, $value['id']);
+			} else {
+				$modelChart = new ModelPieChart($this->VALORMETRICA, $value['id']);
+			}
+			$modelChart->setTitle($value['titulo']);
+			$modelChart->buildForFieldGrouped('valor','fecha', array(
+				'servicio_id' => $id,
+				'metrica_id' => $value['id']
+			));
+		
+			array_push($gfx, array(
+				'script' => $modelChart->renderChart(),
+				'container' => $modelChart->renderContainer()
+			));
+			
+		}
+		
+		$this->set('load_gfx', GoogleChart::loadLibrary());
+		$this->set('gfx', $gfx);
+
 	}
 
 /**
@@ -47,6 +97,14 @@ class SERVICIOsController extends AppController {
 				$this->Session->setFlash(__('The s e r v i c i o could not be saved. Please, try again.'));
 			}
 		}
+				$metricas = $this->METRICA->find('all', array(
+			'conditions' => array('para_propuesta' => 1),
+			'recursive' => 0
+		));
+		
+		$metricas = MetricaAsociar::asociar($propuesta['ValorMetrica'], $metricas);
+		$this->set('metricas', $metricas);
+		
 		$responsables = $this->SERVICIO->Responsable->find('list');
 		$aREAFUNCIONALs = $this->SERVICIO->AREAFUNCIONAL->find('list');
 		$pROYECTOs = $this->SERVICIO->PROYECTO->find('list');

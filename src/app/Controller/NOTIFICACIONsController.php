@@ -15,9 +15,12 @@ class NOTIFICACIONsController extends AppController {
  */
 	public function index() {
 		$this->NOTIFICACION->recursive = 0;
-		$this->set('nOTIFICACIONs', $this->paginate());
+		$filter = array(
+			'persona_id' => $this->usuario['id']
+		);
+		$this->set('nOTIFICACIONs', $this->paginate($filter));
 	}
-
+	
 /**
  * view method
  *

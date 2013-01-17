@@ -68,14 +68,6 @@ class METRICA extends AppModel {
 			),
 		),
 		'descripcion' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -182,7 +174,7 @@ class METRICA extends AppModel {
 /**
  * hasAndBelongsToMany associations
  *
- * @var array
+ * @var array*/
 
 	public $hasAndBelongsToMany = array(
 		'VALOR' => array(
@@ -201,5 +193,5 @@ class METRICA extends AppModel {
 			'insertQuery' => ''
 		)
 	);
- */
+ 
 }

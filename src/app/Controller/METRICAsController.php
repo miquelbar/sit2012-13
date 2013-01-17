@@ -58,6 +58,7 @@ class METRICAsController extends AppController {
  */
 	public function edit($id = null) {
 		$this->METRICA->id = $id;
+		$this->METRICA->recursive = 0;
 		if (!$this->METRICA->exists()) {
 			throw new NotFoundException(__('Invalid m e t r i c a'));
 		}

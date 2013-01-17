@@ -1,6 +1,6 @@
 <?
 
-class ModelPieChart extends ModelChart{
+class ModelHistogramChart extends ModelChart{
 	
 	protected $chart;
 	protected $chartField;
@@ -12,12 +12,13 @@ class ModelPieChart extends ModelChart{
 	}
 	
 	public function buildForFieldGrouped($valueField, $groupField, $where=null){
-		$this->chart = new GooglePieChart($this->id.'_'.$valueField);
+		$this->chart = new GoogleHistograma($this->id.'_'.$valueField);
 		$this->chart->setTitle($this->title);
-		
+		$this->chart->addColumn(GoogleChart::TYPE_STRING, $groupField);
+		$this->chart->addColumn(GoogleChart::TYPE_NUMBER, $valueField);
 		$stats = $this->obtainData($valueField, $groupField, $where);
 		foreach ($stats as $campo => $valor) {
-			$this->chart->addRow($this->getFieldValue($campo), $valor);
+			$this->chart->addRow(array($this->getFieldValue($campo), $valor));
 		}
 		
 	}
@@ -30,12 +31,12 @@ class ModelPieChart extends ModelChart{
 		return $this->chart->render();
 	}
 	
-	public function obtainData($valueField, $countField, $where=null){
+	public function obtainData($valueField, $groupField, $where=null){
 		//Obtener estadísticas por estado
 		$modelName = get_class($this->model);
 		$select = array(
-			'fields' => array('COUNT('.$modelName.'.'.$countField.')', $valueField),
-			'group' => $valueField
+			'fields' => array($groupField,$valueField),
+			'group' => $groupField
 		);
 		
 		if ($where != null){
@@ -45,8 +46,8 @@ class ModelPieChart extends ModelChart{
 		$data = $this->model->find('all', $select);
 		$stats = array();
 		foreach ($data as $key => $value) {
-			$campo = $value[$modelName][$valueField];
-			$valor = array_pop($value[0]);
+			$campo = $value[$modelName][$groupField];
+			$valor = $value[$modelName][$valueField];
 			$stats[$campo] = intval($valor);
 		}
 		return $stats;

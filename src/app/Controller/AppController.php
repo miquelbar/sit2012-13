@@ -32,6 +32,13 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	
+	const ID_PERFIL_ADMINISTRADOR = 1;
+	const ID_PERFIL_SOLICITANTE = 2;
+	const ID_PERFIL_CIO = 3;
+	const ID_PERFIL_RESPONSABLE = 4;
+	const ID_PERFIL_PATROCINADOR = 5;
+	const ID_PERFIL_TECNICO = 6;
+	
 	 var $components = array(
 		'Auth' => array(
 			'loginAction' => array(
@@ -60,7 +67,7 @@ class AppController extends Controller {
 	);
 	
 	var $helpers = array('CrudActions');
-	var $uses = array('NOTIFICACION');
+	var $uses = array('NOTIFICACION', 'USUARIO', 'PERFILUSUARIO');
 	
 	protected $usuario;
 	protected $notificacion;
@@ -149,6 +156,17 @@ class AppController extends Controller {
 		);
 		$this->notificacion = $this->NOTIFICACION->find('all', $options);
 		$this->set('notificacion',$this->notificacion);
+		
+		$perfiles = $this->PERFILUSUARIO->find('all', array(
+			'conditions' => array(
+				'usuario_id' => $usuario['id']
+			)
+		));
+		
+		$this->usuario['perfiles'] = array();
+		foreach ($perfiles as $key => $value) {
+			array_push($this->usuario['perfiles'], $value['PERFILUSUARIO']['perfil_id']);
+		}
 		
 	}
 	

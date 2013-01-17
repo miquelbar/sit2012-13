@@ -80,6 +80,15 @@
 			</tr>
 		</tbody>
 	</table>
+	
+	<div class="metricas">
+		<?=$this->Metrica->buildForShow($metricas, array(
+			'class' => 'table table-striped table-bordered table-hover span7',
+			'unidades' => true,
+			'titulo' => 'Métricas'
+		))?>
+	</div>
+	
 	<div class="related">
 		<?php if (!empty($pROPUESTum['AREA'])): ?>
 		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span12">

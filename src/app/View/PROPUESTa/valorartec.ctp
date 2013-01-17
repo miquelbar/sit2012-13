@@ -79,6 +79,16 @@
 			</tr>
 		</tbody>
 	</table>
+	
+<form method="post">
+	<div class="metricas">
+		<?=$this->Metrica->buildForInput($metricas, array(
+			'class' => 'table table-striped table-bordered table-hover span7',
+			'unidades' => true,
+			'titulo' => 'Métricas'
+		))?>
+	</div>
+	
 	<div class="related">
 		<?php if (!empty($pROPUESTum['AREA'])): ?>
 		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span12">
@@ -185,7 +195,6 @@
 				</tr>
 			</thead>
 			<tbody>
-				<form method="post">
 					<tr>
 						<td colspan="2">
 								<textarea class="span12" name="respuesta"></textarea>
@@ -208,9 +217,9 @@
 							<button action="submit" name="action" value="d" class="btn btn-danger">Desestimar</button>
 						</td>		
 					</tr>
-				</form>
 			</tbody>
 		</table>
+</form>
 		<?
 		
 		}

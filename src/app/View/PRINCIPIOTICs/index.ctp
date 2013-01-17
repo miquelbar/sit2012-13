@@ -36,7 +36,7 @@
 		<td><?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['fecha_inicio']); ?>&nbsp;</td>
 		<td><?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['fecha_fin']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($pRINCIPIOTIC['PRINCIPIOTIC']['id']);?>		
+			<?= $this->CrudActions->makeRowCrud($pRINCIPIOTIC['PRINCIPIOTIC']['id'], $puedeEditar);?>		
 		</td>
 	</tr>
 <?php endforeach; ?>

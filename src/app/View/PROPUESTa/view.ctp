@@ -62,22 +62,31 @@
 		<tbody>
 			<tr>
 				<td>Solicitante</td>
-				<td><?php echo $this->Html->link($pROPUESTum['Solicitante']['correo'], array('controller' => 'u_s_u_a_r_i_os', 'action' => 'view', $pROPUESTum['Solicitante']['id'])); ?></td>
+				<td><?php echo $this->Html->link($pROPUESTum['Solicitante']['nombre'].' '.$pROPUESTum['Solicitante']['apellido1'], array('controller' => 'PERSONAs', 'action' => 'view', $pROPUESTum['Solicitante']['id'])); ?></td>
 			</tr>
 			<tr>
 				<td>Responsable</td>
-				<td><?php echo $this->Html->link($pROPUESTum['Responsable']['correo'], array('controller' => 'u_s_u_a_r_i_os', 'action' => 'view', $pROPUESTum['Responsable']['id'])); ?></td>
+				<td><?php echo $this->Html->link($pROPUESTum['Responsable']['nombre'].' '.$pROPUESTum['Responsable']['apellido1'], array('controller' => 'PERSONAs', 'action' => 'view', $pROPUESTum['Responsable']['id'])); ?></td>
 			</tr>
 			<tr>
 				<td>Técnico</td>
-				<td><?php echo $this->Html->link($pROPUESTum['Tecnico']['correo'], array('controller' => 'u_s_u_a_r_i_os', 'action' => 'view', $pROPUESTum['Tecnico']['id'])); ?></td>
+				<td><?php echo $this->Html->link($pROPUESTum['Tecnico']['nombre'].' '.$pROPUESTum['Tecnico']['apellido1'], array('controller' => 'PERSONAs', 'action' => 'view', $pROPUESTum['Tecnico']['id'])); ?></td>
 			</tr>
 			<tr>
 				<td>Patrocinador</td>
-				<td><?php echo $this->Html->link($pROPUESTum['Patrocinador']['correo'], array('controller' => 'u_s_u_a_r_i_os', 'action' => 'view', $pROPUESTum['Patrocinador']['id'])); ?></td>
+				<td><?php echo $this->Html->link($pROPUESTum['Patrocinador']['nombre'].' '.$pROPUESTum['Patrocinador']['apellido1'], array('controller' => 'PERSONAs', 'action' => 'view', $pROPUESTum['Patrocinador']['id'])); ?></td>
 			</tr>
 		</tbody>
 	</table>
+	
+	<div class="metricas">
+		<?=$this->Metrica->buildForShow($metricas, array(
+			'class' => 'table table-striped table-bordered table-hover span7',
+			'unidades' => true,
+			'titulo' => 'Métricas'
+		))?>
+	</div>
+	
 	<div class="related">
 		<?php if (!empty($pROPUESTum['AREA'])): ?>
 		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span12">

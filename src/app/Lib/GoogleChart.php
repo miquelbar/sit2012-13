@@ -58,7 +58,7 @@ class GoogleChart {
 	
 	public function getChartCode(){
 		$code = 'var '.$this->varName('chart').' = new ';
-		$code = $code."google.visualization.PieChart(document.getElementById('".$this->id."'));";
+		$code = $code."google.visualization.".$this->type."(document.getElementById('".$this->id."'));";
 		return $code;
 	}
 	
@@ -134,6 +134,7 @@ class GoogleChart {
 			if ($column['type']== self::TYPE_NUMBER){
 				
 				if (!is_int($row[$key]) && !is_float($row[$key])){
+					print_r($row);
 					throw new Exception("La columna ".$key." no tiene el tipo esperado.");
 				}
 				

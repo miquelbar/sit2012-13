@@ -78,7 +78,7 @@
 			<?php echo $this->Html->link($pROPUESTum['TipoPro']['nombre'], array('controller' => 't_i_p_o_p_r_os', 'action' => 'view', $pROPUESTum['TipoPro']['id'])); ?>
 		</td>
 		<td class="actions">
-			<a class="btn btn-warning" href="/PROPUESTa/revisarprop/<?=$pROPUESTum['PROPUESTum']['id']?>">Revisar</a>	
+			<a class="btn btn-warning" href="/PROPUESTa/view/<?=$pROPUESTum['PROPUESTum']['id']?>">Revisar</a>	
 		</td>
 	</tr>
 <?php endforeach; ?>

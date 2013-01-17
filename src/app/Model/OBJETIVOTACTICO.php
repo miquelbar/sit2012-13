@@ -46,14 +46,6 @@ class OBJETIVOTACTICO extends AppModel {
 			),
 		),
 		'nombre' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -64,14 +56,7 @@ class OBJETIVOTACTICO extends AppModel {
 			),
 		),
 		'descripcion' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+
 		),
 		'objetivo_estrategico_id' => array(
 			'notempty' => array(

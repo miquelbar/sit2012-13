@@ -42,7 +42,7 @@
 		<td><?php echo h($oBJETIVOTACTICO['OBJETIVOTACTICO']['fecha_inicio']); ?>&nbsp;</td>
 		<td><?php echo h($oBJETIVOTACTICO['OBJETIVOTACTICO']['fecha_fin']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($oBJETIVOTACTICO['OBJETIVOTACTICO']['id']);?>		
+			<?= $this->CrudActions->makeRowCrud($oBJETIVOTACTICO['OBJETIVOTACTICO']['id'], $puedeEditar	);?>		
 		</td>
 	</tr>
 <?php endforeach; ?>

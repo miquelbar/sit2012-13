@@ -34,32 +34,56 @@ class VALORMETRICA extends AppModel {
  */
 	public $belongsTo = array(
 		'Metrica' => array(
-			'className' => 'Metrica',
+			'className' => 'METRICA',
 			'foreignKey' => 'metrica_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Proyecto' => array(
-			'className' => 'Proyecto',
+			'className' => 'PROYECTO',
 			'foreignKey' => 'proyecto_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Propuesta' => array(
-			'className' => 'Propuesta',
+			'className' => 'PROPUESTum',
 			'foreignKey' => 'propuesta_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Servicio' => array(
-			'className' => 'Servicio',
+			'className' => 'SERVICIO',
 			'foreignKey' => 'servicio_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
 	);
+	
+	public function procesarMetrica($data, $idPadre, $para){
+		//PROCESAR CAMBIOS EN METRICAS
+		foreach ($data as $key => $value) {
+			if (substr($key, 0,2) == 'm_'){
+				$id = substr($key, 2,1);
+				$update = array(
+					'valor' => $value,
+					'fecha' => date('Y-m-d'),
+					$para => $idPadre
+				);
+				if (is_numeric($id)){
+					$id = intval($id);
+					$this->id = $id;
+				} else {
+					if ($id == "X" && is_numeric(substr($key, 3,1))){
+						$this->create();
+						$update['metrica_id'] = intval(substr($key, 3,1));
+					}
+				}
+				$this->save($update);
+			}
+		}
+	}
 }

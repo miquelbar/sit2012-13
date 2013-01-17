@@ -81,6 +81,15 @@
 			</tr>
 		</tbody>
 	</table>
+	
+	<div class="metricas">
+		<?=$this->Metrica->buildForInput($metricas, array(
+			'class' => 'table table-striped table-bordered table-hover span7',
+			'unidades' => true,
+			'titulo' => 'Métricas'
+		))?>
+	</div>
+	
 	<div class="related">
 		<?php if (!empty($pROPUESTum['AREA'])): ?>
 		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span12">
@@ -181,7 +190,10 @@
 		<h2>Conversación</h2>
 		<?
 		
-		if ($puedeContestar) {
+		$action = $pendienteResolucion ? 'jd' : 'a';
+		$txt = $pendienteResolucion ? 'La dirección acepta' : 'Aceptar propuesta';
+		
+		if ($puedeContestar || $pendienteResolucion) {
 		
 		?>
 		<table cellpadding="0" cellspacing="0"  class="table table-condensed table-striped table-bordered table-hover span11">
@@ -203,7 +215,7 @@
 					<tr>
 						<td colspan="2">
 							<button action="submit" name="action" value="r" class="btn btn-primary">Actualizar</button>
-							<button action="submit" name="action" value="a" class="btn btn-success">Aceptar propuesta</button>
+							<button action="submit" name="action" value="<?=$action?>" class="btn btn-success"><?=$txt?></button>
 							<button action="submit" name="action" value="d" class="btn btn-danger">Desestimar</button>
 						</td>		
 					</tr>

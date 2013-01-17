@@ -39,7 +39,7 @@
 		<td>
 			<?php echo $nOTIFICACION['TipoNotificacion']['mensaje']; ?>
 		</td>
-		<td><?php echo h($nOTIFICACION['NOTIFICACION']['texto']); ?>&nbsp;</td>
+		<td><?php echo $nOTIFICACION['NOTIFICACION']['texto']; ?>&nbsp;</td>
 		<td class="actions">
 			<?=$this->Form->postLink(__('Eliminar'), array('action' => 'delete', $nOTIFICACION['NOTIFICACION']['id']), array('class' =>'btn btn-danger'), __('Estás seguro de que lo quieres eliminar el registro # %s?', $nOTIFICACION['NOTIFICACION']['id'])); ?> 
 		</td>

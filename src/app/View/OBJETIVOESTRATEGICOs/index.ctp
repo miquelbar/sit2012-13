@@ -41,7 +41,7 @@
 		<td><?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['fecha_inicio']); ?>&nbsp;</td>
 		<td><?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['fecha_fin']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id']);?>
+			<?= $this->CrudActions->makeRowCrud($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id'], $puedeEditar);?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -49,23 +49,25 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Página {:page} de {:pages}, mostrando {:current} registros de {:count} en total, empezando por {:start} y acabando en {:end}')
 	));
 	?>	</p>
 
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		if ($this->Paginator->hasNext() || $this->Paginator->hasPrev()){
+			echo $this->Paginator->prev('< ' . __('anterior'), array('class'=>'btn'), null, array('class' => 'prev disabled'));
+			echo $this->Paginator->numbers(array('separator' => ''));
+			echo $this->Paginator->next(__('siguiente') . ' >', array(), null, array('class' => 'next disabled'));
+		}
 	?>
 	</div>
 </div>
-<div class="actions">
+<!--<div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New O B J E T I V O E S T R A T E G I C O'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List P R I N C I P I O T I Cs'), array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Principio Tic'), array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
+</div>-->

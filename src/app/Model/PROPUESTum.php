@@ -183,6 +183,7 @@ class PROPUESTum extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -243,7 +244,15 @@ class PROPUESTum extends AppModel {
 			'order' => ''
 		)
 	);
-
+	
+	
+	public $hasMany = array(
+		'ValorMetrica' => array(
+			'className' => 'VALORMETRICA',
+			'foreignKey' => 'propuesta_id',
+			'recursive' => 1
+		),
+	);	
 /**
  * hasAndBelongsToMany associations
  *

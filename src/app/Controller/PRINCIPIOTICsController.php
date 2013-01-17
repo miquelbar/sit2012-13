@@ -13,6 +13,9 @@ class PRINCIPIOTICsController extends AppController {
  * @return void
  */
 	public function index() {
+		//ESTABLECER SI PUEDE EDITAR
+		$this->set('puedeEditar',in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+
 		$this->PRINCIPIOTIC->recursive = 0;
 		$this->set('pRINCIPIOTICs', $this->paginate());
 	}
@@ -38,6 +41,10 @@ class PRINCIPIOTICsController extends AppController {
  * @return void
  */
 	public function add() {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if ($this->request->is('post')) {
 			$this->PRINCIPIOTIC->create();
 			if ($this->PRINCIPIOTIC->save($this->request->data)) {
@@ -57,6 +64,10 @@ class PRINCIPIOTICsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->PRINCIPIOTIC->id = $id;
 		if (!$this->PRINCIPIOTIC->exists()) {
 			throw new NotFoundException(__('Invalid p r i n c i p i o t i c'));
