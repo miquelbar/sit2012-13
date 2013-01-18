@@ -14,7 +14,7 @@
 		  		<ul class="dropdown-menu">
 					<li><?php echo $this->Html->link(__('Nuevo usuario'), array('action' => 'add')); ?></li>
 					<li><?php echo $this->Html->link(__('Listar personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('Nueva persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
+					<!--<li><?php echo $this->Html->link(__('Nueva persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>-->
 				</ul>
 		  	</div>
 		</div>

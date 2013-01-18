@@ -7,7 +7,7 @@
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
-					<strong><?php echo __('A&ntilde;adir Servicio'); ?></strong>
+					<strong><?php echo __('Añadir Servicio'); ?></strong>
 			</div>
 			<div class="span1">
 				<div class="btn-group">
@@ -39,7 +39,7 @@
 		echo $this->Form->input('PROYECTO');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Añadir')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>
