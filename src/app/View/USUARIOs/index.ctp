@@ -40,7 +40,7 @@
 			<?php echo $this->Html->link($uSUARIO['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $uSUARIO['Persona']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($uSUARIO['USUARIO']['id']);?>		
+			<?= $this->CrudActions->makeRowCrud($uSUARIO['USUARIO']['id'], $puedeEditar);?>		
 		</td>
 	</tr>
 <?php endforeach; ?>

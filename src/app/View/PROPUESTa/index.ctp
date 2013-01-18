@@ -100,8 +100,17 @@
 	?>
 	</div>
 </div>
-<?=$load_gfx?>
-<?=$container_gfx_estado?>
-<script type="text/javascript">
-	<?=$script_gfx_estado?>
-</script>
+<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span12">
+	<th>
+		<strong> Estado de las propuestas </strong>
+	</th>
+	<tr>
+		<td>
+			<?=$load_gfx?>
+			<?=$container_gfx_estado?>
+			<script type="text/javascript">
+				<?=$script_gfx_estado?>
+			</script>
+		</td>
+	</tr>
+</table>

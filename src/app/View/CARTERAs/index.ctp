@@ -45,7 +45,7 @@
 		<td><?php echo h($cARTERA['CARTERA']['fecha_fin_validez']); ?>&nbsp;</td>
 		<td><?php echo h($cARTERA['CARTERA']['fecha_ultima_modificacion']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($cARTERA['CARTERA']['id']);?>
+			<?= $this->CrudActions->makeRowCrud($cARTERA['CARTERA']['id'], $puedeEditar);?>
 		</td>
 	</tr>
 <?php endforeach; ?>

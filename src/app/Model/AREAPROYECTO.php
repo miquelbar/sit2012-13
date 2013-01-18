@@ -33,14 +33,14 @@ class AREAPROYECTO extends AppModel {
  */
 	public $belongsTo = array(
 		'Proyecto' => array(
-			'className' => 'Proyecto',
+			'className' => 'PROYECTO',
 			'foreignKey' => 'proyecto_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'AreaFuncional' => array(
-			'className' => 'AreaFuncional',
+			'className' => 'AREAFUNCIONAL',
 			'foreignKey' => 'area_funcional_id',
 			'conditions' => '',
 			'fields' => '',

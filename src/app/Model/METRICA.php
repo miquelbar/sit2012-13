@@ -176,21 +176,11 @@ class METRICA extends AppModel {
  *
  * @var array*/
 
-	public $hasAndBelongsToMany = array(
+	public $hasMany = array(
 		'VALOR' => array(
 			'className' => 'VALORMETRICA',
 			'joinTable' => 'VALOR_METRICA',
 			'foreignKey' => 'metrica_id',
-			'associationForeignKey' => 'valor_id',
-			'unique' => 'keepExisting',
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'finderQuery' => '',
-			'deleteQuery' => '',
-			'insertQuery' => ''
 		)
 	);
  

@@ -13,6 +13,7 @@ class CARTERAsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->CARTERA->recursive = 0;
 		$this->set('cARTERAs', $this->paginate());
 	}
@@ -25,6 +26,7 @@ class CARTERAsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->CARTERA->id = $id;
 		if (!$this->CARTERA->exists()) {
 			throw new NotFoundException(__('Invalid c a r t e r a'));
@@ -38,6 +40,11 @@ class CARTERAsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if ($this->request->is('post')) {
 			$this->CARTERA->create();
 			if ($this->CARTERA->save($this->request->data)) {
@@ -57,6 +64,11 @@ class CARTERAsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->CARTERA->id = $id;
 		if (!$this->CARTERA->exists()) {
 			throw new NotFoundException(__('Invalid c a r t e r a'));
@@ -82,6 +94,11 @@ class CARTERAsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

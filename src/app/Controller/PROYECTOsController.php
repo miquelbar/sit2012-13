@@ -1,5 +1,10 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('GoogleChart', '');
+App::uses('GooglePieChart', '');
+App::uses('ModelChart', '');
+App::uses('ModelPieChart', '');
+App::uses('MetricaAsociar', '');
 /**
  * PROYECTOs Controller
  *
@@ -7,14 +12,34 @@ App::uses('AppController', 'Controller');
  */
 class PROYECTOsController extends AppController {
 
+	public $uses = array('PROYECTO','ESTADOPROYECTO', 'AREAPROYECTO');
 /**
  * index method
  *
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->PROYECTO->recursive = 0;
 		$this->set('pROYECTOs', $this->paginate());
+
+		$modelChart = new ModelPieChart($this->PROYECTO, 'pr');
+		$modelChart->setTitle('Estado de las propuestas:');
+		$estados = $this->ESTADOPROYECTO->obtenerEstados();
+		$modelChart->setFieldDict($estados);
+		$modelChart->buildForFieldGrouped('estado_proyecto_id', 'id');
+		$this->set('load_gfx', GoogleChart::loadLibrary());
+		$this->set('script_gfx_estado', $modelChart->renderChart());
+		$this->set('container_gfx_estado', $modelChart->renderContainer());
+		
+		$modelChart = new ModelPieChart($this->AREAPROYECTO, 'porarea');
+		$modelChart->setTitle('Estado de las propuestas:');
+		$estados = $this->ESTADOPROYECTO->obtenerEstados();
+		//$modelChart->setFieldDict($estados);
+		$modelChart->buildForFieldGrouped('area_funcional_id', 'id');
+		$this->set('script_gfx_area', $modelChart->renderChart());
+		$this->set('container_gfx_area', $modelChart->renderContainer());
+		
 	}
 
 /**
@@ -29,6 +54,9 @@ class PROYECTOsController extends AppController {
 		if (!$this->PROYECTO->exists()) {
 			throw new NotFoundException(__('Invalid p r o y e c t o'));
 		}
+		
+		
+		$this->set($propuestas);
 		$this->set('pROYECTO', $this->PROYECTO->read(null, $id));
 	}
 
@@ -47,7 +75,12 @@ class PROYECTOsController extends AppController {
 				$this->Session->setFlash(__('The p r o y e c t o could not be saved. Please, try again.'));
 			}
 		}
+		
 		$carteras = $this->PROYECTO->Cartera->find('list');
+		if (isset($this->params['url']['pr'])){
+			$this->set('propuesta',$this->params['url']['pr']);
+		}
+		
 		$propuestas = $this->PROYECTO->Propuesta->find('list');
 		$tipoPros = $this->PROYECTO->TipoPro->find('list');
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');

@@ -27,24 +27,24 @@
 	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
+			<th><?php echo $this->Paginator->sort('responsable_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('fecha_inicio'); ?></th>
 			<th><?php echo $this->Paginator->sort('fecha_final'); ?></th>
-			<th><?php echo $this->Paginator->sort('responsable_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
 	foreach ($sERVICIOs as $sERVICIO): ?>
 	<tr>
 		<td><?php echo h($sERVICIO['SERVICIO']['id']); ?>&nbsp;</td>
-		<td><?php echo h($sERVICIO['SERVICIO']['fecha_inicio']); ?>&nbsp;</td>
-		<td><?php echo h($sERVICIO['SERVICIO']['fecha_final']); ?>&nbsp;</td>
+		<td><?php echo h($sERVICIO['SERVICIO']['nombre']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($sERVICIO['Responsable']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $sERVICIO['Responsable']['id'])); ?>
 		</td>
-		<td><?php echo h($sERVICIO['SERVICIO']['nombre']); ?>&nbsp;</td>
+		<td><?php echo h($sERVICIO['SERVICIO']['fecha_inicio']); ?>&nbsp;</td>
+		<td><?php echo h($sERVICIO['SERVICIO']['fecha_final']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($sERVICIO['SERVICIO']['id']);?>		
+			<?= $this->CrudActions->makeRowCrud($sERVICIO['SERVICIO']['id'], $puedeEditar);?>		
 		</td>
 	</tr>
 <?php endforeach; ?>

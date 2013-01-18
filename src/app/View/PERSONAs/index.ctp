@@ -36,7 +36,7 @@
 		<td><?php echo h($pERSONA['PERSONA']['apellido1']); ?>&nbsp;</td>
 		<td><?php echo h($pERSONA['PERSONA']['apellido2']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($pERSONA['PERSONA']['id']);?>		
+			<?= $this->CrudActions->makeRowCrud($pERSONA['PERSONA']['id'], $puedeEditar);?>		
 		</td>
 	</tr>
 <?php endforeach; ?>

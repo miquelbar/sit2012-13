@@ -42,7 +42,7 @@
 		<td><?php echo h($mETRICA['METRICA']['unidades']); ?>&nbsp;</td>
 		<td><?php echo h($mETRICA['METRICA']['dominio']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($mETRICA['METRICA']['id']);?>
+			<?= $this->CrudActions->makeRowCrud($mETRICA['METRICA']['id'], $puedeEditar	);?>
 		</td>
 	</tr>
 <?php endforeach; ?>

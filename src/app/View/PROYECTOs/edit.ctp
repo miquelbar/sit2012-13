@@ -4,8 +4,6 @@
   <li class="active">Editar<span class="divider">/</span></li>
 </ul>
 <div class="pROYECTOs form">
-<?php echo $this->Form->create('PROYECTO'); ?>
-	<fieldset>
 		<legend>
 			<div class="row-fluid">
 			<div class="span2">
@@ -41,6 +39,8 @@
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('PROYECTO'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('cartera_id');

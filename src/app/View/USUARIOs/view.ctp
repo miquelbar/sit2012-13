@@ -77,11 +77,10 @@
 <div class="related">
 	<h3><?php echo __('Perfiles del usuario'); ?></h3>
 	<?php if (!empty($uSUARIO['PERFIL'])): ?>
-	<table cellpadding = "0" cellspacing = "0" class="table table-striped table-bordered table-hover">
+	<table cellpadding = "0" cellspacing = "0" class="table table-striped table-bordered table-hover span4">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Nombre'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
 		$i = 0;

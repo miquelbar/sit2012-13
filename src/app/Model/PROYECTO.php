@@ -73,14 +73,6 @@ class PROYECTO extends AppModel {
 			),
 		),
 		'propuesta_id' => array(
-			'notempty' => array(
-				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -215,14 +207,6 @@ class PROYECTO extends AppModel {
 				//'last' => false, // Stop validation after this rule
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
-			'n' => array(
-				'rule' => array('n'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 		),
 		'fecha_fin_prevista' => array(
 			'datetime' => array(
@@ -279,14 +263,6 @@ class PROYECTO extends AppModel {
 			),
 		),
 		'descripcion' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -297,14 +273,6 @@ class PROYECTO extends AppModel {
 			),
 		),
 		'justificacion' => array(
-			'alphanumeric' => array(
-				'rule' => array('alphanumeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
@@ -390,8 +358,8 @@ class PROYECTO extends AppModel {
 		'AREA' => array(
 			'className' => 'AREAFUNCIONAL',
 			'joinTable' => 'AREA_PROYECTO',
-			'foreignKey' => 'p_r_o_y_e_c_t_o_id',
-			'associationForeignKey' => 'a_r_e_a_id',
+			'foreignKey' => 'proyecto_id',
+			'associationForeignKey' => 'area_funcional_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -403,10 +371,10 @@ class PROYECTO extends AppModel {
 			'insertQuery' => ''
 		),
 		'OBJETIVO' => array(
-			'className' => 'OBJETIVOESTRATEGICO',
+			'className' => 'OBJETIVOTACTICO',
 			'joinTable' => 'OBJETIVO_PROYECTO',
-			'foreignKey' => 'p_r_o_y_e_c_t_o_id',
-			'associationForeignKey' => 'o_b_j_e_t_i_v_o_id',
+			'foreignKey' => 'proyecto_id',
+			'associationForeignKey' => 'objetivo_tactico_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',
@@ -420,8 +388,8 @@ class PROYECTO extends AppModel {
 		'SERVICIO' => array(
 			'className' => 'SERVICIO',
 			'joinTable' => 'PROYECTO_SERVICIO',
-			'foreignKey' => 'p_r_o_y_e_c_t_o_id',
-			'associationForeignKey' => 's_e_r_v_i_c_i_o_id',
+			'foreignKey' => 'proyecto_id',
+			'associationForeignKey' => 'servicio_id',
 			'unique' => 'keepExisting',
 			'conditions' => '',
 			'fields' => '',

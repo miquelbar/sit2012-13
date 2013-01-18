@@ -13,6 +13,7 @@ class METRICAsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->METRICA->recursive = 0;
 		$this->set('mETRICAs', $this->paginate());
 	}
@@ -25,6 +26,7 @@ class METRICAsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->METRICA->id = $id;
 		if (!$this->METRICA->exists()) {
 			throw new NotFoundException(__('Invalid m e t r i c a'));
@@ -38,7 +40,12 @@ class METRICAsController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+			if ($this->request->is('post')) {
 			$this->METRICA->create();
 			if ($this->METRICA->save($this->request->data)) {
 				$this->Session->setFlash(__('The m e t r i c a has been saved'));
@@ -57,6 +64,11 @@ class METRICAsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->METRICA->id = $id;
 		$this->METRICA->recursive = 0;
 		if (!$this->METRICA->exists()) {
@@ -83,6 +95,11 @@ class METRICAsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

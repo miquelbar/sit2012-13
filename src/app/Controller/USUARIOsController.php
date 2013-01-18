@@ -20,6 +20,7 @@ class USUARIOsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles']));
 		$this->USUARIO->recursive = 0;
 		$this->set('uSUARIOs', $this->paginate());
 	}
@@ -32,6 +33,8 @@ class USUARIOsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles']));
+		
 		$this->USUARIO->id = $id;
 		if (!$this->USUARIO->exists()) {
 			throw new NotFoundException(__('Invalid u s u a r i o'));
@@ -56,6 +59,11 @@ class USUARIOsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if ($this->request->is('post')) {
 			$this->USUARIO->create();
 			if ($this->USUARIO->save($this->request->data)) {
@@ -78,6 +86,12 @@ class USUARIOsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
+		
 		$this->USUARIO->id = $id;
 		if (!$this->USUARIO->exists()) {
 			throw new NotFoundException(__('Invalid u s u a r i o'));
@@ -107,6 +121,11 @@ class USUARIOsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

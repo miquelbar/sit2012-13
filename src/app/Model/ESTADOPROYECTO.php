@@ -63,4 +63,13 @@ class ESTADOPROYECTO extends AppModel {
 			),
 		),
 	);
+	
+	public function obtenerEstados(){
+		$estados = $this->find('all');
+		$final = array();
+		foreach ($estados as $id => $valor) {
+			$final[$valor['ESTADOPROYECTO']['id']] = $valor['ESTADOPROYECTO']['nombre'];
+		}
+		return $final;
+	}
 }

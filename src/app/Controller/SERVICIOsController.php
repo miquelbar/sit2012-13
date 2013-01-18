@@ -23,6 +23,7 @@ class SERVICIOsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->SERVICIO->recursive = 0;
 		$this->set('sERVICIOs', $this->paginate());
 	}
@@ -35,6 +36,7 @@ class SERVICIOsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->SERVICIO->id = $id;
 		if (!$this->SERVICIO->exists()) {
 			throw new NotFoundException(__('Invalid s e r v i c i o'));
@@ -126,7 +128,7 @@ class SERVICIOsController extends AppController {
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->SERVICIO->save($this->request->data)) {
 				$this->Session->setFlash(__('The s e r v i c i o has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'view', $id));
 			} else {
 				$this->Session->setFlash(__('The s e r v i c i o could not be saved. Please, try again.'));
 			}
