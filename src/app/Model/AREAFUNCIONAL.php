@@ -55,4 +55,13 @@ class AREAFUNCIONAL extends AppModel {
 			),
 		),
 	);
+	
+	public function obtenerAreas(){
+		$areas = $this->find('all');
+		$final = array();
+		foreach ($areas as $id => $valor) {
+			$final[$valor['AREAFUNCIONAL']['id']] = $valor['AREAFUNCIONAL']['nombre'];
+		}
+		return $final;
+	}
 }

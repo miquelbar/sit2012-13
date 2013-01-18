@@ -106,13 +106,6 @@ class OBJETIVOPROYECTO extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
-		'' => array(
-			'className' => '',
-			'foreignKey' => 'id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
 		)
 	);
 }

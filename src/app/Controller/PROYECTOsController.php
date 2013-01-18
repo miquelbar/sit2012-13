@@ -12,7 +12,16 @@ App::uses('MetricaAsociar', '');
  */
 class PROYECTOsController extends AppController {
 
-	public $uses = array('PROYECTO','ESTADOPROYECTO', 'AREAPROYECTO');
+	public $uses = array('PROYECTO','ESTADOPROYECTO', 
+						'AREAPROYECTO', 'AREAFUNCIONAL',
+						'OBJETIVOTACTICO','OBJETIVOPROYECTO');
+						
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'PROYECTO.id' => 'DESC'
+        )
+    );
 /**
  * index method
  *
@@ -22,24 +31,33 @@ class PROYECTOsController extends AppController {
 		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->PROYECTO->recursive = 0;
 		$this->set('pROYECTOs', $this->paginate());
-
-		$modelChart = new ModelPieChart($this->PROYECTO, 'pr');
-		$modelChart->setTitle('Estado de las propuestas:');
-		$estados = $this->ESTADOPROYECTO->obtenerEstados();
-		$modelChart->setFieldDict($estados);
-		$modelChart->buildForFieldGrouped('estado_proyecto_id', 'id');
-		$this->set('load_gfx', GoogleChart::loadLibrary());
-		$this->set('script_gfx_estado', $modelChart->renderChart());
-		$this->set('container_gfx_estado', $modelChart->renderContainer());
-		
-		$modelChart = new ModelPieChart($this->AREAPROYECTO, 'porarea');
-		$modelChart->setTitle('Estado de las propuestas:');
-		$estados = $this->ESTADOPROYECTO->obtenerEstados();
-		//$modelChart->setFieldDict($estados);
-		$modelChart->buildForFieldGrouped('area_funcional_id', 'id');
-		$this->set('script_gfx_area', $modelChart->renderChart());
-		$this->set('container_gfx_area', $modelChart->renderContainer());
-		
+		$showGfx = true;
+		if ($showGfx){
+			$modelChart = new ModelPieChart($this->PROYECTO, 'pr');
+			$modelChart->setTitle('Estado de las propuestas:');
+			$estados = $this->ESTADOPROYECTO->obtenerEstados();
+			$modelChart->setFieldDict($estados);
+			$modelChart->buildForFieldGrouped('estado_proyecto_id', 'id');
+			$this->set('load_gfx', GoogleChart::loadLibrary());
+			$this->set('script_gfx_estado', $modelChart->renderChart());
+			$this->set('container_gfx_estado', $modelChart->renderContainer());
+			
+			$modelChart = new ModelPieChart($this->AREAPROYECTO, 'porarea');
+			$modelChart->setTitle('Estado de las propuestas:');
+			$areas = $this->AREAFUNCIONAL->obtenerAreas();
+			$modelChart->setFieldDict($areas);
+			$modelChart->buildForFieldGrouped('area_funcional_id', 'id');
+			$this->set('script_gfx_area', $modelChart->renderChart());
+			$this->set('container_gfx_area', $modelChart->renderContainer());
+			
+			$modelChart = new ModelPieChart($this->OBJETIVOPROYECTO, 'porarea');
+			$modelChart->setTitle('Estado de las propuestas:');
+			$objetivos = $this->OBJETIVOTACTICO->obtenerObjetivos();
+			$modelChart->setFieldDict($objetivos);
+			$modelChart->buildForFieldGrouped('objetivo_tactico_id', 'id');
+			$this->set('script_gfx_objetivos', $modelChart->renderChart());
+			$this->set('container_gfx_objetivos', $modelChart->renderContainer());
+		}
 	}
 
 /**

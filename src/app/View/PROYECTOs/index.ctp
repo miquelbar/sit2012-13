@@ -83,14 +83,16 @@
 	));
 	?>	</p>
 
-	<div class="paging">
+	<div class="paginator">
+	<ul>
 	<?php
 		if ($this->Paginator->hasNext() || $this->Paginator->hasPrev()){
-			echo $this->Paginator->prev('< ' . __('anterior'), array('class'=>'btn'), null, array('class' => 'prev disabled'));
-			echo $this->Paginator->numbers(array('separator' => ''));
-			echo $this->Paginator->next(__('siguiente') . ' >', array(), null, array('class' => 'next disabled'));
+			echo $this->Paginator->prev('<<<', array('class'=>'btn'), null, array('class' => 'btn prev disabled'));
+			echo $this->Paginator->numbers(array('separator'=>'','class'=>"btn", 'href=#', 'tag'=>'li'));
+			echo $this->Paginator->next('>>>', array('class'=>'btn'), null, array('class' => 'btn next disabled'));
 		}
 	?>
+	</ul>
 	</div>
 </div>
 <?=$load_gfx?>
@@ -115,6 +117,19 @@
 			<?=$container_gfx_area?>
 			<script type="text/javascript">
 				<?=$script_gfx_area?>
+			</script>
+		</td>
+	</tr>
+</table>
+<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span12">
+	<th>
+		<strong> Proyectos por objetivos </strong>
+	</th>
+	<tr>
+		<td>
+			<?=$container_gfx_objetivos?>
+			<script type="text/javascript">
+				<?=$script_gfx_objetivos?>
 			</script>
 		</td>
 	</tr>

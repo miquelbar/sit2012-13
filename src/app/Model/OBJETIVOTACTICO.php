@@ -114,4 +114,13 @@ class OBJETIVOTACTICO extends AppModel {
 			'order' => ''
 		)
 	);
+	
+	public function obtenerObjetivos(){
+		$objetivos = $this->find('all');
+		$final = array();
+		foreach ($objetivos as $id => $valor) {
+			$final[$valor['OBJETIVOTACTICO']['id']] = $valor['OBJETIVOTACTICO']['nombre'];
+		}
+		return $final;
+	}
 }

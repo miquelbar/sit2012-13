@@ -52,7 +52,7 @@ class AREAPROYECTO extends AppModel {
  * hasMany associations
  *
  * @var array
- */
+ *//*
 	public $hasMany = array(
 		'' => array(
 			'className' => '',
@@ -67,6 +67,6 @@ class AREAPROYECTO extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	);
+	);*/
 
 }

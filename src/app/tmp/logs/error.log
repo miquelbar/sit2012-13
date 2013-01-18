@@ -8777,3 +8777,65 @@
 #3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-01-18 21:19:28 Error: Fatal Error (1): Call to a member function obtenerObjetivos() on a non-object in [/var/www/sit/src/app/Controller/PROYECTOsController.php, line 48]
+2013-01-18 21:19:28 Error: [FatalErrorException] Call to a member function obtenerObjetivos() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 48)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 48, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 48, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-18 21:19:41 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [/var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php, line 1068]
+2013-01-18 21:19:41 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 1068)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 1068, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 1068, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-18 21:20:04 Error: Fatal Error (1): Call to a member function getDataSource() on a non-object in [/var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php, line 1068]
+2013-01-18 21:20:04 Error: [FatalErrorException] Call to a member function getDataSource() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 1068)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 1068, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 1068, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-18 21:20:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'OBJETIVOPROYECTO.area_funcional_id' in 'field list'
+#0 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT COUNT(`O...', Array)
+#2 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT COUNT(`O...', Array, Array)
+#3 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT COUNT(`O...', false)
+#4 /var/www/sit/src/lib/Cake/Model/Model.php(2631): DboSource->read(Object(OBJETIVOPROYECTO), Array)
+#5 /var/www/sit/src/app/Lib/ModelPieChart.php(45): Model->find('all', Array)
+#6 /var/www/sit/src/app/Lib/ModelPieChart.php(18): ModelPieChart->obtainData('area_funcional_...', 'id', NULL)
+#7 /var/www/sit/src/app/Controller/PROYECTOsController.php(50): ModelPieChart->buildForFieldGrouped('area_funcional_...', 'id')
+#8 [internal function]: PROYECTOsController->index()
+#9 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROYECTOsController), Array)
+#10 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROYECTOsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-01-18 21:20:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'OBJETIVOPROYECTO.aobjetivo_tactico_id' in 'field list'
+#0 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT COUNT(`O...', Array)
+#2 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT COUNT(`O...', Array, Array)
+#3 /var/www/sit/src/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT COUNT(`O...', false)
+#4 /var/www/sit/src/lib/Cake/Model/Model.php(2631): DboSource->read(Object(OBJETIVOPROYECTO), Array)
+#5 /var/www/sit/src/app/Lib/ModelPieChart.php(45): Model->find('all', Array)
+#6 /var/www/sit/src/app/Lib/ModelPieChart.php(18): ModelPieChart->obtainData('aobjetivo_tacti...', 'id', NULL)
+#7 /var/www/sit/src/app/Controller/PROYECTOsController.php(50): ModelPieChart->buildForFieldGrouped('aobjetivo_tacti...', 'id')
+#8 [internal function]: PROYECTOsController->index()
+#9 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROYECTOsController), Array)
+#10 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROYECTOsController), Object(CakeRequest), Object(CakeResponse))
+#12 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-01-18 21:26:39 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/var/www/sit/src/app/View/PROYECTOs/index.ctp, line 91]
+2013-01-18 21:26:39 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/sit/sr...', 91)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/sit/sr...', 91, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/sit/sr...', 91, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
