@@ -7,7 +7,7 @@
 	<legend>
 		<div class="row-fluid">
 			<div class="span2">
-					<strong><?php echo __('Ver m&eacute;trica'); ?></strong>
+					<strong><?php echo __('Ver Métrica'); ?></strong>
 			</div>
 			<div class="span1">
 				<div class="btn-group">
@@ -16,10 +16,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('Editar M&eacute;tricas'), array('action' => 'edit', $mETRICA['METRICA']['id'])); ?> </li>
-						<li><?php echo $this->Form->postLink(__('Eliminar M&eacute;trica'), array('action' => 'delete', $mETRICA['METRICA']['id']), null, __('Are you sure you want to delete # %s?', $mETRICA['METRICA']['id'])); ?> </li>
-						<li><?php echo $this->Html->link(__('Ver M&eacute;tricas'), array('action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('A&ntilde;adir M&eacute;tricas'), array('action' => 'add')); ?> </li>
+						<li><?php echo $this->Html->link(__('Editar Métricas'), array('action' => 'edit', $mETRICA['METRICA']['id'])); ?> </li>
+						<li><?php echo $this->Form->postLink(__('Eliminar Métrica'), array('action' => 'delete', $mETRICA['METRICA']['id']), null, __('Are you sure you want to delete # %s?', $mETRICA['METRICA']['id'])); ?> </li>
+						<li><?php echo $this->Html->link(__('Ver Métricas'), array('action' => 'index')); ?> </li>
+						<!--<li><?php echo $this->Html->link(__('A&ntilde;adir M&eacute;tricas'), array('action' => 'add')); ?> </li>-->
 			  		</ul>
 			  </div>
 			</div>

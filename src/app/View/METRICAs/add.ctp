@@ -4,12 +4,12 @@
   <li class="active">A&ntilde;dir<span class="divider">/</span></li>
 </ul>
 <div class="mETRICAs form">
-<?php echo $this->Form->create('METRICA'); ?>
-	<fieldset>
+
+	
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
-					<strong><?php echo __('A&ntilde;adir m&eacute;trica'); ?></strong>
+					<strong><?php echo __('Añadir Métrica'); ?></strong>
 			</div>
 			<div class="span1">
 				<div class="btn-group">
@@ -18,12 +18,14 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('Ver M&eacute;tricas'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver Métricas'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>
 		</div>
 		</legend>
+	<?php echo $this->Form->create('METRICA'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('titulo');
 		echo $this->Form->input('descripcion');
@@ -34,7 +36,7 @@
 		echo $this->Form->input('dominio');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Añadir')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

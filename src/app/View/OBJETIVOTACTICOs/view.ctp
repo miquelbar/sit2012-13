@@ -1,6 +1,6 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li><a href="/OBJETIVOTACTICOs/index">Objetivo T&aacute;ctico</a> <span class="divider">/</span></li>
+  <li><a href="/OBJETIVOTACTICOs/index">Objetivos T&aacute;cticos</a> <span class="divider">/</span></li>
   <li class="active">Ver<span class="divider">/</span></li>
 </ul>
 <div class="oBJETIVOTACTICOs view">
@@ -20,9 +20,9 @@
 						<li><?php echo $this->Html->link(__('Editar objetivo táctico.'), array('action' => 'edit', $oBJETIVOTACTICO['OBJETIVOTACTICO']['id'])); ?> </li>
 						<li><?php echo $this->Form->postLink(__('Eliminar objetivo táctico.'), array('action' => 'delete', $oBJETIVOTACTICO['OBJETIVOTACTICO']['id']), null, __('Are you sure you want to delete # %s?', $oBJETIVOTACTICO['OBJETIVOTACTICO']['id'])); ?> </li>
 						<li><?php echo $this->Html->link(__('Listar objetivos tácticos.'), array('action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('Nuevo objetivo táctico.'), array('action' => 'add')); ?> </li>
+						<!--<li><?php echo $this->Html->link(__('Nuevo objetivo táctico.'), array('action' => 'add')); ?> </li>-->
 						<li><?php echo $this->Html->link(__('Listar objetivos estratégicos.'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('Nuevo objetivo estratégico.'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'add')); ?> </li>
+						<!--<li><?php echo $this->Html->link(__('Nuevo objetivo estratégico.'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'add')); ?> </li>-->
 			  		</ul>
 			  </div>
 			</div>

@@ -4,12 +4,12 @@
   <li class="active">Editar<span class="divider">/</span></li>
 </ul>
 <div class="mETRICAs form">
-<?php echo $this->Form->create('METRICA'); ?>
+
 	<fieldset>
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
-					<strong><?php echo __('Editar m&eacute;trica'); ?></strong>
+					<strong><?php echo __('Editar Métrica'); ?></strong>
 			</div>
 			<div class="span1">
 				<div class="btn-group">
@@ -19,12 +19,13 @@
 			  		</a>
 			  		<ul class="dropdown-menu">
 						<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('METRICA.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('METRICA.id'))); ?></li>
-						<li><?php echo $this->Html->link(__('Ver M&eacute;tricas'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver Métricas'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>
 		</div>
 		</legend>
+<?php echo $this->Form->create('METRICA'); ?>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('titulo');
@@ -36,7 +37,7 @@
 		echo $this->Form->input('dominio');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Editar')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

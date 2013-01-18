@@ -1,13 +1,13 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li><a href="/OBJETIVOTACTICOs/index">Objetivo T&aacute;ctico</a> <span class="divider">/</span></li>
+  <li><a href="/OBJETIVOTACTICOs/index">Objetivos T&aacute;cticos</a> <span class="divider">/</span></li>
   <li class="active">A&ntilde;dir<span class="divider">/</span></li>
 </ul>
 <div class="oBJETIVOTACTICOs form">
 		<legend>
 		<div class="row-fluid">
 			<div class="span3">
-					<strong><?php echo __('A&ntilde;adir objetivo t&aacute;ctico'); ?></strong>
+					<strong><?php echo __('Añadir Objetivo Táctico'); ?></strong>
 			</div>
 			<div class="span1">
 				<div class="btn-group">
@@ -18,7 +18,7 @@
 			  		<ul class="dropdown-menu">
 						<li><?php echo $this->Html->link(__('Nuevo objetivo táctico'), array('action' => 'add')); ?></li>
 						<li><?php echo $this->Html->link(__('Listar objetivos estratégicos'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('Nuevo objetivo estratégico'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'add')); ?> </li>
+						<!--<li><?php echo $this->Html->link(__('Nuevo objetivo estratégico'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'add')); ?> </li>-->
 			  		</ul>
 			  </div>
 			</div>

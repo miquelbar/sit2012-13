@@ -8,7 +8,7 @@
 		<div class="row-fluid">
 			<div class="span3">
 				
-					<strong><?php echo __('Editar &Aacute;rea Funcional'); ?></strong>
+					<strong><?php echo __('Editar Área Funcional'); ?></strong>
 				
 			</div>
 			<div class="span1">
@@ -19,7 +19,7 @@
 			  		</a>
 			  		<ul class="dropdown-menu">
 			  			<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('AREAFUNCIONAL.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('AREAFUNCIONAL.id'))); ?></li>
-						<li><?php echo $this->Html->link(__('Ver &Aacute;reas Funcionales'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>
@@ -32,7 +32,7 @@
 		echo $this->Form->input('nombre');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Editar')); ?>
 </div>
 <div class="actions">
 	<!--<h3><?php echo __('Actions'); ?></h3>

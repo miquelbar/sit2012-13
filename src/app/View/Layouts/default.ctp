@@ -58,13 +58,26 @@
 	<div id="top-bar" class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="/"><img src="logo.png" style="width:auto;height: 24px;"class="img-square">SIT</a>
+				<a class="brand" href="/"><img src="/logo.png" style="width:auto;height: 24px;"class="img-square">SIT</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 					<? 
 						$navigation->renderSubTree('topbar',$requested);
 					?>
-						<li class=" "><a href="#">Navegaci&oacute;n</a></li>
+						<li>
+							<div class="btn-group">
+				                <button class="btn btn-link dropdown-toggle" style="color:#777;" data-toggle="dropdown">Ir a... <span class="caret"></span></button>
+				                <ul class="dropdown-menu">
+				                  <!--<li><a href="/AREAFUNCIONALs">&Aacute;rea Funcional</a></li>-->
+				                  <!--<li><a href="/AREAPERSONAs">&Aacute;rea Persona</a></li>-->
+				                  <li><a href="/CARTERAs">Carteras</a></li>
+				                  <li><a href="/METRICAs">M&eacute;tricas</a></li>
+				                  <li><a href="/OBJETIVOESTRATEGICOs">Objetivos Estrat&eacute;gicos</a></li>
+				                  <li><a href="/OBJETIVOTACTICOs">Objetivos T&aacute;cticos</a></li>
+				                  <li><a href="/PERSONAs">Personas</a></li>
+				                </ul>
+				              </div>
+						</li>
 					</ul>
 				    <!--<form class="navbar-form pull-right">
 					    <input type="text" class="span2">
@@ -79,9 +92,20 @@
 						<? } else { ?>
 							<li>
 							<div class="btn-group">
-							<a class="btn btn-warning" href="/NOTIFICACIONs/">
+								<? $num = count($notificacion);
+									$class = 'btn-warning'; 
+							    	if ($num==0)
+										$class= "btn-success";
+									else if ($num > 0 && $num<10) {
+										$class= "btn-warning";
+									} else {
+										$class= "btn-danger";
+									}
+									
+							    ?>
+							<a class="btn <?=$class;?>" href="/NOTIFICACIONs/">
 							  	<i class="icon-envelope icon-white"></i>
-							    <?=count($notificacion) ?>
+							  	<?=$num;?>
 							  </a>
 							  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
 							  	<i class="icon-user icon-white"></i>

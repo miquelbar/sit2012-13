@@ -8,7 +8,7 @@
 		<div class="row-fluid">
 			<div class="span3">
 				
-					<strong><?php echo __('A&ntilde;adir &aacute;rea funcional'); ?></strong>
+					<strong><?php echo __('Añadir área funcional'); ?></strong>
 				
 			</div>
 			<div class="span1">
@@ -18,7 +18,7 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-			  			<li><?php echo $this->Html->link(__('Ver &Aacute;reas Funcionales'), array('action' => 'index')); ?></li>
+			  			<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>
@@ -30,7 +30,7 @@
 		echo $this->Form->input('nombre');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Añadir')); ?>
 </div>
 <div class="actions">
 	<!--<h3><?php echo __('Actions'); ?></h3>

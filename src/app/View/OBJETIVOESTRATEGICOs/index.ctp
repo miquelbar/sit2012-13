@@ -1,10 +1,10 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
-  <li class="active">Objetivos Estrategicos<span class="divider">/</span></li>
+  <li class="active">Objetivos Estrat&eacute;gicos<span class="divider">/</span></li>
 </ul>
 <div class="oBJETIVOESTRATEGICOs index">
 	<div class="row-fluid">
-		<div class="span10"><h2><?php echo __('Objetivos Estrategicos'); ?></h2></div>
+		<div class="span10"><h2><?php echo __('Objetivos Estratégicos'); ?></h2></div>
 		<div class="span1">
 			<div class="btn-group">
 		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
@@ -12,9 +12,9 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
-							<li><?php echo $this->Html->link(__('Nuevo Objetivo Estrat&eacute;gico'), array('action' => 'add')); ?></li>
+							<li><?php echo $this->Html->link(__('Añadir Objetivo Estratégico'), array('action' => 'add')); ?></li>
 							<li><?php echo $this->Html->link(__('Ver Principios TIC'), array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'index')); ?> </li>
-							<li><?php echo $this->Html->link(__('A&ntilde;adir Principio TIC'), array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'add')); ?> </li>
+							<!--<li><?php echo $this->Html->link(__('A&ntilde;adir Principio TIC'), array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'add')); ?> </li>-->
 				</ul>
 		  	</div>
 		</div>
