@@ -76,6 +76,9 @@
 				                  <li><a href="/OBJETIVOTACTICOs">Objetivos T&aacute;cticos</a></li>
 				                  <li><a href="/PERSONAs">Personas</a></li>
 				                  <li><a href="/PROPUESTa">Propuestas</a></li>
+				                  <li><a href="/PROYECTOs">Proyectos</a></li>
+				                  <li><a href="/SERVICIOs">Servicios</a></li>
+				                  <li><a href="/USUARIOs">Usuarios</a></li>
 				                </ul>
 				              </div>
 						</li>
