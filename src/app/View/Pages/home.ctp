@@ -1,13 +1,13 @@
 <div class="row">
 	<div class="span3">
-		<div class="accordion" id="accordion2">
+		<div class="accordion" id="accordion3">
 			 <div class="accordion-group">
 				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseOne">
 						<strong>X</strong>
 					</a>
 				</div>
-				<div id="collapseOne" class="accordion-body collapse in">
+				<div id="icollapseOne" class="accordion-body collapse in">
 					<div class="accordion-inner">
 						<ul>
 							<li>TEST</li>
@@ -17,11 +17,11 @@
 			</div>
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseTwo">
 						<strong>X</strong>
 					</a>
 				</div>
-				<div id="collapseTwo" class="accordion-body collapse">
+				<div id="icollapseTwo" class="accordion-body collapse">
 					<div class="accordion-inner">
 						<ul>
 							<li>TEST</li>
@@ -31,11 +31,11 @@
 			</div>
 			<div class="accordion-group">
 				<div class="accordion-heading">
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseThree">
 						<strong>X</strong>
 					</a>
 				</div>
-				<div id="collapseThree" class="accordion-body collapse">
+				<div id="icollapseThree" class="accordion-body collapse">
 					<div class="accordion-inner">
 						<ul>
 							<li>TEST</li>

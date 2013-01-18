@@ -13,7 +13,7 @@ class GooglePieChart extends GoogleChart {
 		$this->setColumn(self::INDEX_VALUE,self::TYPE_NUMBER,$valor);
 	}
 
-	public function addRow($campo, $valor){
+	public function newRow($campo, $valor){
 		parent::addRow(array($campo, $valor));
 	}
 }

@@ -17,7 +17,7 @@ class ModelPieChart extends ModelChart{
 		
 		$stats = $this->obtainData($valueField, $groupField, $where);
 		foreach ($stats as $campo => $valor) {
-			$this->chart->addRow($this->getFieldValue($campo), $valor);
+			$this->chart->newRow($this->getFieldValue($campo), $valor);
 		}
 		
 	}
