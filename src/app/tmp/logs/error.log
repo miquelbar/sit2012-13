@@ -8385,3 +8385,35 @@
 2013-01-18 17:40:11 Error: [MissingControllerException] Controller class OBJETIVOSESTRATEGICOsController could not be found.
 #0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-18 18:01:47 Error: [MissingControllerException] Controller class PROPUESTasController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 18:03:31 Error: [MissingControllerException] Controller class PROPUESTAController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 18:05:09 Error: [MissingControllerException] Controller class TIPOPROsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 18:07:02 Error: [MissingControllerException] Controller class TIPOPROsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 18:12:48 Error: [Exception] La fila que se pretende insertar no cumple con la estructura.
+#0 /home/mike/git/sit2012-13/src/app/Lib/GooglePieChart.php(17): GoogleChart->addRow(Array)
+#1 /home/mike/git/sit2012-13/src/app/Controller/USUARIOsController.php(43): GooglePieChart->addRow(Array)
+#2 [internal function]: USUARIOsController->view('4')
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(USUARIOsController), Array)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(USUARIOsController), Object(CakeRequest), Object(CakeResponse))
+#6 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-01-18 18:13:17 Error: [MissingActionException] Action PROPUESTaController::cio() could not be found.
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROPUESTaController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-18 18:15:40 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 18:16:32 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
