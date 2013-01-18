@@ -50,13 +50,13 @@
 			<!--top-->
 				<!--left -->
 				<div><img src="/iso38500.png" style="width: 500px; height: 457px;"></div>
-				<div style="position: absolute; left:25px; top: 0px;">
+				<!--<div style="position: absolute; left:25px; top: 0px;">
 					<div class="box box_top"><a href="#topleft">&nbsp;	</a></div>
-				</div>
+				</div>-->
 				<!-- right -->
-				<div style="position: absolute; left:375px; top: 0px;">
+				<!--<div style="position: absolute; left:375px; top: 0px;">
 					<div class="box box_top"><a href="#topright">&nbsp;	</a></div>
-				</div>
+				</div>-->
 			<!--/top-->
 			<!--top bottom-->
 				<!-- left -->
@@ -89,12 +89,12 @@
 			<!--bottom-->
 				<!--left-->
 				<div style="position: absolute; left:15px; top: 330px;">
-					<div class="box box_bottom"><a href="#bottomleft">&nbsp;	</a></div>
+					<div class="box box_bottom"><a href="/PROYECTOs">&nbsp;	</a></div>
 				</div>
 				<!--right-->
-				<div style="position: absolute; left:260px; top: 328px;">
+				<!--<div style="position: absolute; left:260px; top: 328px;">
 					<div class="box box_bottom"><a href="#bottomright">&nbsp;	</a></div>
-				</div>
+				</div>-->
 			<!--/bottom-->
 		</div>
 	</div>
@@ -181,27 +181,28 @@
 			},
 			function() {
 				$(this).stop().animate({"opacity": "0"}, "slow");
-			});
-
+		});
+		$(".box_top").click(function(){
+	     	window.location=$(this).find("a").attr("href"); 
+		    return false;
+		});
+		$(".box_top_bottom").click(function(){
+	     	window.location=$(this).find("a").attr("href"); 
+		    return false;
+		});
+		$(".box_middle").click(function(){
+	     	window.location=$(this).find("a").attr("href"); 
+		    return false;
+		});
+		$(".box_bottom").click(function(){
+	     	window.location=$(this).find("a").attr("href"); 
+		    return false;
+		});
+		$(".box_top").mouseover(function() {
+	    	$(this).fadeIn("slow");
 		});
 
-	$(".box_top").click(function(){
-     	window.location=$(this).find("a").attr("href"); 
-	    return false;
 	});
-	$(".box_top_bottom").click(function(){
-     	window.location=$(this).find("a").attr("href"); 
-	    return false;
-	});
-	$(".box_middle").click(function(){
-     	window.location=$(this).find("a").attr("href"); 
-	    return false;
-	});
-	$(".box_bottom").click(function(){
-     	window.location=$(this).find("a").attr("href"); 
-	    return false;
-	});
-	$(".box_top").mouseover(function() {
-    	$(this).fadeIn("slow");
-	});
+
+	
 </script>

@@ -19,7 +19,7 @@
 					<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('PROPUESTum.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('PROPUESTum.id'))); ?></li>
 					<li><?php echo $this->Html->link(__('Ver Propuestas'), array('action' => 'index')); ?></li>
 					<li><?php echo $this->Html->link(__('Ver Usuarios'), array('controller' => 'u_s_u_a_r_i_os', 'action' => 'index')); ?> </li>
-					<li><?php echo $this->Html->link(__('A&ntilde;adir Solicitante'), array('controller' => 'u_s_u_a_r_i_os', 'action' => 'add')); ?> </li>
+					<li><?php echo $this->Html->link(__('Añadir Solicitante'), array('controller' => 'u_s_u_a_r_i_os', 'action' => 'add')); ?> </li>
 					<li><?php echo $this->Html->link(__('Ver Carteras'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'index')); ?> </li>
 					<li><?php echo $this->Html->link(__('A&ntilde;adir Carteras'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'add')); ?> </li>
 					<li><?php echo $this->Html->link(__('Ver Valoraciones CIO'), array('controller' => 'v_a_l_o_r_a_c_i_o_n_c_i_os', 'action' => 'index')); ?> </li>

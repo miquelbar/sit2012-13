@@ -4,8 +4,8 @@
   <li class="active">A&ntilde;dir<span class="divider">/</span></li>
 </ul>
 <div class="aREAPERSONAs form">
-<?php echo $this->Form->create('AREAPERSONA'); ?>
-	<fieldset>
+
+	
 		<legend>
 		<div class="row-fluid">
 			<div class="span3">
@@ -20,22 +20,24 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('Ver &Aacute;rea Persona'), array('action' => 'index')); ?></li>
-						<li><?php echo $this->Html->link(__('Ver &Aacute;reas Funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('Nueva &Aacute;rea Funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
+						<li><?php echo $this->Html->link(__('Ver Área Persona'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+						<!--<li><?php echo $this->Html->link(__('Nueva &Aacute;rea Funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>-->
 						<li><?php echo $this->Html->link(__('Ver Personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('Nueva Persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>
+						<!--<li><?php echo $this->Html->link(__('Nueva Persona'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'add')); ?> </li>-->
 			  		</ul>
 			  </div>
 			</div>
 		</div>
 		</legend>
+	<?php echo $this->Form->create('AREAPERSONA'); ?>
+	<fieldset>
 	<?php
 		echo $this->Form->input('area_funcional_id');
 		echo $this->Form->input('persona_id');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Añadir')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

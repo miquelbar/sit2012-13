@@ -8,7 +8,7 @@
 		<div class="row-fluid">
 			<div class="span3">
 				
-					<strong><?php echo __('&Aacute;rea Funcional'); ?></strong>
+					<strong><?php echo __('Área Funcional'); ?></strong>
 				
 			</div>
 			<div class="span1">
@@ -18,10 +18,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('Editar &Aacute;rea Funcional'), array('action' => 'edit', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?> </li>
-						<li><?php echo $this->Form->postLink(__('Eliminar &Aacute;rea Funcional'), array('action' => 'delete', $aREAFUNCIONAL['AREAFUNCIONAL']['id']), null, __('Are you sure you want to delete # %s?', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?> </li>
-						<li><?php echo $this->Html->link(__('Ver &Aacute;reas Funcionales'), array('action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('A&ntilde;adir &Aacute;rea Funcional'), array('action' => 'add')); ?> </li>
+						<li><?php echo $this->Html->link(__('Editar Área Funcional'), array('action' => 'edit', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?> </li>
+						<li><?php echo $this->Form->postLink(__('Eliminar Área Funcional'), array('action' => 'delete', $aREAFUNCIONAL['AREAFUNCIONAL']['id']), null, __('Are you sure you want to delete # %s?', $aREAFUNCIONAL['AREAFUNCIONAL']['id'])); ?> </li>
+						<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('action' => 'index')); ?> </li>
+						<li><?php echo $this->Html->link(__('Añadir Área Funcional'), array('action' => 'add')); ?> </li>
 			  		</ul>
 			  </div>
 			</div>
