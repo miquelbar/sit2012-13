@@ -8111,3 +8111,37 @@
 #3 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(SERVICIOsController), Object(CakeRequest), Object(CakeResponse))
 #4 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-01-18 18:05:52 Error: [MissingActionException] Action UsuarioController::logo.png() could not be found.
+#0 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsuarioController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-18 18:05:52 Error: [MissingActionException] Action UsuarioController::logo.png() could not be found.
+#0 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsuarioController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-18 18:05:58 Error: [MissingActionException] Action UsuarioController::logo.png() could not be found.
+#0 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(UsuarioController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-01-18 18:06:09 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/sit/src/app/Controller/PagesController.php, line 64]
+2013-01-18 18:06:09 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 64, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 64, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-18 18:06:09 Error: [MissingControllerException] Controller class Logo.pngController could not be found.
+#0 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-18 18:06:11 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/sit/src/app/Controller/PagesController.php, line 64]
+2013-01-18 18:06:11 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 64)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 64, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 64, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

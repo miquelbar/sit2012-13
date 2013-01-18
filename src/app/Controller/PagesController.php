@@ -43,7 +43,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('PRINCIPIOTIC', 'OBJETIVOTACTICO', 'OBJETIVOESTRATEGICO');
 
 /**
  * Displays a view
@@ -58,6 +58,15 @@ class PagesController extends AppController {
 		if (!$count) {
 			$this->redirect('/');
 		}
+		
+		$principios = $this->PRINCIPIOTIC->find('all');
+		$tacticos = $this->OBJETIVOTACTICO->find('all');
+		$estrategico = $this->OBJETIVOESTRATEGICO->find('all');
+		
+		$this->set('principios', $principios);
+		$this->set('tacticos', $tacticos);
+		$this->set('estrategicos', $estrategico);
+		
 		$page = $subpage = $title_for_layout = null;
 
 		if (!empty($path[0])) {
@@ -72,4 +81,5 @@ class PagesController extends AppController {
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
 	}
+	
 }
