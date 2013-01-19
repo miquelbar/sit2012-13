@@ -1,9 +1,12 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('MetricaAsociar', '');
 App::uses('GoogleChart', '');
 App::uses('GooglePieChart', '');
+App::uses('GoogleHistograma', '');
 App::uses('ModelChart', '');
 App::uses('ModelPieChart', '');
+App::uses('ModelHistogramChart', '');
 App::uses('MetricaAsociar', '');
 /**
  * PROYECTOs Controller
@@ -14,7 +17,7 @@ class PROYECTOsController extends AppController {
 
 	public $uses = array('PROYECTO','ESTADOPROYECTO', 
 						'AREAPROYECTO', 'AREAFUNCIONAL',
-						'OBJETIVOTACTICO','OBJETIVOPROYECTO');
+						'OBJETIVOTACTICO','OBJETIVOPROYECTO','METRICA', 'VALORMETRICA');
 						
 	var $paginate = array(
         'limit' => 5,
@@ -73,8 +76,44 @@ class PROYECTOsController extends AppController {
 			throw new NotFoundException(__('Invalid p r o y e c t o'));
 		}
 		
+		$proyecto = $this->PROYECTO->read(null, $id);
+		$metricas = $this->METRICA->find('all', array(
+			'conditions' => array('para_proyecto' => 1),
+			'recursive' => 0,
+		));
 		
-		$this->set($propuestas);
+		$metricas = MetricaAsociar::asociar($proyecto['ValorMetrica'], $metricas);
+		$this->set('metricas', $metricas);
+		
+				//$chart = new GooglePieChart('tst');
+		$buildGFX = array(
+			array('id'=>2, 'type'=> 'h', 'titulo' => $metricas[2]['titulo']),
+			array('id'=>4, 'type'=> 'r', 'titulo' => $metricas[4]['titulo']),
+		);
+		
+		$gfx = array();
+		foreach ($buildGFX as $key => $value) {
+			if ($value['type']=='h'){
+				$modelChart = new ModelHistogramChart($this->VALORMETRICA, $value['id']);
+			} else {
+				$modelChart = new ModelPieChart($this->VALORMETRICA, $value['id']);
+			}
+			$modelChart->setTitle($value['titulo']);
+			$modelChart->buildForFieldGrouped('valor','fecha', array(
+				'servicio_id' => $id,
+				'metrica_id' => $value['id']
+			));
+		
+			array_push($gfx, array(
+				'script' => $modelChart->renderChart(),
+				'container' => $modelChart->renderContainer()
+			));
+			
+		}
+		
+		$this->set('load_gfx', GoogleChart::loadLibrary());
+		$this->set('gfx', $gfx);
+		
 		$this->set('pROYECTO', $this->PROYECTO->read(null, $id));
 	}
 
@@ -94,11 +133,11 @@ class PROYECTOsController extends AppController {
 			}
 		}
 		
-		$carteras = $this->PROYECTO->Cartera->find('list');
 		if (isset($this->params['url']['pr'])){
 			$this->set('propuesta',$this->params['url']['pr']);
 		}
 		
+		$carteras = $this->PROYECTO->Cartera->find('list');
 		$propuestas = $this->PROYECTO->Propuesta->find('list');
 		$tipoPros = $this->PROYECTO->TipoPro->find('list');
 		$estadoProyectos = $this->PROYECTO->EstadoProyecto->find('list');

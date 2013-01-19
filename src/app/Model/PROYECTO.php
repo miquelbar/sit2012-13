@@ -175,7 +175,7 @@ class PROYECTO extends AppModel {
 		'nombre' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -193,7 +193,7 @@ class PROYECTO extends AppModel {
 			),
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -211,7 +211,7 @@ class PROYECTO extends AppModel {
 			),
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -241,7 +241,7 @@ class PROYECTO extends AppModel {
 		'descripcion' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -251,7 +251,7 @@ class PROYECTO extends AppModel {
 		'justificacion' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
-				//'message' => 'Your custom message here',
+				'message' => 'Este campo no puede estar vacío.',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -378,4 +378,12 @@ class PROYECTO extends AppModel {
 		)
 	);
 
+	public $hasMany = array(
+		'ValorMetrica' => array(
+			'className' => 'VALORMETRICA',
+			'foreignKey' => 'proyecto_id',
+			'recursive' => 1,
+			'order' => 'fecha DESC'
+		),
+	);	
 }
