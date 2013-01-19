@@ -119,7 +119,7 @@ class OBJETIVOTACTICO extends AppModel {
 		$objetivos = $this->find('all');
 		$final = array();
 		foreach ($objetivos as $id => $valor) {
-			$final[$valor['OBJETIVOTACTICO']['id']] = $valor['OBJETIVOTACTICO']['nombre'];
+			$final[$valor['OBJETIVOTACTICO']['id']] = str_replace("'", "", $valor['OBJETIVOTACTICO']['nombre']);
 		}
 		return $final;
 	}

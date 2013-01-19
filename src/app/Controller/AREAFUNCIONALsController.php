@@ -20,6 +20,7 @@ class AREAFUNCIONALsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->AREAFUNCIONAL->recursive = 0;
 		$this->set('aREAFUNCIONALs', $this->paginate());
 	}
@@ -32,6 +33,7 @@ class AREAFUNCIONALsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->AREAFUNCIONAL->id = $id;
 		if (!$this->AREAFUNCIONAL->exists()) {
 			throw new NotFoundException(__('Invalid a r e a f u n c i o n a l'));
@@ -64,6 +66,11 @@ class AREAFUNCIONALsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
+		
 		$this->AREAFUNCIONAL->id = $id;
 		if (!$this->AREAFUNCIONAL->exists()) {
 			throw new NotFoundException(__('Invalid a r e a f u n c i o n a l'));
@@ -89,6 +96,11 @@ class AREAFUNCIONALsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
+		
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
