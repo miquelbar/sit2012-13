@@ -16,8 +16,10 @@
 	  		</a>
 	  		<ul class="dropdown-menu">
 	    	<!-- dropdown menu links -->
-	    		<li><?php echo $this->Html->link(__('Editar Persona'), array('action' => 'edit', $pERSONA['PERSONA']['id'])); ?> </li>
+	    	<? if ($puedeEditar) { ?>
+	    	<li><?php echo $this->Html->link(__('Editar Persona'), array('action' => 'edit', $pERSONA['PERSONA']['id'])); ?> </li>
 			<li><?php echo $this->Form->postLink(__('Eliminar Persona'), array('action' => 'delete', $pERSONA['PERSONA']['id']), null, __('Are you sure you want to delete # %s?', $pERSONA['PERSONA']['id'])); ?> </li>
+			<? } ?>
 			<li><?php echo $this->Html->link(__('Ver Personas'), array('action' => 'index')); ?> </li>
 			<!--<li><?php echo $this->Html->link(__('Nueva persona'), array('action' => 'add')); ?> </li>-->
 			<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>

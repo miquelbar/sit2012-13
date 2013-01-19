@@ -16,8 +16,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
+			  			<? if ($puedeEditar) { ?>
 						<li><?php echo $this->Html->link(__('Editar Objetivo Estratégico'), array('action' => 'edit', $oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id'])); ?> </li>
 						<li><?php echo $this->Form->postLink(__('Eliminar Objetivo Estratégico'), array('action' => 'delete', $oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id']), null, __('Are you sure you want to delete # %s?', $oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id'])); ?> </li>
+						<? } ?>
 						<li><?php echo $this->Html->link(__('Ver Objetivos Estratégicos'), array('action' => 'index')); ?> </li>
 						<!--<li><?php echo $this->Html->link(__('A&ntilde;adir Objetivo Estrat&eacute;gico'), array('action' => 'add')); ?> </li>-->
 						<li><?php echo $this->Html->link(__('Ver Principios TIC'), array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'index')); ?> </li>

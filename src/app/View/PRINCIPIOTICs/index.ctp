@@ -12,7 +12,9 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
+		  			<? if ($puedeEditar) { ?>
 					<li><?php echo $this->Html->link(__('Nuevo principio TIC'), array('action' => 'add')); ?></li>
+					<? } ?>
 				</ul>
 		  	</div>
 		</div>

@@ -95,6 +95,7 @@ class SERVICIOsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		if ($this->request->is('post')) {
 			$this->SERVICIO->create();
 			if ($this->SERVICIO->save($this->request->data)) {
@@ -119,6 +120,7 @@ class SERVICIOsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->SERVICIO->id = $id;
 		$servicio = $this->SERVICIO->read(null, $id);
 		if (!$this->SERVICIO->exists()) {
@@ -165,6 +167,7 @@ class SERVICIOsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

@@ -17,8 +17,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
+			  			<? if ($puedeEditar) { ?>
 						<li><?php echo $this->Html->link(__('Editar Principio TIC'), array('action' => 'edit', $pRINCIPIOTIC['PRINCIPIOTIC']['id'])); ?> </li>
 						<li><?php echo $this->Form->postLink(__('Eliminar Principio TIC'), array('action' => 'delete', $pRINCIPIOTIC['PRINCIPIOTIC']['id']), null, __('Are you sure you want to delete # %s?', $pRINCIPIOTIC['PRINCIPIOTIC']['id'])); ?> </li>
+						<? } ?>
 						<li><?php echo $this->Html->link(__('Ver Principios TIC'), array('action' => 'index')); ?> </li>
 						<!--<li><?php echo $this->Html->link(__('New P R I N C I P I O T I C'), array('action' => 'add')); ?> </li>-->
 			  		</ul>
