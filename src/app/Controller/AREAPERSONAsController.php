@@ -19,6 +19,7 @@ class AREAPERSONAsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles']));
 		$this->AREAPERSONA->recursive = 0;
 		$this->set('aREAPERSONAs', $this->paginate());
 	}
@@ -31,6 +32,7 @@ class AREAPERSONAsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles']));
 		$this->AREAPERSONA->id = $id;
 		if (!$this->AREAPERSONA->exists()) {
 			throw new NotFoundException(__('Invalid a r e a p e r s o n a'));
@@ -44,6 +46,10 @@ class AREAPERSONAsController extends AppController {
  * @return void
  */
 	public function add() {
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if ($this->request->is('post')) {
 			$this->AREAPERSONA->create();
 			if ($this->AREAPERSONA->save($this->request->data)) {
@@ -66,6 +72,10 @@ class AREAPERSONAsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->AREAPERSONA->id = $id;
 		if (!$this->AREAPERSONA->exists()) {
 			throw new NotFoundException(__('Invalid a r e a p e r s o n a'));
@@ -94,6 +104,10 @@ class AREAPERSONAsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

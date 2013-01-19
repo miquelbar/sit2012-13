@@ -66,7 +66,7 @@ class AREAFUNCIONALsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+		if (!in_array(AppController::ID_PERFIL_ADMINISTRADOR,$this->usuario['perfiles'])){
 			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
 			$this->redirect('/');
 		}
