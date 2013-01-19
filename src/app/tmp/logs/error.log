@@ -8839,3 +8839,6 @@
 #3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-01-19 12:13:41 Error: [MissingControllerException] Controller class ProyectosController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

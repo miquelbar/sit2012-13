@@ -25,17 +25,36 @@
 		</legend>
 <?php echo $this->Form->create('CARTERA'); ?>
 	<fieldset>
-	<?php
+		<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('fecha_creacion');
-		echo $this->Form->input('fecha_inicio_periodo');
-		echo $this->Form->input('fecha_fin_periodo');
-		echo $this->Form->input('fecha_ultima_discusion');
-		echo $this->Form->input('fecha_obtencion_definitiva');
-		echo $this->Form->input('fecha_inicio_validez');
-		echo $this->Form->input('fecha_fin_validez');
-		echo $this->Form->input('fecha_ultima_modificacion');
-	?>
+		?>
+		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
+			
+			<tr>
+				<td><?=$this->Form->input('fecha_creacion');?></td>
+			</tr>
+			<tr>
+				<td><? echo $this->Form->input('fecha_inicio_periodo'); ?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_fin_periodo');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_ultima_discusion');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_obtencion_definitiva');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_inicio_validez');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_fin_validez');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_ultima_modificacion'); ?></td>
+			</tr>
+		</table>
 	</fieldset>
 <?php echo $this->Form->end(array('label'=>'Editar Cartera', 'class'=>'btn btn-success btn-large')); ?>
 </div>
