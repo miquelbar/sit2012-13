@@ -59,7 +59,16 @@ if (count($pROPUESTa) > 0) {
 		<td><?php echo h($pROPUESTum['PROPUESTum']['resumen']); ?>&nbsp;</td>
 		<!--<td><?php echo h($pROPUESTum['PROPUESTum']['justificacion']); ?>&nbsp;</td>-->
 		<!--<td><?php echo h($pROPUESTum['PROPUESTum']['fecha_limite']); ?>&nbsp;</td>-->
-		<td><?php echo h($estados[$pROPUESTum['PROPUESTum']['estado']]); ?>&nbsp;</td>
+		<td>
+			<?echo h($estados[$pROPUESTum['PROPUESTum']['estado']]); ?>
+			<? 
+			if ($pROPUESTum['PROPUESTum']['estado'] == PROPUESTaController::ESTADO_ACEPTADA) {
+			?>
+			<a class="btn btn-success" href="/PROYECTOs/add/?pr=<?=$pROPUESTum['PROPUESTum']['id']?>">Convertir en propuesta</a>			
+			<?
+			}
+			?>
+		</td>
 		<td>
 			<?php echo $this->Html->link($pROPUESTum['Solicitante']['nombre'], array('controller' => 'u_s_u_a_r_i_os', 'action' => 'view', $pROPUESTum['Solicitante']['id'])); ?>
 		</td>

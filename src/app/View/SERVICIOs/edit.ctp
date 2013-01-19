@@ -81,10 +81,21 @@
 			'titulo' => 'Métricas'
 		))?>
 	</div>
-	<?
-		echo $this->Form->input('AREAFUNCIONAL');
-		echo $this->Form->input('PROYECTO');
-	?>
+	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
+		<tr>
+			<td><?echo $this->Form->input('AREAFUNCIONAL', array(
+				'label' => 'Área',
+				'class' => 'span6 offset1',
+				'style' =>'height:200px'
+			));?>
+
+			<td><?echo $this->Form->input('PROYECTO', array(
+				'label' => 'Proyectos relacionados',
+				'class' => 'span6 offset1',
+				'style' =>'height:200px'
+			));?></td>
+		</tr>
+	</table>
 	</fieldset>
 <?php echo $this->Form->end(array('label'=>'Editar Servicio', 'class'=>'btn btn-success btn-large')); ?>
 </div>

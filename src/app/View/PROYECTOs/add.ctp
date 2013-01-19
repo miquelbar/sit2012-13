@@ -60,8 +60,30 @@
 		</table>
 		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
 		<tr>
-			<td><?echo $this->Form->input('patrocinador_id');?></td>
-			<td><?echo $this->Form->input('responsable_id');?></td>
+			<td>
+				<?
+				if (isset($patrocinador)){
+				?>
+				<input value="<?=$patrocinador['id']?>" readonly="readonly" type="hidden" name="data[PROYECTO][patrocinador_id]"/>
+				<strong>Patrocinador:</strong> <?=$patrocinador['nombre']?>
+				<? 
+				} else {
+					echo $this->Form->input('patrocinador_id');
+				}	
+				?>
+			</td>
+			<td>
+				<?
+				if (isset($responsable)){
+				?>
+				<input value="<?=$responsable['id']?>" readonly="readonly" type="hidden" name="data[PROYECTO][patrocinador_id]"/>
+				<strong>Responsable: </strong><?=$responsable['nombre']?>
+				<?
+				} else {
+					 echo $this->Form->input('responsable_id');
+				}
+				?>
+			</td>
 		</tr>
 		</table>
 		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
@@ -74,15 +96,17 @@
 		</table>
 		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
 			<tr>
-			<td><?echo $this->Form->input('descripción', array(
+			<td><?echo $this->Form->input('descripcion', array(
 				'label' => 'Descripción',
 				'type' =>'textarea',
-				'class' => 'span6 offset1'
+				'class' => 'span6 offset1',
+				'value' => isset($descripcion) ? $descripcion : ''
 			));?></td>
 			<td><?echo $this->Form->input('justificacion', array(
 				'label' => 'Justificación',
 				'type' =>'textarea',
-				'class' => 'span6 offset1'
+				'class' => 'span6 offset1',
+				'value' => isset($justificacion) ? $justificacion : ''
 			));?></td>
 			</tr>
 		</table>

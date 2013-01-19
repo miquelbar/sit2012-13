@@ -1,5 +1,13 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('MetricaAsociar', '');
+App::uses('GoogleChart', '');
+App::uses('GooglePieChart', '');
+App::uses('GoogleHistograma', '');
+App::uses('ModelChart', '');
+App::uses('ModelPieChart', '');
+App::uses('ModelHistogramChart', '');
+App::uses('MetricaAsociar', '');
 /**
  * CARTERAs Controller
  *
@@ -19,8 +27,9 @@ class CARTERAsController extends AppController {
  * @return void
  */
 	public function index() {
+
 		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
-		$this->CARTERA->recursive = 0;
+		$this->CARTERA->recursive = 1;
 		$this->set('cARTERAs', $this->paginate());
 	}
 
@@ -37,6 +46,7 @@ class CARTERAsController extends AppController {
 		if (!$this->CARTERA->exists()) {
 			throw new NotFoundException(__('Invalid c a r t e r a'));
 		}
+		
 		$this->set('cARTERA', $this->CARTERA->read(null, $id));
 	}
 
@@ -55,7 +65,7 @@ class CARTERAsController extends AppController {
 			$this->CARTERA->create();
 			if ($this->CARTERA->save($this->request->data)) {
 				$this->Session->setFlash(__('The c a r t e r a has been saved'));
-				$this->redirect(array('action' => 'index'));
+				$this->redirect(array('action' => 'view', $id));
 			} else {
 				$this->Session->setFlash(__('The c a r t e r a could not be saved. Please, try again.'));
 			}

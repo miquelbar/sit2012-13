@@ -84,6 +84,13 @@
 			));?></td>
 			</tr>
 		</table>
+		<div class="metricas">
+			<?=$this->Metrica->buildForInput($metricas, array(
+				'class' => 'table table-striped table-bordered table-hover span7',
+				'unidades' => true,
+				'titulo' => 'Métricas'
+			))?>
+		</div>
 		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
 			<tr>
 				<td><?echo $this->Form->input('AREA', array(
@@ -95,10 +102,10 @@
 					'label' => 'Objetivos Tácticos',
 					'class' => 'span6 offset1',
 					'style' =>'height:200px'
-				));?>
+				));?></td>
 			</tr>
 			<tr>
-				<td><?echo $this->Form->input('SERVICIO', array(
+				<td colspan="2"><?echo $this->Form->input('SERVICIO', array(
 					'label' => 'Servicios relacionados',
 					'class' => 'span6 offset1',
 					'style' =>'height:200px'

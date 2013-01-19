@@ -67,14 +67,14 @@ class VALORMETRICA extends AppModel {
 		//PROCESAR CAMBIOS EN METRICAS
 		foreach ($data as $key => $value) {
 			if (substr($key, 0,2) == 'm_'){
-				$id = substr($key, 2);
+				$id = substr($key, 2,1);
 				$update = array(
 					'valor' => $value,
 					'fecha' => date('Y-m-d H:i:s'),
 					$para => $idPadre
 				);
 				if (is_numeric($id)){
-					$id = intval($id);
+					$id = intval(substr($key, 2));
 					$this->id = $id;
 				} else {
 					if ($id == "X" && is_numeric(substr($key, 3,1))){

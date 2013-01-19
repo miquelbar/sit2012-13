@@ -28,9 +28,20 @@ class SERVICIOsController extends AppController {
  * @return void
  */
 	public function index() {
+		$tipo = isset($this->params['url']['t']) ? $this->params['url']['t'] : 'a';
+		
+		$opts = array();
+		switch ($tipo) {
+			case 'r':
+				$opts['responsable_id'] = $this->usuario['Persona']['id'];
+				break;
+			default:
+				break;
+		}
+		
 		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->SERVICIO->recursive = 0;
-		$this->set('sERVICIOs', $this->paginate());
+		$this->set('sERVICIOs', $this->paginate($opts));
 	}
 
 /**
@@ -128,16 +139,16 @@ class SERVICIOsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->SERVICIO->save($this->request->data)) {
+				$this->VALORMETRICA->procesarMetrica(
+					$this->request->data,
+					$servicio['SERVICIO']['id'],
+					'servicio_id'
+				);
 				$this->Session->setFlash(__('The s e r v i c i o has been saved'));
 				$this->redirect(array('action' => 'view', $id));
 			} else {
 				$this->Session->setFlash(__('The s e r v i c i o could not be saved. Please, try again.'));
 			}
-			$this->VALORMETRICA->procesarMetrica(
-				$this->request->data,
-				$servicio['SERVICIO']['id'],
-				'servicio_id'
-			);
 		} else {
 			$this->request->data = $this->SERVICIO->read(null, $id);
 		}

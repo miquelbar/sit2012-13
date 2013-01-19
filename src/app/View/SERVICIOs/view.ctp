@@ -139,21 +139,13 @@
 		</tr>
 		<tr>
 			<th><?php echo __('Id'); ?></th>
-			<th><?php echo __('Cartera Id'); ?></th>
-			<th><?php echo __('Propuesta Id'); ?></th>
 			<th><?php echo __('Codigo'); ?></th>
 			<th><?php echo __('Nombre'); ?></th>
-			<th><?php echo __('Tipo'); ?></th>
 			<th><?php echo __('Fecha Inicio Prevista'); ?></th>
 			<th><?php echo __('Fecha Inicio Real'); ?></th>
 			<th><?php echo __('Fecha Fin Prevista'); ?></th>
 			<th><?php echo __('Fecha Fin Real'); ?></th>
 			<th><?php echo __('Descripcion'); ?></th>
-			<th><?php echo __('Justificacion'); ?></th>
-			<th><?php echo __('Estado'); ?></th>
-			<th><?php echo __('Patrocinador Id'); ?></th>
-			<th><?php echo __('Responsable Id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -162,25 +154,13 @@
 		foreach ($sERVICIO['PROYECTO'] as $pROYECTO): ?>
 		<tr>
 			<td><?php echo $pROYECTO['id']; ?></td>
-			<td><?php echo $pROYECTO['cartera_id']; ?></td>
-			<td><?php echo $pROYECTO['propuesta_id']; ?></td>
 			<td><?php echo $pROYECTO['codigo']; ?></td>
 			<td><?php echo $pROYECTO['nombre']; ?></td>
-			<td><?php echo $pROYECTO['tipo']; ?></td>
 			<td><?php echo $pROYECTO['fecha_inicio_prevista']; ?></td>
 			<td><?php echo $pROYECTO['fecha_inicio_real']; ?></td>
 			<td><?php echo $pROYECTO['fecha_fin_prevista']; ?></td>
 			<td><?php echo $pROYECTO['fecha_fin_real']; ?></td>
 			<td><?php echo $pROYECTO['descripcion']; ?></td>
-			<td><?php echo $pROYECTO['justificacion']; ?></td>
-			<td><?php echo $pROYECTO['estado']; ?></td>
-			<td><?php echo $pROYECTO['patrocinador_id']; ?></td>
-			<td><?php echo $pROYECTO['responsable_id']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'p_r_o_y_e_c_t_os', 'action' => 'view', $pROYECTO['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'p_r_o_y_e_c_t_os', 'action' => 'edit', $pROYECTO['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'p_r_o_y_e_c_t_os', 'action' => 'delete', $pROYECTO['id']), null, __('Are you sure you want to delete # %s?', $pROYECTO['id'])); ?>
-			</td>
 		</tr>
 	<?php endforeach; ?>
 	</tbody>

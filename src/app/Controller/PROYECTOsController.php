@@ -15,7 +15,7 @@ App::uses('MetricaAsociar', '');
  */
 class PROYECTOsController extends AppController {
 
-	public $uses = array('PROYECTO','ESTADOPROYECTO', 
+	public $uses = array('PROYECTO','PERSONA','PROPUESTum','ESTADOPROYECTO', 
 						'AREAPROYECTO', 'AREAFUNCIONAL',
 						'OBJETIVOTACTICO','OBJETIVOPROYECTO','METRICA', 'VALORMETRICA');
 						
@@ -31,9 +31,26 @@ class PROYECTOsController extends AppController {
  * @return void
  */
 	public function index() {
+		
+		$tipo = isset($this->params['url']['t']) ? $this->params['url']['t'] : 'a';
+		
+		$opts = array();
+		switch ($tipo) {
+			case 'r':
+				$opts['PROYECTO.responsable_id'] = $this->usuario['Persona']['id'];
+				break;
+			
+			case 'p':
+				$opts['PROYECTO.patrocinador_id'] = $this->usuario['Persona']['id'];
+				break;
+			default:
+				break;
+		}
+		
+		
 		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->PROYECTO->recursive = 0;
-		$this->set('pROYECTOs', $this->paginate());
+		$this->set('pROYECTOs', $this->paginate($opts));
 		$showGfx = true;
 		if ($showGfx){
 			$modelChart = new ModelPieChart($this->PROYECTO, 'pr');
@@ -71,6 +88,8 @@ class PROYECTOsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+		
 		$this->PROYECTO->id = $id;
 		if (!$this->PROYECTO->exists()) {
 			throw new NotFoundException(__('Invalid p r o y e c t o'));
@@ -135,6 +154,12 @@ class PROYECTOsController extends AppController {
 		
 		if (isset($this->params['url']['pr'])){
 			$this->set('propuesta',$this->params['url']['pr']);
+			$this->PROPUESTum->recursive=1;
+			$propuesta = $this->PROPUESTum->read(null, $this->params['url']['pr']);
+			$this->set('responsable', $propuesta['Responsable']);
+			$this->set('patrocinador', $propuesta['Patrocinador']);
+			$this->set('descripcion', $propuesta['PROPUESTum']['descripcion']);
+			$this->set('justificacion', $propuesta['PROPUESTum']['justificacion']);
 		}
 		
 		$carteras = $this->PROYECTO->Cartera->find('list');
@@ -162,9 +187,15 @@ class PROYECTOsController extends AppController {
 		if (!$this->PROYECTO->exists()) {
 			throw new NotFoundException(__('Invalid p r o y e c t o'));
 		}
+		$proyecto = $this->PROYECTO->read(null, $id);
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->PROYECTO->save($this->request->data)) {
 				$this->Session->setFlash(__('The p r o y e c t o has been saved'));
+				$this->VALORMETRICA->procesarMetrica(
+					$this->request->data,
+					$proyecto['PROYECTO']['id'],
+					'proyecto_id'
+				);
 				$this->redirect(array('action' => 'view', $id));
 			} else {
 				$this->Session->setFlash(__('The p r o y e c t o could not be saved. Please, try again.'));
@@ -172,6 +203,14 @@ class PROYECTOsController extends AppController {
 		} else {
 			$this->request->data = $this->PROYECTO->read(null, $id);
 		}
+		
+		$metricas = $this->METRICA->find('all', array(
+			'conditions' => array('para_proyecto' => 1),
+			'recursive' => 0
+		));
+		
+		$metricas = MetricaAsociar::asociar($proyecto['ValorMetrica'], $metricas);
+		$this->set('metricas', $metricas);
 		
 		$carteras = $this->PROYECTO->Cartera->find('list');
 		$propuestas = $this->PROYECTO->Propuesta->find('list');

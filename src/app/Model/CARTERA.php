@@ -189,4 +189,12 @@ class CARTERA extends AppModel {
 			),
 		),
 	);
+	
+	public $hasMany = array(
+		'PROYECTO' => array(
+			'className' => 'PROYECTO',
+			'foreignKey' => 'cartera_id',
+			'recursive' => 1,
+		)
+	);
 }
