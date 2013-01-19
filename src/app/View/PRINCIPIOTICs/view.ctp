@@ -17,41 +17,53 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('Edit P R I N C I P I O T I C'), array('action' => 'edit', $pRINCIPIOTIC['PRINCIPIOTIC']['id'])); ?> </li>
-						<li><?php echo $this->Form->postLink(__('Delete P R I N C I P I O T I C'), array('action' => 'delete', $pRINCIPIOTIC['PRINCIPIOTIC']['id']), null, __('Are you sure you want to delete # %s?', $pRINCIPIOTIC['PRINCIPIOTIC']['id'])); ?> </li>
-						<li><?php echo $this->Html->link(__('List P R I N C I P I O T I Cs'), array('action' => 'index')); ?> </li>
-						<li><?php echo $this->Html->link(__('New P R I N C I P I O T I C'), array('action' => 'add')); ?> </li>
+						<li><?php echo $this->Html->link(__('Editar Principio TIC'), array('action' => 'edit', $pRINCIPIOTIC['PRINCIPIOTIC']['id'])); ?> </li>
+						<li><?php echo $this->Form->postLink(__('Eliminar Principio TIC'), array('action' => 'delete', $pRINCIPIOTIC['PRINCIPIOTIC']['id']), null, __('Are you sure you want to delete # %s?', $pRINCIPIOTIC['PRINCIPIOTIC']['id'])); ?> </li>
+						<li><?php echo $this->Html->link(__('Ver Principios TIC'), array('action' => 'index')); ?> </li>
+						<!--<li><?php echo $this->Html->link(__('New P R I N C I P I O T I C'), array('action' => 'add')); ?> </li>-->
 			  		</ul>
 			  </div>
 			</div>
 		</div>
 		</legend>
 	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Nombre'); ?></dt>
-		<dd>
-			<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['nombre']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Descripcion'); ?></dt>
-		<dd>
-			<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['descripcion']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Inicio'); ?></dt>
-		<dd>
-			<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['fecha_inicio']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Fin'); ?></dt>
-		<dd>
-			<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['fecha_fin']); ?>
-			&nbsp;
-		</dd>
+		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span6">
+			<tr>
+				<td><strong><?php echo __('Id'); ?></strong></td>
+				<td>
+					<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['id']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Nombre'); ?></strong></td>
+				<td>
+					<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['nombre']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Descripcion'); ?></strong></td>
+				<td>
+					<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['descripcion']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Inicio'); ?></strong></td>
+				<td>
+					<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['fecha_inicio']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Fin'); ?></strong></td>
+				<td>
+					<?php echo h($pRINCIPIOTIC['PRINCIPIOTIC']['fecha_fin']); ?>
+					&nbsp;
+				</td>
+			</tr>
+		</table>
 	</dl>
 </div>
 <div class="actions">

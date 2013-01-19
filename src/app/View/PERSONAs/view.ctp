@@ -16,42 +16,45 @@
 	  		</a>
 	  		<ul class="dropdown-menu">
 	    	<!-- dropdown menu links -->
-	    		<li><?php echo $this->Html->link(__('Editar persona'), array('action' => 'edit', $pERSONA['PERSONA']['id'])); ?> </li>
-			<li><?php echo $this->Form->postLink(__('Eliminar persona'), array('action' => 'delete', $pERSONA['PERSONA']['id']), null, __('Are you sure you want to delete # %s?', $pERSONA['PERSONA']['id'])); ?> </li>
-			<li><?php echo $this->Html->link(__('Listar personas'), array('action' => 'index')); ?> </li>
+	    		<li><?php echo $this->Html->link(__('Editar Persona'), array('action' => 'edit', $pERSONA['PERSONA']['id'])); ?> </li>
+			<li><?php echo $this->Form->postLink(__('Eliminar Persona'), array('action' => 'delete', $pERSONA['PERSONA']['id']), null, __('Are you sure you want to delete # %s?', $pERSONA['PERSONA']['id'])); ?> </li>
+			<li><?php echo $this->Html->link(__('Ver Personas'), array('action' => 'index')); ?> </li>
 			<!--<li><?php echo $this->Html->link(__('Nueva persona'), array('action' => 'add')); ?> </li>-->
-			<li><?php echo $this->Html->link(__('Listar áreas funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+			<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
 			<!--<li><?php echo $this->Html->link(__('Nueva área funcional.'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>-->
 	  		</ul>
 		</div>
 	</div>
 </div> 
-</legend>	
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($pERSONA['PERSONA']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Nombre'); ?></dt>
-		<dd>
-			<?php echo h($pERSONA['PERSONA']['nombre']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Apellido1'); ?></dt>
-		<dd>
-			<?php echo h($pERSONA['PERSONA']['apellido1']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Apellido2'); ?></dt>
-		<dd>
-			<?php echo h($pERSONA['PERSONA']['apellido2']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+</legend>
+		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span6">
+			<tr>
+				<td><strong><?php echo __('Id'); ?></strong></td>
+				<td>
+					<?php echo h($pERSONA['PERSONA']['id']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Nombre'); ?></strong></td>
+				<td>
+					<?php echo h($pERSONA['PERSONA']['nombre']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Apellidos'); ?></strong></td>
+				<td>
+					<?php echo h($pERSONA['PERSONA']['apellido1']); ?>
+					<?php echo h($pERSONA['PERSONA']['apellido2']); ?>
+					&nbsp;
+				</td>
+			</tr>
+		</table>
 </div>
 
 <div class="related">
+	<br /><br /><br /><br /><br /><br /><br /><br />
 	<?php if (!empty($pERSONA['AREAFUNCIONAL'])): ?>
 	<h3><?php echo __('Áreas funcionales de Persona'); ?></h3>
 	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">

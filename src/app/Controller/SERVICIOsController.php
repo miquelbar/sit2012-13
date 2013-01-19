@@ -16,7 +16,12 @@ App::uses('MetricaAsociar', '');
 class SERVICIOsController extends AppController {
 
 	public $uses = array('SERVICIO','METRICA', 'VALORMETRICA');
-	
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'SERVICIO.id' => 'DESC'
+        )
+    );	
 /**
  * index method
  *

@@ -29,28 +29,36 @@
 			</div>
 		</div>
 		</legend>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($nOTIFICACION['NOTIFICACION']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Persona'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($nOTIFICACION['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $nOTIFICACION['Persona']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Tipo Notificacion'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($nOTIFICACION['TipoNotificacion']['mensaje'], array('controller' => 't_i_p_o_n_o_t_i_f_i_c_a_c_i_o_ns', 'action' => 'view', $nOTIFICACION['TipoNotificacion']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Texto'); ?></dt>
-		<dd>
-			<?php echo h($nOTIFICACION['NOTIFICACION']['texto']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span6">
+			<tr>
+				<td><strong><?php echo __('Id'); ?></strong></td>
+				<td>
+					<?php echo h($nOTIFICACION['NOTIFICACION']['id']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Persona'); ?></strong></td>
+				<td>
+					<?php echo $this->Html->link($nOTIFICACION['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $nOTIFICACION['Persona']['id'])); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Tipo Notificacion'); ?></strong></td>
+				<td>
+					<?php echo $nOTIFICACION['TipoNotificacion']['mensaje'];?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Texto'); ?></strong></td>
+				<td>
+					<?php echo h($nOTIFICACION['NOTIFICACION']['texto']); ?>
+					&nbsp;
+				</td>
+			</tr>
+		</table>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

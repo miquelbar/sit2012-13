@@ -6,6 +6,12 @@ App::uses('AppController', 'Controller');
  * @property PERSONA $PERSONA
  */
 class PERSONAsController extends AppController {
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'PERSONA.id' => 'DESC'
+        )
+    );
 
 /**
  * index method

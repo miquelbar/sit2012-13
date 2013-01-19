@@ -6,7 +6,12 @@ App::uses('AppController', 'Controller');
  * @property TIPONOTIFICACION $TIPONOTIFICACION
  */
 class TIPONOTIFICACIONsController extends AppController {
-
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'TIPONOTIFICACION.id' => 'DESC'
+        )
+    );
 /**
  * index method
  *

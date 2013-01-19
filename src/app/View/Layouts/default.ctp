@@ -75,6 +75,7 @@
 				                  <li><a href="/OBJETIVOESTRATEGICOs">Objetivos Estrat&eacute;gicos</a></li>
 				                  <li><a href="/OBJETIVOTACTICOs">Objetivos T&aacute;cticos</a></li>
 				                  <li><a href="/PERSONAs">Personas</a></li>
+				                  <li><a href="/PRINCIPIOTICs">Principios TIC</a></li>
 				                  <li><a href="/PROPUESTa">Propuestas</a></li>
 				                  <li><a href="/PROYECTOs">Proyectos</a></li>
 				                  <li><a href="/SERVICIOs">Servicios</a></li>

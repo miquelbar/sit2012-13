@@ -1,16 +1,14 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/AREAPERSONAs/index">&Aacute;rea Persona</a> <span class="divider">/</span></li>
-  <li class="active">A&ntilde;dir<span class="divider">/</span></li>
+  <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
-<div class="aREAPERSONAs form">
-
-	
+<div class="aREAPERSONAs form">	
 		<legend>
 		<div class="row-fluid">
 			<div class="span3">
 				
-					<strong><?php echo __('A&ntilde;adir &aacute;rea Persona'); ?></strong>
+					<strong><?php echo __('A&ntilde;adir &Aacute;rea Persona'); ?></strong>
 				
 			</div>
 			<div class="span1">
@@ -37,7 +35,7 @@
 		echo $this->Form->input('persona_id');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Añadir')); ?>
+<?php echo $this->Form->end(array('label'=>'Añadir Área Persona', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

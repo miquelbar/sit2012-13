@@ -6,6 +6,13 @@ App::uses('AppController', 'Controller');
  * @property OBJETIVOESTRATEGICO $OBJETIVOESTRATEGICO
  */
 class OBJETIVOESTRATEGICOsController extends AppController {
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'OBJETIVOESTRATEGICO.id' => 'DESC'
+        )
+    );
+
 
 /**
  * index method

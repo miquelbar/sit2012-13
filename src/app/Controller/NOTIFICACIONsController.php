@@ -7,6 +7,12 @@ App::uses('AppController', 'Controller');
  * @property nComponent $n
  */
 class NOTIFICACIONsController extends AppController {
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'NOTIFICACION.id' => 'DESC'
+        )
+    );
 
 /**
  * index method

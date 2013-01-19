@@ -1,13 +1,13 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/CARTERAs/index">Carteras</a> <span class="divider">/</span></li>
-  <li class="active">Nueva<span class="divider">/</span></li>
+  <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
 <div class="cARTERAs form">
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
-					<strong><?php echo __('Nueva cartera'); ?></strong>
+					<strong><?php echo __('Añadir Cartera'); ?></strong>
 			</div>
 			<div class="span1">
 				<div class="btn-group">
@@ -24,18 +24,34 @@
 		</legend>
 <?php echo $this->Form->create('CARTERA'); ?>
 	<fieldset>
-	<?php
-		echo $this->Form->input('fecha_creacion');
-		echo $this->Form->input('fecha_inicio_periodo');
-		echo $this->Form->input('fecha_fin_periodo');
-		echo $this->Form->input('fecha_ultima_discusion');
-		echo $this->Form->input('fecha_obtencion_definitiva');
-		echo $this->Form->input('fecha_inicio_validez');
-		echo $this->Form->input('fecha_fin_validez');
-		echo $this->Form->input('fecha_ultima_modificacion');
-	?>
+		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
+			<tr>
+				<td><?=$this->Form->input('fecha_creacion');?></td>
+			</tr>
+			<tr>
+				<td><? echo $this->Form->input('fecha_inicio_periodo'); ?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_fin_periodo');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_ultima_discusion');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_obtencion_definitiva');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_inicio_validez');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_fin_validez');?></td>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('fecha_ultima_modificacion'); ?></td>
+			</tr>
+		</table>
 	</fieldset>
-<?php echo $this->Form->end(__('Dar de alta')); ?>
+<?php echo $this->Form->end(array('label'=>'Dar de alta la Cartera', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

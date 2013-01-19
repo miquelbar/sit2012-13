@@ -6,7 +6,12 @@ App::uses('AppController', 'Controller');
  * @property PRINCIPIOTIC $PRINCIPIOTIC
  */
 class PRINCIPIOTICsController extends AppController {
-
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'PRINCIPIOTIC.id' => 'DESC'
+        )
+    );
 /**
  * index method
  *

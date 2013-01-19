@@ -6,6 +6,12 @@ App::uses('AppController', 'Controller');
  * @property CARTERA $CARTERA
  */
 class CARTERAsController extends AppController {
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'CARTERA.id' => 'DESC'
+        )
+    );
 
 /**
  * index method

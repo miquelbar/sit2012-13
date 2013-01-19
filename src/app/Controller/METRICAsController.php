@@ -6,6 +6,12 @@ App::uses('AppController', 'Controller');
  * @property METRICA $METRICA
  */
 class METRICAsController extends AppController {
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'METRICA.id' => 'DESC'
+        )
+    );
 
 /**
  * index method

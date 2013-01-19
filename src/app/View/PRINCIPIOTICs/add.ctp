@@ -31,7 +31,7 @@
 		echo $this->Form->input('fecha_fin');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(array('label'=>'Crear', 'class'=>'btn btn-success btn-large')); ?>
+<?php echo $this->Form->end(array('label'=>'Añadir Principio TIC', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

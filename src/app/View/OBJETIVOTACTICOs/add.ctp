@@ -1,7 +1,7 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/OBJETIVOTACTICOs/index">Objetivos T&aacute;cticos</a> <span class="divider">/</span></li>
-  <li class="active">A&ntilde;dir<span class="divider">/</span></li>
+  <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
 <div class="oBJETIVOTACTICOs form">
 		<legend>
@@ -34,7 +34,7 @@
 		echo $this->Form->input('fecha_fin');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(array('label'=>'Crear', 'class'=>'btn btn-success btn-large')); ?>
+<?php echo $this->Form->end(array('label'=>'Añadir Objetivo Táctico', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

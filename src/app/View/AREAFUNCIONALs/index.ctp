@@ -4,7 +4,7 @@
 </ul>
 <div class="aREAFUNCIONALs index">
 	<div class="row-fluid">
-		<div class="span10"><h2><?php echo __('&Aacute;reas funcionales'); ?></h2></div>
+		<div class="span10"><h2><?php echo __('Áreas Funcionales'); ?></h2></div>
 		<div class="span1">
 			<div class="btn-group">
 		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
@@ -12,7 +12,7 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
-					<li><?php echo $this->Html->link(__('Añadir Área FUncional'), array('action' => 'add')); ?></li>
+					<li><?php echo $this->Html->link(__('Añadir Área Funcional'), array('action' => 'add')); ?></li>
 				</ul>
 		  	</div>
 		</div>
@@ -42,13 +42,17 @@
 	));
 	?>	</p>
 
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('anterior'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('siguiente') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
+	<div class="paginator">
+    <ul>
+    <?php
+        if ($this->Paginator->hasNext() || $this->Paginator->hasPrev()){
+            echo $this->Paginator->prev('<<<', array('class'=>'btn'), null, array('class' => 'btn prev disabled'));
+            echo $this->Paginator->numbers(array('separator'=>'','class'=>"btn", 'href=#', 'tag'=>'li'));
+            echo $this->Paginator->next('>>>', array('class'=>'btn'), null, array('class' => 'btn next disabled'));
+        }
+    ?>
+    </ul>
+    </div>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>
