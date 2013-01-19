@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 src/app/tmp/*
 src/app/tmp/cache/models
 src/app/tmp/cache/persistent
 src/app/tmp/cache/persistent/myapp_cake_core_file_map
 src/app/tmp/cache/persistent/myapp_cake_core_method_cache
-=======
-src/app/tmp/**
->>>>>>> fad9f52848af1ea62bab986f1b02e1c031e7e02c
+src/app/tmp/**/*
