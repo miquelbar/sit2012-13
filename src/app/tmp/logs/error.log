@@ -8842,3 +8842,14 @@
 2013-01-19 12:13:41 Error: [MissingControllerException] Controller class ProyectosController could not be found.
 #0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-01-19 12:30:12 Error: [MissingControllerException] Controller class EditController could not be found.
+#0 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-01-19 13:23:37 Error: Fatal Error (4): syntax error, unexpected '&' in [/home/mike/git/sit2012-13/src/app/View/USUARIOs/view.ctp, line 69]
+2013-01-19 13:23:37 Error: [FatalErrorException] syntax error, unexpected '&'
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mike/git/...', 69)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mike/git/...', 69, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mike/git/...', 69, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

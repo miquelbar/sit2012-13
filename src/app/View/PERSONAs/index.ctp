@@ -13,8 +13,8 @@
 	  		</a>
 	  		<ul class="dropdown-menu">
 	  			<li><?php echo $this->Html->link(__('Nueva persona'), array('action' => 'add')); ?> </li>
-				<li><?php echo $this->Html->link(__('Listar personas'), array('action' => 'index')); ?></li>
-				<li><?php echo $this->Html->link(__('Listar áreas funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+				<li><?php echo $this->Html->link(__('Ver Personas'), array('action' => 'index')); ?></li>
+				<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
 				<!--<li><?php echo $this->Html->link(__('Nueva área funcional.'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>-->
 			</ul>
 	  	</div>
@@ -24,8 +24,8 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th><?php echo $this->Paginator->sort('apellido1'); ?></th>
-			<th><?php echo $this->Paginator->sort('apellido2'); ?></th>
+			<th><?php echo $this->Paginator->sort('Primer Apellido'); ?></th>
+			<th><?php echo $this->Paginator->sort('Segundo Apellido'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php

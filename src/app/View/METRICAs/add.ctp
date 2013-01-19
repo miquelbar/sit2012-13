@@ -1,7 +1,7 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/METRICAs/index">M&eacute;tricas</a> <span class="divider">/</span></li>
-  <li class="active">A&ntilde;dir<span class="divider">/</span></li>
+  <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
 <div class="mETRICAs form">
 

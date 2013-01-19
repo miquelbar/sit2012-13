@@ -31,23 +31,29 @@
 			</div>
 		</div>
 		</legend>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($aREAPERSONA['AREAPERSONA']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Área Funcional'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($aREAPERSONA['AreaFuncional']['nombre'], array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'view', $aREAPERSONA['AreaFuncional']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Persona'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($aREAPERSONA['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $aREAPERSONA['Persona']['id'])); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span6">
+			<tr>
+				<td><strong><?php echo __('Id'); ?></strong></td>
+				<td>
+					<?php echo h($aREAPERSONA['AREAPERSONA']['id']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Área Funcional'); ?></strong></td>
+				<td>
+					<?php echo $this->Html->link($aREAPERSONA['AreaFuncional']['nombre'], array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'view', $aREAPERSONA['AreaFuncional']['id'])); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Persona'); ?></strong></td>
+				<td>
+					<?php echo $this->Html->link($aREAPERSONA['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $aREAPERSONA['Persona']['id'])); ?>
+					&nbsp;
+				</td>
+			</tr>
+		</table>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

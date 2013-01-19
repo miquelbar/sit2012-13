@@ -16,7 +16,7 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-						<li><?php echo $this->Html->link(__('List T I P O N O T I F I C A C I O Ns'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver Tipo de Notificaciones'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>

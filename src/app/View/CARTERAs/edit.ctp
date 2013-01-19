@@ -7,7 +7,7 @@
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
-					<strong><?php echo __('Editar cartera'); ?></strong>
+					<strong><?php echo __('Editar Cartera'); ?></strong>
 			</div>
 			<div class="span1">
 				<div class="btn-group">

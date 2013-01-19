@@ -27,38 +27,50 @@
 			</div>
 		</div>
 		</legend>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Nombre'); ?></dt>
-		<dd>
-			<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['nombre']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Descripcion'); ?></dt>
-		<dd>
-			<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['descripcion']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Principio Tic'); ?></dt>
-		<dd>
-			<?php echo $this->Html->link($oBJETIVOESTRATEGICO['PrincipioTic']['nombre'], array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'view', $oBJETIVOESTRATEGICO['PrincipioTic']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Inicio'); ?></dt>
-		<dd>
-			<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['fecha_inicio']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Fin'); ?></dt>
-		<dd>
-			<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['fecha_fin']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span6">
+			<tr>
+				<td><strong><?php echo __('Id'); ?></strong></td>
+				<td>
+					<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['id']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Nombre'); ?></strong></td>
+				<td>
+					<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['nombre']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Descripcion'); ?></strong></td>
+				<td>
+					<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['descripcion']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Principio Tic'); ?></strong></td>
+				<td>
+					<?php echo $this->Html->link($oBJETIVOESTRATEGICO['PrincipioTic']['nombre'], array('controller' => 'p_r_i_n_c_i_p_i_o_t_i_cs', 'action' => 'view', $oBJETIVOESTRATEGICO['PrincipioTic']['id'])); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Inicio'); ?></strong></td>
+				<td>
+					<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['fecha_inicio']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Fin'); ?></strong></td>
+				<td>
+					<?php echo h($oBJETIVOESTRATEGICO['OBJETIVOESTRATEGICO']['fecha_fin']); ?>
+					&nbsp;
+				</td>
+			</tr>
+		</table>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

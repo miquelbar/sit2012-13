@@ -35,7 +35,10 @@
 		<td><?php echo h($uSUARIO['USUARIO']['id']); ?>&nbsp;</td>
 		<td><?php echo h($uSUARIO['USUARIO']['correo']); ?>&nbsp;</td>
 		<td><?php echo h($uSUARIO['USUARIO']['clave']); ?>&nbsp;</td>
-		<td><?php echo h($uSUARIO['USUARIO']['bloqueado']); ?>&nbsp;</td>
+		<td><?php if (h($uSUARIO['USUARIO']['bloqueado'])) 
+							echo 'Sí';
+						else 
+							echo 'No'; ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($uSUARIO['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $uSUARIO['Persona']['id'])); ?>
 		</td>

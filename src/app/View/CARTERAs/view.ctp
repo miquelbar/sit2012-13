@@ -25,53 +25,71 @@
 			</div>
 		</div>
 		</legend>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Creacion'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['fecha_creacion']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Inicio Periodo'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['fecha_inicio_periodo']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Fin Periodo'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['fecha_fin_periodo']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Ultima Discusion'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['fecha_ultima_discusion']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Obtencion Definitiva'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['fecha_obtencion_definitiva']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Inicio Validez'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['fecha_inicio_validez']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Fin Validez'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['fecha_fin_validez']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Fecha Ultima Modificacion'); ?></dt>
-		<dd>
-			<?php echo h($cARTERA['CARTERA']['fecha_ultima_modificacion']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span6">
+			<tr>
+				<td><strong><?php echo __('Id'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['id']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Creación'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['fecha_creacion']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Inicio Periodo'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['fecha_inicio_periodo']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Fin Periodo'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['fecha_fin_periodo']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Última Discusion'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['fecha_ultima_discusion']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Obtencion Definitiva'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['fecha_obtencion_definitiva']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Inicio Validez'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['fecha_inicio_validez']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Fin Validez'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['fecha_fin_validez']); ?>
+					&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td><strong><?php echo __('Fecha Ultima Modificacion'); ?></strong></td>
+				<td>
+					<?php echo h($cARTERA['CARTERA']['fecha_ultima_modificacion']); ?>
+					&nbsp;
+				</td>
+			</tr>
+		</table>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

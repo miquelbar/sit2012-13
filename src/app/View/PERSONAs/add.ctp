@@ -1,14 +1,14 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/PERSONAs/index">Personas</a> <span class="divider">/</span></li>
-  <li class="active">A&ntilde;dir persona<span class="divider">/</span></li>
+  <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
 <div class="pERSONAs form">
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
 				
-					<strong><?php echo __('A&ntilde;adir persona'); ?></strong>
+					<strong><?php echo __('A&ntilde;adir Persona'); ?></strong>
 				
 			</div>
 			<div class="span1">
@@ -30,8 +30,8 @@
 	<fieldset>
 	<?php
 		echo $this->Form->input('nombre');
-		echo $this->Form->input('apellido1');
-		echo $this->Form->input('apellido2');
+		echo $this->Form->input('apellido1', array('label' => 'Primer Apellido'));
+		echo $this->Form->input('apellido2', array('label' => 'Segundo Apellido'));
 		echo $this->Form->input('AREAFUNCIONAL');
 	?>
 	</fieldset>

@@ -1,14 +1,14 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/AREAFUNCIONALs/index">&Aacute;reas Funcionales</a> <span class="divider">/</span></li>
-  <li class="active">A&ntilde;dir<span class="divider">/</span></li>
+  <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
 <div class="aREAFUNCIONALs form">
 		<legend>
 		<div class="row-fluid">
 			<div class="span3">
 				
-					<strong><?php echo __('Añadir área funcional'); ?></strong>
+					<strong><?php echo __('Añadir Área Funcional'); ?></strong>
 				
 			</div>
 			<div class="span1">

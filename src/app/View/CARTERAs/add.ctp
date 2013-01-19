@@ -1,13 +1,13 @@
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
   <li><a href="/CARTERAs/index">Carteras</a> <span class="divider">/</span></li>
-  <li class="active">Nueva<span class="divider">/</span></li>
+  <li class="active">A&ntilde;adir<span class="divider">/</span></li>
 </ul>
 <div class="cARTERAs form">
 		<legend>
 		<div class="row-fluid">
 			<div class="span2">
-					<strong><?php echo __('Nueva Cartera'); ?></strong>
+					<strong><?php echo __('Añadir Cartera'); ?></strong>
 			</div>
 			<div class="span1">
 				<div class="btn-group">

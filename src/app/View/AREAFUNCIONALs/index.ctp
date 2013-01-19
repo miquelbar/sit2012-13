@@ -4,7 +4,7 @@
 </ul>
 <div class="aREAFUNCIONALs index">
 	<div class="row-fluid">
-		<div class="span10"><h2><?php echo __('Áreas funcionales'); ?></h2></div>
+		<div class="span10"><h2><?php echo __('Áreas Funcionales'); ?></h2></div>
 		<div class="span1">
 			<div class="btn-group">
 		  		<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">

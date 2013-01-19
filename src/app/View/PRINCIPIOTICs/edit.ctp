@@ -17,7 +17,7 @@
 			  		</a>
 			  		<ul class="dropdown-menu">
 						<li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $this->Form->value('PRINCIPIOTIC.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('PRINCIPIOTIC.id'))); ?></li>
-						<li><?php echo $this->Html->link(__('Listar principios TIC'), array('action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Ver Principios TIC'), array('action' => 'index')); ?></li>
 			  		</ul>
 			  </div>
 			</div>
