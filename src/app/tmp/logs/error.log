@@ -8899,3 +8899,19 @@
 #11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
 #12 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2013-01-19 16:32:27 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/sit/src/app/View/SERVICIOs/edit.ctp, line 42]
+2013-01-19 16:32:27 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/sit/sr...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/sit/sr...', 42, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/sit/sr...', 42, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-19 16:32:35 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [/var/www/sit/src/app/View/SERVICIOs/edit.ctp, line 42]
+2013-01-19 16:32:35 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/sit/sr...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/sit/sr...', 42, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/sit/sr...', 42, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

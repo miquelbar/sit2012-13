@@ -33,6 +33,7 @@ class OBJETIVOESTRATEGICOsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar',in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->OBJETIVOESTRATEGICO->id = $id;
 		if (!$this->OBJETIVOESTRATEGICO->exists()) {
 			throw new NotFoundException(__('Invalid o b j e t i v o e s t r a t e g i c o'));

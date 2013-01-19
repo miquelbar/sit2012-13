@@ -104,13 +104,6 @@ class SERVICIOsController extends AppController {
 				$this->Session->setFlash(__('The s e r v i c i o could not be saved. Please, try again.'));
 			}
 		}
-				$metricas = $this->METRICA->find('all', array(
-			'conditions' => array('para_propuesta' => 1),
-			'recursive' => 0
-		));
-		
-		$metricas = MetricaAsociar::asociar($propuesta['ValorMetrica'], $metricas);
-		$this->set('metricas', $metricas);
 		
 		$responsables = $this->SERVICIO->Responsable->find('list');
 		$aREAFUNCIONALs = $this->SERVICIO->AREAFUNCIONAL->find('list');
@@ -127,6 +120,7 @@ class SERVICIOsController extends AppController {
  */
 	public function edit($id = null) {
 		$this->SERVICIO->id = $id;
+		$servicio = $this->SERVICIO->read(null, $id);
 		if (!$this->SERVICIO->exists()) {
 			throw new NotFoundException(__('Invalid s e r v i c i o'));
 		}
@@ -137,9 +131,25 @@ class SERVICIOsController extends AppController {
 			} else {
 				$this->Session->setFlash(__('The s e r v i c i o could not be saved. Please, try again.'));
 			}
+			$this->VALORMETRICA->procesarMetrica(
+				$this->request->data,
+				$servicio['PROPUESTum']['id'],
+				'servicio_id'
+			);
 		} else {
 			$this->request->data = $this->SERVICIO->read(null, $id);
 		}
+		
+		//METRICAS
+		
+		$metricas = $this->METRICA->find('all', array(
+			'conditions' => array('para_servicio' => 1),
+			'recursive' => 0
+		));
+		
+		$metricas = MetricaAsociar::asociar($servicio['ValorMetrica'], $metricas);
+		$this->set('metricas', $metricas);
+		
 		$responsables = $this->SERVICIO->Responsable->find('list');
 		$aREAFUNCIONALs = $this->SERVICIO->AREAFUNCIONAL->find('list');
 		$pROYECTOs = $this->SERVICIO->PROYECTO->find('list');

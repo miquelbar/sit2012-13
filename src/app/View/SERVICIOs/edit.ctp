@@ -31,12 +31,57 @@
 		</legend>
 <?php echo $this->Form->create('SERVICIO'); ?>
 	<fieldset>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('fecha_inicio');
-		echo $this->Form->input('fecha_final');
-		echo $this->Form->input('responsable_id');
-		echo $this->Form->input('nombre');
+	<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span6">
+		<tr>
+			<td>
+				<strong>Nombre</strong>
+			</td>
+			<td>
+				<?echo $this->Form->input('nombre', array(
+					'label' => ''
+				));?>
+				<?echo $this->Form->input('id');?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>Responsable</strong>
+			</td>
+			<td>
+				<?echo $this->Form->input('responsable_id', array(
+					'label' => ''
+				));?>
+			</td>
+		</tr>				
+		<tr>
+			<td>
+				<strong>Fecha de inicio</strong>
+			</td>
+			<td>
+				<?echo $this->Form->input('fecha_inicio', array(
+					'label' => ''
+				));?>
+			</td>
+		</tr>				
+		<tr>
+			<td>
+				<strong>Fecha final</strong>
+			</td>
+			<td>		
+				<?echo $this->Form->input('fecha_final', array(
+					'label' => ''
+				));?>
+			</td>
+		</tr>				
+	</table>
+	<div class="metricas">
+		<?=$this->Metrica->buildForInput($metricas, array(
+			'class' => 'table table-striped table-bordered table-hover span7',
+			'unidades' => true,
+			'titulo' => 'Métricas'
+		))?>
+	</div>
+	<?
 		echo $this->Form->input('AREAFUNCIONAL');
 		echo $this->Form->input('PROYECTO');
 	?>

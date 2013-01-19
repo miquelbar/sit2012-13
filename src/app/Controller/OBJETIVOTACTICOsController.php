@@ -31,6 +31,7 @@ class OBJETIVOTACTICOsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		
 		$this->OBJETIVOTACTICO->id = $id;
 		if (!$this->OBJETIVOTACTICO->exists()) {
 			throw new NotFoundException(__('Invalid o b j e t i v o t a c t i c o'));

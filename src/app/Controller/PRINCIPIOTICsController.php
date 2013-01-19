@@ -33,6 +33,7 @@ class PRINCIPIOTICsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar',in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->PRINCIPIOTIC->id = $id;
 		if (!$this->PRINCIPIOTIC->exists()) {
 			throw new NotFoundException(__('Invalid p r i n c i p i o t i c'));
