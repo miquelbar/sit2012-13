@@ -39,7 +39,7 @@
 		echo $this->Form->input('PERFIL');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Editar')); ?>
+<?php echo $this->Form->end(array('label'=>'Editar Usuario', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Acciones'); ?></h3>

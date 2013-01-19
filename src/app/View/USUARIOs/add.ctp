@@ -36,7 +36,7 @@
 		echo $this->Form->input('PERFIL');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(array('label'=>'Añadir', 'class'=>'btn btn-success btn-large')); ?>
+<?php echo $this->Form->end(array('label'=>'Añadir Usuario', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

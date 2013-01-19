@@ -33,7 +33,7 @@
 		echo $this->Form->input('AREAFUNCIONAL');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(array('label'=>'Guardar', 'class'=>'btn btn-success btn-large')); ?>
+<?php echo $this->Form->end(array('label'=>'Editar Persona', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

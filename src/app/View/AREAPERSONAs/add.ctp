@@ -37,7 +37,7 @@
 		echo $this->Form->input('persona_id');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Añadir')); ?>
+<?php echo $this->Form->end(array('label'=>'Añadir Área Persona', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>

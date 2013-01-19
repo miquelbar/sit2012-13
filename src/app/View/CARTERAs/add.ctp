@@ -35,7 +35,7 @@
 		echo $this->Form->input('fecha_ultima_modificacion');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Dar de alta')); ?>
+<?php echo $this->Form->end(array('label'=>'Dar de alta la Cartera', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 <!--	<h3><?php echo __('Actions'); ?></h3>
