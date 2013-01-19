@@ -35,8 +35,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
-		<li><?php echo $this->Html->link(__('Editar usuario'), array('action' => 'edit', $uSUARIO['USUARIO']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('USUARIO.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('USUARIO.id'))); ?></li>
+			  			<? if ($puedeEditar) { ?>
+		<li><?php echo $this->Html->link(__('Editar Usuario'), array('action' => 'edit', $uSUARIO['USUARIO']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Eliminar Usuario'), array('action' => 'delete', $this->Form->value('USUARIO.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('USUARIO.id'))); ?></li>
+						<? } ?>
 		<li><?php echo $this->Html->link(__('Ver Usuarios'), array('action' => 'index')); ?></li>
 		<!--<li><?php echo $this->Html->link(__('Nuevo usuario'), array('action' => 'add')); ?></li>-->
 		<li><?php echo $this->Html->link(__('Ver Personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>

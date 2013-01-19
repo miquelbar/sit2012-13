@@ -18,6 +18,7 @@ class TIPONOTIFICACIONsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->TIPONOTIFICACION->recursive = 0;
 		$this->set('tIPONOTIFICACIONs', $this->paginate());
 	}
@@ -30,6 +31,7 @@ class TIPONOTIFICACIONsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->TIPONOTIFICACION->id = $id;
 		if (!$this->TIPONOTIFICACION->exists()) {
 			throw new NotFoundException(__('Invalid t i p o n o t i f i c a c i o n'));
@@ -43,6 +45,7 @@ class TIPONOTIFICACIONsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		if ($this->request->is('post')) {
 			$this->TIPONOTIFICACION->create();
 			if ($this->TIPONOTIFICACION->save($this->request->data)) {
@@ -62,6 +65,7 @@ class TIPONOTIFICACIONsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		$this->TIPONOTIFICACION->id = $id;
 		if (!$this->TIPONOTIFICACION->exists()) {
 			throw new NotFoundException(__('Invalid t i p o n o t i f i c a c i o n'));
@@ -87,6 +91,7 @@ class TIPONOTIFICACIONsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}

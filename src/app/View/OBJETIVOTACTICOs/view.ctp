@@ -17,8 +17,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
+			  			<? if ($puedeEditar) { ?>
 						<li><?php echo $this->Html->link(__('Editar objetivo táctico.'), array('action' => 'edit', $oBJETIVOTACTICO['OBJETIVOTACTICO']['id'])); ?> </li>
 						<li><?php echo $this->Form->postLink(__('Eliminar objetivo táctico.'), array('action' => 'delete', $oBJETIVOTACTICO['OBJETIVOTACTICO']['id']), null, __('Are you sure you want to delete # %s?', $oBJETIVOTACTICO['OBJETIVOTACTICO']['id'])); ?> </li>
+						<? } ?>
 						<li><?php echo $this->Html->link(__('Listar objetivos tácticos.'), array('action' => 'index')); ?> </li>
 						<!--<li><?php echo $this->Html->link(__('Nuevo objetivo táctico.'), array('action' => 'add')); ?> </li>-->
 						<li><?php echo $this->Html->link(__('Listar objetivos estratégicos.'), array('controller' => 'o_b_j_e_t_i_v_o_e_s_t_r_a_t_e_g_i_c_os', 'action' => 'index')); ?> </li>

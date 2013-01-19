@@ -15,8 +15,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
+			  			<? if ($puedeEditar) { ?>
 						<li><?php echo $this->Html->link(__('Editar servicio'), array('action' => 'edit', $sERVICIO['SERVICIO']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Eliminar servicio'), array('action' => 'delete', $sERVICIO['SERVICIO']['id']), null, __('Are you sure you want to delete # %s?', $sERVICIO['SERVICIO']['id'])); ?> </li>
+						<? } ?>
 		<li><?php echo $this->Html->link(__('Ver Servicios'), array('action' => 'index')); ?> </li>
 		<!--<li><?php echo $this->Html->link(__('Nuevo Servicio'), array('action' => 'add')); ?></li>-->
 		<li><?php echo $this->Html->link(__('Ver Personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>

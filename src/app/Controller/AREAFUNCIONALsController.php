@@ -47,6 +47,7 @@ class AREAFUNCIONALsController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		if ($this->request->is('post')) {
 			$this->AREAFUNCIONAL->create();
 			if ($this->AREAFUNCIONAL->save($this->request->data)) {

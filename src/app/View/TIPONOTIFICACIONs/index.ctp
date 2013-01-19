@@ -12,7 +12,9 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
+		  			<? if ($puedeEditar) { ?>
 					<li><?php echo $this->Html->link(__('New T I P O N O T I F I C A C I O N'), array('action' => 'add')); ?></li>
+					<? } ?>
 				</ul>
 		  	</div>
 		</div>
@@ -29,7 +31,7 @@
 		<td><?php echo h($tIPONOTIFICACION['TIPONOTIFICACION']['id']); ?>&nbsp;</td>
 		<td><?php echo h($tIPONOTIFICACION['TIPONOTIFICACION']['mensaje']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($tIPONOTIFICACION['TIPONOTIFICACION']['id']);?>
+			<?= $this->CrudActions->makeRowCrud($tIPONOTIFICACION['TIPONOTIFICACION']['id'], $puedeEditar);?>
 		</td>
 	</tr>
 <?php endforeach; ?>

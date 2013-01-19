@@ -21,8 +21,10 @@
 			    		<span class="caret"></span>
 			  		</a>
 			  		<ul class="dropdown-menu">
+			  			<? if ($puedeEditar) { ?>
 						<li><?php echo $this->Html->link(__('Editar Métricas'), array('action' => 'edit', $mETRICA['METRICA']['id'])); ?> </li>
 						<li><?php echo $this->Form->postLink(__('Eliminar Métrica'), array('action' => 'delete', $mETRICA['METRICA']['id']), null, __('Are you sure you want to delete # %s?', $mETRICA['METRICA']['id'])); ?> </li>
+						<? } ?>
 						<li><?php echo $this->Html->link(__('Ver Métricas'), array('action' => 'index')); ?> </li>
 						<!--<li><?php echo $this->Html->link(__('A&ntilde;adir M&eacute;tricas'), array('action' => 'atd')); ?> </li>-->
 			  		</ul>

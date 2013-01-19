@@ -12,7 +12,9 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
+		  			<? if ($puedeEditar) { ?>
 					<li><?php echo $this->Html->link(__('Añadir Área Persona'), array('action' => 'add')); ?></li>
+					<? } ?>
 					<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
 					<!--<li><?php echo $this->Html->link(__('Añadir Área Funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>-->
 					<li><?php echo $this->Html->link(__('Ver Personas'), array('controller' => 'p_e_r_s_o_n_as', 'action' => 'index')); ?> </li>
@@ -39,7 +41,7 @@
 			<?php echo $this->Html->link($aREAPERSONA['Persona']['nombre'], array('controller' => 'p_e_r_s_o_n_as', 'action' => 'view', $aREAPERSONA['Persona']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($aREAPERSONA['AREAPERSONA']['id']);?>
+			<?= $this->CrudActions->makeRowCrud($aREAPERSONA['AREAPERSONA']['id'], $puedeEditar	);?>
 		</td>
 	</tr>
 <?php endforeach; ?>
