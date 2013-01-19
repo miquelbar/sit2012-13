@@ -7,6 +7,13 @@ App::uses('AppController', 'Controller');
  */
 class AREAFUNCIONALsController extends AppController {
 
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'AREAFUNCIONAL.id' => 'DESC'
+        )
+    );
+
 /**
  * index method
  *

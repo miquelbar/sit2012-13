@@ -13,6 +13,12 @@ class USUARIOsController extends AppController {
 		parent::beforeFilter();
 		$this->Auth->allow('index');
 	}
+	var $paginate = array(
+        'limit' => 5,
+        'order' => array(
+            'USUARIO.id' => 'DESC'
+        )
+    );
 
 /**
  * index method

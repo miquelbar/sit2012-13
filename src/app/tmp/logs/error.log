@@ -8853,3 +8853,49 @@
 #3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-01-19 13:31:11 Error: Fatal Error (4): syntax error, unexpected '$usuario' (T_VARIABLE) in [/home/mike/git/sit2012-13/src/app/View/Layouts/default.ctp, line 94]
+2013-01-19 13:31:11 Error: [FatalErrorException] syntax error, unexpected '$usuario' (T_VARIABLE)
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mike/git/...', 94)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mike/git/...', 94, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mike/git/...', 94, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-19 13:31:45 Error: Fatal Error (1): Call to undefined function len() in [/home/mike/git/sit2012-13/src/app/View/Layouts/default.ctp, line 94]
+2013-01-19 13:31:45 Error: [FatalErrorException] Call to undefined function len()
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/mike/git/...', 94)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/mike/git/...', 94, Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/mike/git/...', 94, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-19 13:41:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aREAFUNCIONALs.id' in 'order clause'
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `AREAFUN...', Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `AREAFUN...', Array, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `AREAFUN...', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2631): DboSource->read(Object(AREAFUNCIONAL), Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Component/PaginatorComponent.php(173): Model->find('all', Array)
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(1082): PaginatorComponent->paginate(NULL, Array, Array)
+#7 /home/mike/git/sit2012-13/src/app/Controller/AREAFUNCIONALsController.php(24): Controller->paginate()
+#8 [internal function]: AREAFUNCIONALsController->index()
+#9 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(AREAFUNCIONALsController), Array)
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(AREAFUNCIONALsController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-01-19 13:43:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'NOTIFICACIO.id' in 'order clause'
+#0 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(461): PDOStatement->execute(Array)
+#1 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(427): DboSource->_execute('SELECT `NOTIFIC...', Array)
+#2 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(671): DboSource->execute('SELECT `NOTIFIC...', Array, Array)
+#3 /home/mike/git/sit2012-13/src/lib/Cake/Model/Datasource/DboSource.php(1082): DboSource->fetchAll('SELECT `NOTIFIC...', false)
+#4 /home/mike/git/sit2012-13/src/lib/Cake/Model/Model.php(2631): DboSource->read(Object(NOTIFICACION), Array)
+#5 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Component/PaginatorComponent.php(173): Model->find('all', Array)
+#6 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(1082): PaginatorComponent->paginate(Array, Array, Array)
+#7 /home/mike/git/sit2012-13/src/app/Controller/NOTIFICACIONsController.php(27): Controller->paginate(Array)
+#8 [internal function]: NOTIFICACIONsController->index()
+#9 /home/mike/git/sit2012-13/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(NOTIFICACIONsController), Array)
+#10 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(NOTIFICACIONsController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
