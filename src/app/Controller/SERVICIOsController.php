@@ -133,7 +133,7 @@ class SERVICIOsController extends AppController {
 			}
 			$this->VALORMETRICA->procesarMetrica(
 				$this->request->data,
-				$servicio['PROPUESTum']['id'],
+				$servicio['SERVICIO']['id'],
 				'servicio_id'
 			);
 		} else {
