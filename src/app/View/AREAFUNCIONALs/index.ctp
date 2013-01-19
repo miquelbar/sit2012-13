@@ -30,7 +30,7 @@
 		<td><?php echo h($aREAFUNCIONAL['AREAFUNCIONAL']['id']); ?>&nbsp;</td>
 		<td><?php echo h($aREAFUNCIONAL['AREAFUNCIONAL']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($aREAFUNCIONAL['AREAFUNCIONAL']['id']);?>
+			<?= $this->CrudActions->makeRowCrud($aREAFUNCIONAL['AREAFUNCIONAL']['id'], $puedeEditar);?>
 		</td>
 	</tr>
 <?php endforeach; ?>
