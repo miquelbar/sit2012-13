@@ -41,26 +41,70 @@
 		</legend>
 <?php echo $this->Form->create('PROYECTO'); ?>
 	<fieldset>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('cartera_id');
-		echo $this->Form->input('propuesta_id');
-		echo $this->Form->input('tipo_pro_id');
-		echo $this->Form->input('estado_proyecto_id');
-		echo $this->Form->input('patrocinador_id');
-		echo $this->Form->input('responsable_id');
-		echo $this->Form->input('codigo');
-		echo $this->Form->input('nombre');
-		echo $this->Form->input('fecha_inicio_prevista');
-		echo $this->Form->input('fecha_fin_prevista');
-		echo $this->Form->input('fecha_inicio_real');
-		echo $this->Form->input('fecha_fin_real');
-		echo $this->Form->input('descripcion');
-		echo $this->Form->input('justificacion');
-		echo $this->Form->input('AREA');
-		echo $this->Form->input('OBJETIVO');
-		echo $this->Form->input('SERVICIO');
-	?>
+		<input type="hidden" name="data[PROYECTO][estado_proyecto_id]" value="1"/>
+		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
+		<tr>
+			<td><?echo $this->Form->input('cartera_id');?></td>
+			<td><?echo $this->Form->input('codigo');?></td>
+			<td><?echo $this->Form->input('nombre');?></td>
+			<td><?echo $this->Form->input('tipo_pro_id');?></td>
+		</tr>
+		</table>
+		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
+		<tr>
+			<td><?echo $this->Form->input('patrocinador_id');?></td>
+			<td><?echo $this->Form->input('responsable_id');?></td>
+		</tr>
+		</table>
+		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
+		<tr>
+			<td><?echo $this->Form->input('fecha_inicio_prevista');?></td>
+		</tr>
+		<tr>
+			<td><?echo $this->Form->input('fecha_fin_prevista');?></td>
+		</tr>
+		<tr>
+			<td><?echo $this->Form->input('fecha_inicio_real');?></td>
+		</tr>	
+		<tr>
+			<td><?echo $this->Form->input('fecha_fin_real');?></td>
+		</tr>
+		</table>
+		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
+			<tr>
+			<td><?echo $this->Form->input('descripción', array(
+				'label' => 'Descripción',
+				'type' =>'textarea',
+				'class' => 'span6 offset1'
+			));?></td>
+			<td><?echo $this->Form->input('justificacion', array(
+				'label' => 'Justificación',
+				'type' =>'textarea',
+				'class' => 'span6 offset1'
+			));?></td>
+			</tr>
+		</table>
+		<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover span12">
+			<tr>
+				<td><?echo $this->Form->input('AREA', array(
+					'label' => 'Área',
+					'class' => 'span6 offset1',
+					'style' =>'height:200px'
+				));?>
+				<td><?echo $this->Form->input('OBJETIVO', array(
+					'label' => 'Objetivos Tácticos',
+					'class' => 'span6 offset1',
+					'style' =>'height:200px'
+				));?>
+			</tr>
+			<tr>
+				<td><?echo $this->Form->input('SERVICIO', array(
+					'label' => 'Servicios relacionados',
+					'class' => 'span6 offset1',
+					'style' =>'height:200px'
+				));?></td>
+			</tr>
+		</table>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
