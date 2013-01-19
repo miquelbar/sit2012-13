@@ -1,1 +1,5 @@
 src/app/tmp/*
+src/app/tmp/cache/models
+src/app/tmp/cache/persistent
+src/app/tmp/cache/persistent/myapp_cake_core_file_map
+src/app/tmp/cache/persistent/myapp_cake_core_method_cache

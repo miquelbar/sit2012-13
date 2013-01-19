@@ -8947,3 +8947,10 @@
 #2 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 >>>>>>> 0c38ca18986014f214aedd75c1d240940a3170dc
+2013-01-19 18:02:08 Error: [NotFoundException] Invalid p r o y e c t o
+#0 [internal function]: PROYECTOsController->edit()
+#1 /var/www/sit/src/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(PROYECTOsController), Array)
+#2 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/sit/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PROYECTOsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/www/sit/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

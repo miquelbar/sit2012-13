@@ -100,7 +100,7 @@ class PROYECTOsController extends AppController {
 			}
 			$modelChart->setTitle($value['titulo']);
 			$modelChart->buildForFieldGrouped('valor','fecha', array(
-				'servicio_id' => $id,
+				'proyecto_id' => $id,
 				'metrica_id' => $value['id']
 			));
 		
