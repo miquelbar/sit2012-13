@@ -172,6 +172,7 @@ class PROYECTOsController extends AppController {
 		} else {
 			$this->request->data = $this->PROYECTO->read(null, $id);
 		}
+		
 		$carteras = $this->PROYECTO->Cartera->find('list');
 		$propuestas = $this->PROYECTO->Propuesta->find('list');
 		$tipoPros = $this->PROYECTO->TipoPro->find('list');
