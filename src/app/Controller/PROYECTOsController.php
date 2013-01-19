@@ -34,7 +34,7 @@ class PROYECTOsController extends AppController {
 		$showGfx = true;
 		if ($showGfx){
 			$modelChart = new ModelPieChart($this->PROYECTO, 'pr');
-			$modelChart->setTitle('Estado de las propuestas:');
+			$modelChart->setTitle('Estado de los proyectos:');
 			$estados = $this->ESTADOPROYECTO->obtenerEstados();
 			$modelChart->setFieldDict($estados);
 			$modelChart->buildForFieldGrouped('estado_proyecto_id', 'id');
@@ -43,7 +43,7 @@ class PROYECTOsController extends AppController {
 			$this->set('container_gfx_estado', $modelChart->renderContainer());
 			
 			$modelChart = new ModelPieChart($this->AREAPROYECTO, 'porarea');
-			$modelChart->setTitle('Estado de las propuestas:');
+			$modelChart->setTitle('Distribución de proyectos por área funcional:');
 			$areas = $this->AREAFUNCIONAL->obtenerAreas();
 			$modelChart->setFieldDict($areas);
 			$modelChart->buildForFieldGrouped('area_funcional_id', 'id');
@@ -51,7 +51,7 @@ class PROYECTOsController extends AppController {
 			$this->set('container_gfx_area', $modelChart->renderContainer());
 			
 			$modelChart = new ModelPieChart($this->OBJETIVOPROYECTO, 'porarea');
-			$modelChart->setTitle('Estado de las propuestas:');
+			$modelChart->setTitle('Ditribución de proyectos por objetivos:');
 			$objetivos = $this->OBJETIVOTACTICO->obtenerObjetivos();
 			$modelChart->setFieldDict($objetivos);
 			$modelChart->buildForFieldGrouped('objetivo_tactico_id', 'id');
@@ -90,7 +90,7 @@ class PROYECTOsController extends AppController {
 				$this->Session->setFlash(__('The p r o y e c t o has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The p r o y e c t o could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('El proyecto no se ha podido guardar.'));
 			}
 		}
 		
