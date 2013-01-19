@@ -31,8 +31,6 @@
 		</div>
 	</legend>
 	<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span6">
-
-	<dl>
 		<tr>
 			<td><strong><?php echo __('Id'); ?></strong></td>
 			<td>
@@ -68,7 +66,6 @@
 				&nbsp;
 			</td>
 		</tr>
-	</dl>
 	</table>
 </div>
 <div class="metricas">
