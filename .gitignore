@@ -1,3 +1,11 @@
 src/app/tmp/
 src/app/tmp/**
+src/app/tmp/*
 src/app/tmp/**/*
+src/app/tmp/cache/models/myapp_cake_model_default_gobierno_t_i_c_list
+src/app/tmp/cache/persistent/myapp_cake_core_cake_dev_es-es
+src/app/tmp/cache/persistent/myapp_cake_core_cake_es-es
+src/app/tmp/cache/persistent/myapp_cake_core_default_es-es
+src/app/tmp/cache/persistent/myapp_cake_core_file_map
+src/app/tmp/cache/persistent/myapp_cake_core_method_cache
+src/app/tmp/logs/error.log
