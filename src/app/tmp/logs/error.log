@@ -8915,8 +8915,35 @@
 #3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+<<<<<<< HEAD
+2013-01-19 17:47:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [/var/www/sit/src/app/Controller/PROYECTOsController.php, line 77]
+2013-01-19 17:47:36 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 77)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 77, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 77, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-19 17:47:53 Error: Fatal Error (1): Call to a member function read() on a non-object in [/var/www/sit/src/app/Controller/PROYECTOsController.php, line 85]
+2013-01-19 17:47:53 Error: [FatalErrorException] Call to a member function read() on a non-object
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sit/sr...', 85)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sit/sr...', 85, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sit/sr...', 85, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-19 17:52:01 Error: Fatal Error (1): Class 'ModelHistogramChart' not found in [/var/www/sit/src/app/Controller/PROYECTOsController.php, line 94]
+2013-01-19 17:52:01 Error: [FatalErrorException] Class 'ModelHistogramChart' not found
+#0 /var/www/sit/src/lib/Cake/Error/ErrorHandler.php(162): ErrorHandler::handleFatalError(1, 'Class 'ModelHis...', '/var/www/sit/sr...', 94)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'ModelHis...', '/var/www/sit/sr...', 94, Array)
+#2 /var/www/sit/src/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'ModelHis...', '/var/www/sit/sr...', 94, Array)
+#3 /var/www/sit/src/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+=======
 2013-01-19 17:43:51 Error: [MissingActionException] Action PagesController::index() could not be found.
 #0 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
 #1 /home/mike/git/sit2012-13/src/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #2 /home/mike/git/sit2012-13/src/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+>>>>>>> 0c38ca18986014f214aedd75c1d240940a3170dc
