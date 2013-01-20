@@ -103,34 +103,9 @@ class AppController extends Controller {
 			'footer' => array(
 				array(
 					'titulo' => 'Como funciona'
-					,'url'=> '/login/logout/'
+					,'url'=> '#pdf'
 					,'rol' => 0
 				),
-				array(
-					'titulo' => 'Política de privacidad'
-					,'url'=> '/login/logout/'
-					,'rol' => 0
-				),
-				array(
-					'titulo' => 'Términos y condiciones'
-					,'url'=> '/login/logout/'
-					,'rol' => 0
-				),
-				array(
-					'titulo' => 'Legal'
-					,'url'=> '/login/logout/'
-					,'rol' => 0
-				),
-				array(
-					'titulo' => 'Contacto'
-					,'url'=> '/login/logout/'
-					,'rol' => 0
-				),
-				array(
-					'titulo' => 'Blog'
-					,'url'=> '/login/logout/'
-					,'rol' => 0
-				)
 			),
 			
 		);
