@@ -82,17 +82,20 @@ class AppController extends Controller {
 					'titulo' => 'Inicio'
 					,'url' => '/'
 					,'rol' => 0
+				)
+			),
+			'topbar-nouser' => array(
+			 
+				array(
+					'titulo' => 'Inicio'
+					,'url' => '/'
+					,'rol' => 0
 				),
 				array(
 					array(
 						'titulo' => 'Login'
 						,'url'=> '/usuario/login/'
 						,'rol' => 0
-					),
-					array(
-						'titulo' => 'Logout'
-						,'url'=> '/login/logout/'
-						,'rol' => 1
 					)
 				)
 			),
@@ -145,7 +148,17 @@ class AppController extends Controller {
 		//Antes de renderizar la vista todas las paginas necesitan al usuario
 		$usuario = $this->Auth->user();
 		if (isset($usuario)){
-	    	$this->set('usuario', $usuario);
+			$perfiles = $this->PERFILUSUARIO->find('all', array(
+				'conditions' => array(
+				'usuario_id' => $usuario['id']
+				)
+			));
+			
+			$usuario['perfiles'] = array();
+			foreach ($perfiles as $key => $value) {
+				array_push($usuario['perfiles'], $value['PERFILUSUARIO']['perfil_id']);
+			}
+			$this->set('usuario', $usuario);
 			$this->usuario = $usuario;
 		}
 		
@@ -157,16 +170,6 @@ class AppController extends Controller {
 		$this->notificacion = $this->NOTIFICACION->find('all', $options);
 		$this->set('notificacion',$this->notificacion);
 		
-		$perfiles = $this->PERFILUSUARIO->find('all', array(
-			'conditions' => array(
-				'usuario_id' => $usuario['id']
-			)
-		));
-		
-		$this->usuario['perfiles'] = array();
-		foreach ($perfiles as $key => $value) {
-			array_push($this->usuario['perfiles'], $value['PERFILUSUARIO']['perfil_id']);
-		}
 		
 	}
 	
