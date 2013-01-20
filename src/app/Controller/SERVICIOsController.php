@@ -106,6 +106,10 @@ class SERVICIOsController extends AppController {
  * @return void
  */
 	public function add() {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		if ($this->request->is('post')) {
 			$this->SERVICIO->create();
@@ -132,6 +136,10 @@ class SERVICIOsController extends AppController {
  */
 	public function edit($id = null) {
 		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->SERVICIO->id = $id;
 		$servicio = $this->SERVICIO->read(null, $id);
 		if (!$this->SERVICIO->exists()) {
@@ -178,6 +186,10 @@ class SERVICIOsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->set('puedeEditar', in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles']));
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();

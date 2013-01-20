@@ -234,7 +234,7 @@
 		
 		}
 		
-		$colores = array('success', 'info');
+		$colores = array('success', 'info', 'error', 'inverse', 'primary');
 		$asignados = array();
 		$ultimo = 0;
 		foreach ($comentarios as $key => $comentario) {

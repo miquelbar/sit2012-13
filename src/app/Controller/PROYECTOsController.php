@@ -142,6 +142,10 @@ class PROYECTOsController extends AppController {
  * @return void
  */
 	public function add() {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if ($this->request->is('post')) {
 			$this->PROYECTO->create();
 			if ($this->PROYECTO->save($this->request->data)) {
@@ -183,6 +187,10 @@ class PROYECTOsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		$this->PROYECTO->id = $id;
 		if (!$this->PROYECTO->exists()) {
 			throw new NotFoundException(__('Invalid p r o y e c t o'));
@@ -234,6 +242,10 @@ class PROYECTOsController extends AppController {
  * @return void
  */
 	public function delete($id = null) {
+		if (!in_array(AppController::ID_PERFIL_CIO,$this->usuario['perfiles'])){
+			$this->Session->setFlash(__('No tiene acceso a esa zona.'));
+			$this->redirect('/');
+		}
 		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
