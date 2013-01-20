@@ -240,7 +240,7 @@
 		foreach ($comentarios as $key => $comentario) {
 			if (!array_key_exists($comentario['Persona']['id'],$asignados) ){
 				$ultimo += 1;
-				$asignados[$comentario['Persona']['id']] = $colores[$ultimo];
+				$asignados[$comentario['Persona']['id']] = $colores[$ultimo%4];
 			}  
 			
 			$mensaje += 1;
