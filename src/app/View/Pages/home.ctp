@@ -131,29 +131,29 @@
 			<!--top bottom-->
 				<!-- left -->
 				<div style="position: absolute; left:78px; top: 132px;">
-					<div class="box box_top_bottom"><a href="#topbottomleft">&nbsp;	</a></div>
+					<div class="box box_top_bottom"><a href="/PROPUESTa/pendientescio?t=8" id="dirigir" data-placement="top">&nbsp;	</a></div>
 				</div>
 				<!-- right -->
 				<div style="position: absolute; left:322px; top: 130px;">
-					<div class="box box_top_bottom"><a href="#topbottomright">&nbsp;	</a></div>
+					<div class="box box_top_bottom"><a href="/METRICAs/" data-placement="top" id="controlar">&nbsp;</a></div>
 				</div>
 				<!-- top -->
 				<div style="position: absolute; left:205px; top: 90px;">
-					<div class="box box_top_bottom"><a href="#topbottomtop">&nbsp;	</a></div>
+					<div class="box box_top_bottom"><a href="/PROPUESTa/pendientescio" data-placement="top" id="evaluar">&nbsp;	</a></div>
 				</div>
 			<!--/top bottom-->
 			<!-- middle-->
 				<!--left-->
 				<div style="position: absolute; left:83px; top: 163px;">
-					<div class="box box_middle"><a href="#middleleft">&nbsp;	</a></div>
+					<div class="box box_middle"><a href="#" id="planespoliticas" rel="tooltip">&nbsp;	</a></div>
 				</div>
 				<!--rigth-->
-				<div style="position: absolute; left:328px; top: 163px;">
+				<!--<div style="position: absolute; left:328px; top: 163px;">
 					<div class="box box_middle"><a href="#middleright">&nbsp;	</a></div>
-				</div>
+				</div>-->
 				<!--center-->
 				<div style="position: absolute; left:212px; top: 130px;">
-					<div class="box box_middle" style="width:82px; height:180px;"><a href="#middlecenter">&nbsp;	</a></div>
+					<div class="box box_middle" style="width:82px; height:180px;"><a href="#" rel="tooltip" id="usosit">&nbsp;	</a></div>
 				</div>
 			<!-- /middle-->
 			<!--bottom-->
@@ -257,15 +257,66 @@
 		    return false;
 		});
 		$(".box_top_bottom").click(function(){
-	     	window.location=$(this).find("a").attr("href"); 
+			var id_div = $(this).find("a").attr("id");
+			var tooltip = $(this).find("a").attr("rel");
+			if(tooltip == "tooltip") {
+				$('#'+id_div).tooltip({
+			        placement : 'left',
+			        trigger: 'manual',
+			        title : '<ul style="text-align: left; color: white;">'+
+			        			'<li><a style="color: white;" href="#prueba">first tooltip</a></li>'+
+			        			'<li><a style="color: white;" href="#prueba">second tooltip</a></li>'+
+			        		'</ul>'
+			    }).tooltip('toggle');
+		  	} else {
+	     		window.location=$(this).find("a").attr("href");
+	     	} 
 		    return false;
 		});
 		$(".box_middle").click(function(){
-	     	window.location=$(this).find("a").attr("href"); 
+	     	var id_div = $(this).find("a").attr("id");
+			var tooltip = $(this).find("a").attr("rel");
+			if(tooltip == "tooltip") {
+				if (id_div == "planespoliticas") {
+					$('#'+id_div).tooltip({
+				        placement : 'left',
+				        trigger: 'manual',
+				        title : '<ul style="text-align: left; color: white;">'+
+				        			'<li><a style="color: white;" href="/PRINCIPIOTICs">Principios TIC</a></li>'+
+				        			'<li><a style="color: white;" href="/OBJETIVOESTRATEGICOs">Objetivos Estrat&eacute;gicos</a></li>'+
+				        			'<li><a style="color: white;" href="/OBJETIVOTACTICOs">Objetivos T&aacute;cticos</a></li>'+
+				        		'</ul>'
+				    }).tooltip('toggle');
+			  } else if(id_div == "usosit") {
+			  	$('#'+id_div).tooltip({
+				        placement : 'top',
+				        trigger: 'manual',
+				        title : '<ul style="text-align: left; color: white;">'+
+				        			'<li><a style="color: white;" href="/CARTERAs">Carteras</a></li>'+
+				        			'<li><a style="color: white;" href="/PROPUESTa">Propuestas</a></li>'+
+				        		'</ul>'
+				    }).tooltip('toggle');
+			  }
+		  	} else {
+	     		window.location=$(this).find("a").attr("href");
+	     	}  
 		    return false;
 		});
 		$(".box_bottom").click(function(){
-	     	window.location=$(this).find("a").attr("href"); 
+	     	var id_div = $(this).find("a").attr("id");
+			var tooltip = $(this).find("a").attr("rel");
+			if(tooltip == "tooltip") {
+				$('#'+id_div).tooltip({
+			        placement : 'left',
+			        trigger: 'manual',
+			        title : '<ul style="text-align: left; color: white;">'+
+			        			'<li><a style="color: white;" href="#prueba">first tooltip</a></li>'+
+			        			'<li><a style="color: white;" href="#prueba">second tooltip</a></li>'+
+			        		'</ul>'
+			    }).tooltip('toggle');
+		  	} else {
+	     		window.location=$(this).find("a").attr("href");
+	     	}  
 		    return false;
 		});
 		$(".box_top").mouseover(function() {
