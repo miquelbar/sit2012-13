@@ -96,6 +96,8 @@
 				                		if (isset($perfiles['1'])) { //Admin
 				                			$anterior = true;
 				                	?>
+				                		<li style="margin-left: 10px;"><strong>Opciones de Administrador</strong></li>
+				                		<li class="divider"></li>
 				                  		<li><a href="/AREAFUNCIONALs">&Aacute;reas Funcionales</a></li>
 				                  		<li><a href="/PERSONAs">Personas</a></li>
 				                  		<li><a href="/USUARIOs">Usuarios</a></li>
@@ -106,7 +108,11 @@
 				                  		if ($anterior)  {
 				                  	?>
 				                  		<li class="divider"></li>
+				                  		
 				                  		<? } ?>
+				                  		<li style="margin-left: 10px;"><strong>Opciones de Solicitante</strong></li>
+				                  		<li class="divider"></li>
+				                  		<li><a href="/PROPUESTa/mispropuestas">Mis Propuesta</a></li>
 				                  		<li><a href="/PROPUESTa/crear">Solicitar Propuesta</a></li>
 				                  	<? 
 				                  			$anterior = true; 
@@ -117,6 +123,8 @@
 				                  	?>
 				                  		<li class="divider"></li>
 				                  		<? } ?>
+				                  		<li style="margin-left: 10px;"><strong>Opciones de CIO</strong></li>
+				                  		<li class="divider"></li>
 				                  		<li><a href="/PROPUESTa/pendientescio?t=5">Propuestas Pendientes de Valorar</a></li>
 				                  		<li><a href="/PROPUESTa/pendientescio?t=8">Propuestas Pendientes de Tramitar</a></li>
 				                  		<li><a href="/PROPUESTa/pendientescio?t=7">Convertir Propuestas en Proyectos</a></li>
@@ -131,6 +139,8 @@
 				                  	?>
 				                  		<li class="divider"></li>
 				                  		<? } ?>
+				                  		<li style="margin-left: 10px;"><strong>Opciones de Responsable</strong></li>
+				                  		<li class="divider"></li>
 				                  		<li><a href="/PROYECTOs/?t=r">Mis Proyectos</a></li>
 				                  		<li><a href="/SERVICIOs/?t=r">Mis Servicios</a></li>
 				                  		<li><a href="/PROPUESTa/miresponsabilidad">Propuestas que patrocino</a></li>
@@ -142,6 +152,8 @@
 				                  	?>
 				                  		<li class="divider"></li>
 				                  		<? } ?>
+				                  		<li style="margin-left: 10px;"><strong>Opciones de Patrocinador</strong></li>
+				                  		<li class="divider"></li>
 				                  		<li><a href="/PROYECTOs/?t=p">Mis proyectos</a></li>
 				                  		<li><a href="/PROPUESTa/mispatrocinadas">Propuestas Patrocinadas</a></li>
 				                  	<? $anterior = true; 
@@ -151,7 +163,10 @@
 				                  			if ($anterior) {
 				                  	?>
 				                  		<li class="divider"></li>
+				                  		
 				                  		<? } ?>
+				                  		<li style="margin-left: 10px;"><strong>Opciones de T&eacute;cnico</strong></li>
+				                  		<li class="divider"></li>
 				                  		<li><a href="/PROPUESTa/pendientes">Propuestas pendientes de valorar</a></li>
 				                  	<? } ?>
 				                </ul>

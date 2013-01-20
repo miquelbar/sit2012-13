@@ -1,48 +1,118 @@
+<? $perfiles = array_flip($usuario['perfiles']); ?>
+									
+
 <div class="row">
 	<div class="span3">
 		<div class="accordion" id="accordion3">
+			<?
+				if (isset($perfiles['1'])) { //Admin
+			?>
 			 <div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseOne">
-						<strong>X</strong>
+						<strong>Opciones de Administrador</strong>
 					</a>
 				</div>
 				<div id="icollapseOne" class="accordion-body collapse in">
 					<div class="accordion-inner">
-						<ul>
-							<li>TEST</li>
+						<ul>							
+	                  		<li><a href="/AREAFUNCIONALs">&Aacute;reas Funcionales</a></li>
+	                  		<li><a href="/PERSONAs">Personas</a></li>
+	                  		<li><a href="/USUARIOs">Usuarios</a></li>
+	                  		<li><a href="/TIPONOTIFICACIONs">Tipo Notificaciones</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
+			<? } ?>
+			<? if (isset($perfiles['2'])) { //Solicitante ?>
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseTwo">
-						<strong>X</strong>
+						<strong>Opciones de Solicitante</strong>
 					</a>
 				</div>
 				<div id="icollapseTwo" class="accordion-body collapse">
 					<div class="accordion-inner">
 						<ul>
-							<li>TEST</li>
+							<li><a href="/PROPUESTa/mispropuestas">Mis Propuesta</a></li>
+				            <li><a href="/PROPUESTa/crear">Solicitar Propuesta</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
+			<? } ?>
+			<? if (isset($perfiles['3'])) { //CIO ?>
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseThree">
-						<strong>X</strong>
+						<strong>Opciones de CIO	</strong>
 					</a>
 				</div>
 				<div id="icollapseThree" class="accordion-body collapse">
 					<div class="accordion-inner">
 						<ul>
-							<li>TEST</li>
+							<li><a href="/PROPUESTa/pendientescio?t=5">Propuestas Pendientes de Valorar</a></li>
+	                  		<li><a href="/PROPUESTa/pendientescio?t=8">Propuestas Pendientes de Tramitar</a></li>
+	                  		<li><a href="/PROPUESTa/pendientescio?t=7">Convertir Propuestas en Proyectos</a></li>
+	                  		<li><a href="/PROYECTOs">Proyectos</a></li>
+	                  		<li><a href="/SEVICIOs">Servicios</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
+			<? } ?>
+			<? if (isset($perfiles['4'])) { //Responsable ?>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseFour">
+						<strong>Opciones de Responsable</strong>
+					</a>
+				</div>
+				<div id="icollapseFour" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul>
+							<li><a href="/PROYECTOs/?t=r">Mis Proyectos</a></li>
+				            <li><a href="/SERVICIOs/?t=r">Mis Servicios</a></li>
+				            <li><a href="/PROPUESTa/miresponsabilidad">Propuestas que patrocino</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<? } ?>
+			<? if (isset($perfiles['5'])) { //Patrocinador ?>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseFive">
+						<strong>Opciones de Patrocinador</strong>
+					</a>
+				</div>
+				<div id="icollapseFive" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul>
+							<li><a href="/PROYECTOs/?t=p">Mis proyectos</a></li>
+	                  		<li><a href="/PROPUESTa/mispatrocinadas">Propuestas Patrocinadas</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<? } ?>
+			<? if (isset($perfiles['4'])) { //T&eacute;cnico ?>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseSix">
+						<strong>Opciones de T&eacute;cnico</strong>
+					</a>
+				</div>
+				<div id="icollapseSix" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<ul>
+				            <li><a href="/PROPUESTa/pendientes">Propuestas pendientes de valorar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<? } ?>
 		</div>
 	</div>
 	<div class="span6">
