@@ -78,7 +78,10 @@
 			<?php echo $this->Html->link($pROPUESTum['TipoPro']['nombre'], array('controller' => 't_i_p_o_p_r_os', 'action' => 'view', $pROPUESTum['TipoPro']['id'])); ?>
 		</td>
 		<td class="actions">
-			<?= $this->CrudActions->makeRowCrud($pROPUESTum['PROPUESTum']['id']);?>		
+			<?
+			$puedeEditar = $usuario['Persona']['id'] == $pROPUESTum['Solicitante']['id'];
+			?>
+			<?= $this->CrudActions->makeRowCrud($pROPUESTum['PROPUESTum']['id'], $puedeEditar);?>		
 		</td>
 	</tr>
 <?php endforeach; ?>
