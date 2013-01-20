@@ -76,7 +76,7 @@
 				<?
 				if (isset($responsable)){
 				?>
-				<input value="<?=$responsable['id']?>" readonly="readonly" type="hidden" name="data[PROYECTO][patrocinador_id]"/>
+				<input value="<?=$responsable['id']?>" readonly="readonly" type="hidden" name="data[PROYECTO][responsable_id]"/>
 				<strong>Responsable: </strong><?=$responsable['nombre']?>
 				<?
 				} else {

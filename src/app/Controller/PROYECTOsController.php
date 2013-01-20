@@ -150,7 +150,7 @@ class PROYECTOsController extends AppController {
 			$this->PROYECTO->create();
 			if ($this->PROYECTO->save($this->request->data)) {
 				$this->Session->setFlash(__('The p r o y e c t o has been saved'));
-				$this->redirect(array('action' => 'view', $id));
+				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('El proyecto no se ha podido guardar.'));
 			}
