@@ -40,7 +40,6 @@ class SERVICIO extends AppModel {
 			),
 		),
 		'fecha_inicio' => array(
-		
 			'notempty' => array(
 				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',

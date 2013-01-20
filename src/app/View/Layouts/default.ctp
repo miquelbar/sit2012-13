@@ -130,7 +130,7 @@
 				                  		<li><a href="/PROPUESTa/pendientescio?t=8">Propuestas Pendientes de Tramitar</a></li>
 				                  		<li><a href="/PROPUESTa/pendientescio?t=7">Convertir Propuestas en Proyectos</a></li>
 				                  		<li><a href="/PROYECTOs">Proyectos</a></li>
-				                  		<li><a href="/SEVICIOs">Servicios</a></li>
+				                  		<li><a href="/SERVICIOs">Servicios</a></li>
 				                  	<? 
 				                  			$anterior = true;
 				                  		} 
