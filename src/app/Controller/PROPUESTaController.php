@@ -80,7 +80,6 @@ class PROPUESTaController extends AppController {
  * @return void
  */
 	public function index() {
-		
 		$this->PROPUESTum->recursive = 0;
 		$this->set('pROPUESTa', $this->paginate());
 		$this->set('estados', self::$estados);
