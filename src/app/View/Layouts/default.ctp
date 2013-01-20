@@ -62,7 +62,11 @@
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 					<? 
-						$navigation->renderSubTree('topbar',$requested);
+						if (!isset($usuario)) {
+							$navigation->renderSubTree('topbar-nouser',$requested);
+						} else {
+							$navigation->renderSubTree('topbar',$requested);
+						
 					?>
 						<li>
 							<div class="btn-group">
@@ -83,6 +87,77 @@
 				                </ul>
 				              </div>
 						</li>
+						<li>
+							<div class="btn-group">
+				                <button class="btn btn-link dropdown-toggle" style="color:#777;" data-toggle="dropdown">Acceso a... <span class="caret"></span></button>
+				                <ul class="dropdown-menu">
+				                	<?  $perfiles = array_flip($usuario['perfiles']); 
+										$anterior = false;
+				                		if (isset($perfiles['1'])) { //Admin
+				                			$anterior = true;
+				                	?>
+				                  		<li><a href="/AREAFUNCIONALs">&Aacute;reas Funcionales</a></li>
+				                  		<li><a href="/PERSONAs">Personas</a></li>
+				                  		<li><a href="/USUARIOs">Usuarios</a></li>
+				                  		<li><a href="/TIPONOTIFICACIONs">Tipo Notificaciones</a></li>
+				                  		
+				                  	<? } ?>
+				                  	<? if (isset($perfiles['2'])) { //Solicitante
+				                  		if ($anterior)  {
+				                  	?>
+				                  		<li class="divider"></li>
+				                  		<? } ?>
+				                  		<li><a href="/PROPUESTa/crear">Solicitar Propuesta</a></li>
+				                  	<? 
+				                  			$anterior = true; 
+										} 
+									?>
+				                  	<? if (isset($perfiles['3'])) { //CIO 
+				                  		if ($anterior) {
+				                  	?>
+				                  		<li class="divider"></li>
+				                  		<? } ?>
+				                  		<li><a href="/PROPUESTa/pendientescio?t=5">Propuestas Pendientes de Valorar</a></li>
+				                  		<li><a href="/PROPUESTa/pendientescio?t=8">Propuestas Pendientes de Tramitar</a></li>
+				                  		<li><a href="/PROPUESTa/pendientescio?t=7">Convertir Propuestas en Proyectos</a></li>
+				                  		<li><a href="/PROYECTOs">Proyectos</a></li>
+				                  		<li><a href="/SEVICIOs">Servicios</a></li>
+				                  	<? 
+				                  			$anterior = true;
+				                  		} 
+				                  	?>
+				                  	<? if (isset($perfiles['4'])) { //Responsable 
+											if ($anterior) {
+				                  	?>
+				                  		<li class="divider"></li>
+				                  		<? } ?>
+				                  		<li><a href="/PROYECTOs/?t=r">Mis Proyectos</a></li>
+				                  		<li><a href="/SERVICIOs/?t=r">Mis Servicios</a></li>
+				                  		<li><a href="/PROPUESTa/miresponsabilidad">Propuestas que patrocino</a></li>
+				                  	<? 		$anterior = true; 
+										} 
+									?>
+				                  	<? if (isset($perfiles['5'])) { //Patrocinador 
+				                  			if ($anterior) {
+				                  	?>
+				                  		<li class="divider"></li>
+				                  		<? } ?>
+				                  		<li><a href="/PROYECTOs/?t=p">Mis proyectos</a></li>
+				                  		<li><a href="/PROPUESTa/mispatrocinadas">Propuestas Patrocinadas</a></li>
+				                  	<? $anterior = true; 
+										} 
+									?>
+				                  	<? if (isset($perfiles['6'])) { //Técnico 
+				                  			if ($anterior) {
+				                  	?>
+				                  		<li class="divider"></li>
+				                  		<? } ?>
+				                  		<li><a href="/PROPUESTa/pendientes">Propuestas pendientes de valorar</a></li>
+				                  	<? } ?>
+				                </ul>
+				              </div>
+						</li>
+						<? } ?>
 					</ul>
 				    <!--<form class="navbar-form pull-right">
 					    <input type="text" class="span2">
