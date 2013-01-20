@@ -26,33 +26,6 @@
 		  	</div>
 		</div>
 	</div>
-	<h4>Leyenda:</h4> 
-	<div class="row" style="background: #f9f9f9;">
-		<div class="span3">
-			<div class="row-fluid">
-				<div class="span1"><div style="background: #d9edf7; width: 18px; height: 18px; border: 1px black solid;"></div></div>
-				<div class="span11">Pendiente de valorar CIO</div>
-			</div>
-		</div>
-		<div class="span3">
-			<div class="row-fluid">
-				<div class="span1"><div style="background: #dff0d8; width: 18px; height: 18px; border: 1px black solid;"></div></div>
-				<div class="span11">Aceptada</div>
-			</div>
-		</div>
-		<div class="span3">
-			<div class="row-fluid">
-				<div class="span1"><div style="background: #fcf8e3; width: 18px; height: 18px; border: 1px black solid;"></div></div>
-				<div class="span11">Pendiente de Confirmaci&oacute;n</div>
-			</div>
-		</div>
-		<div class="span3">
-			<div class="row-fluid">
-				<div class="span1"><div style="background: #F2DEDE; width: 18px; height: 18px; border: 1px black solid;"></div></div>
-				<div class="span11">Descartada</div>
-			</div>
-		</div>
-	</div>
 	<table cellpadding="0" cellspacing="0"  class="table table-striped table-bordered table-hover span12">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -111,6 +84,47 @@
 		</td>
 	</tr>
 <?php endforeach; ?>
+	<tr>
+		<td colspan="11"><h4>Leyenda:</h4></td>
+	</tr>
+	<tr>
+		<td colspan="11">
+			<div class="row-fluid">
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: #d9edf7; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">Pendiente de valorar</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: #dff0d8; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">Aceptada</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: #fcf8e3; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">Pendiente de Confirmaci&oacute;n</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: #F2DEDE; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">Descartada</div>
+			</div>
+		</div>
+		</div>
+		<div class="row-fluid">
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: white; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">No Asignada</div>
+			</div>
+		</div>
+	</div>
+		</td>
+	</tr>
 	</table>
 	<p>
 	<?php

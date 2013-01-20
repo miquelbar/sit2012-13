@@ -13,16 +13,16 @@
 		    		<span class="caret"></span>
 		  		</a>
 		  		<ul class="dropdown-menu">
-					<li><?php echo $this->Html->link(__('Realizar propuesta'), array('action' => 'add')); ?></li>
+					<li><?php echo $this->Html->link(__('Realizar propuesta'), array('action' => 'crear')); ?></li>
 		<li><?php echo $this->Html->link(__('Ver usuarios'), array('controller' => 'u_s_u_a_r_i_os', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Ver carteras'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('A&ntilde;adir Cartera'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver tipos de propuesta'), array('controller' => 't_i_p_o_p_r_os', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('A&ntilde;adir tipo de propuesta'), array('controller' => 't_i_p_o_p_r_os', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver areas funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('A&ntilde;adir área funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('Ver objetivos tácticos'), array('controller' => 'o_b_j_e_t_i_v_o_t_a_c_t_i_c_os', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('A&ntilde;adir objetivo táctico'), array('controller' => 'o_b_j_e_t_i_v_o_t_a_c_t_i_c_os', 'action' => 'add')); ?> </li>
+		<!--<li><?php echo $this->Html->link(__('A&ntilde;adir Cartera'), array('controller' => 'c_a_r_t_e_r_as', 'action' => 'add')); ?> </li>-->
+		<!--<li><?php echo $this->Html->link(__('Ver tipos de propuesta'), array('controller' => 't_i_p_o_p_r_os', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('A&ntilde;adir tipo de propuesta'), array('controller' => 't_i_p_o_p_r_os', 'action' => 'add')); ?> </li>-->
+		<li><?php echo $this->Html->link(__('Ver Áreas Funcionales'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'index')); ?> </li>
+		<!--<li><?php echo $this->Html->link(__('A&ntilde;adir área funcional'), array('controller' => 'a_r_e_a_f_u_n_c_i_o_n_a_ls', 'action' => 'add')); ?> </li>-->
+		<li><?php echo $this->Html->link(__('Ver Objetivos Tácticos'), array('controller' => 'o_b_j_e_t_i_v_o_t_a_c_t_i_c_os', 'action' => 'index')); ?> </li>
+		<!--<li><?php echo $this->Html->link(__('A&ntilde;adir objetivo táctico'), array('controller' => 'o_b_j_e_t_i_v_o_t_a_c_t_i_c_os', 'action' => 'add')); ?> </li>-->
 				</ul>
 		  	</div>
 		</div>
@@ -95,6 +95,48 @@ if (count($pROPUESTa) > 0) {
 		</td>
 	</tr>
 <?php endforeach; ?>
+<tr>
+		<td colspan="11"><h4>Leyenda:</h4></td>
+	</tr>
+	<tr>
+		<td colspan="11">
+			<div class="row-fluid">
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: #d9edf7; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">Pendiente de valorar</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: #dff0d8; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">Aceptada</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: #fcf8e3; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">Pendiente de Confirmaci&oacute;n</div>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: #F2DEDE; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">Descartada</div>
+			</div>
+		</div>
+		</div>
+		<div class="row-fluid">
+		<div class="span3">
+			<div class="row-fluid">
+				<div class="span1"><div style="background: white; width: 16px; height: 16px; border: 1px black solid;"></div></div>
+				<div class="span11">No Asignada</div>
+			</div>
+		</div>
+	</div>
+		</td>
+	</tr>
+	</table>
 	</table>
 	<p>
 	<?php
