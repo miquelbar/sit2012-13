@@ -382,7 +382,6 @@ class PROPUESTaController extends AppController {
 				$puedeContestar = FALSE;
 			}
 			$mostrarAceptacion = $propuesta['PROPUESTum']['estado'] == self::ESTADO_PENDIENTE_ACEPTACION_TECNICO;
-			
 			//METRICAS
 			$metricas = $this->METRICA->find('all', array(
 				'conditions' => array('para_propuesta' => 1),
@@ -452,6 +451,16 @@ class PROPUESTaController extends AppController {
 						throw new Exception("No se ha podido almacenar la valoración");
 					}
 					
+					$notificacion = array(
+						'persona_id' => $propuesta['PROPUESTum']['tecnico_id'],
+						'tipo_notificacion_id' => self::NOTIFICACION_CAMBIOS,
+						'texto' => '<a class="btn btn-success" href="/PROPUESTa/valorartec/'.$propuesta['PROPUESTum']['id'].'">Ir</a>'
+					);
+					if ($notificacion != null) {
+						$this->NOTIFICACION->create();
+						$this->NOTIFICACION->save($notificacion);	
+					}
+										
 					$update = $this->request->data;
 					$mes = (date('m')+4) %12;
 					$year = floor((date('m')+4) /12);
@@ -474,7 +483,6 @@ class PROPUESTaController extends AppController {
 						if ($propuesta['PROPUESTum']['estado'] !=self::ESTADO_PENDIENTE_VISTOBUENO){
 							throw new Exception("Todavía no se puede aceptar esta propuesta.");
 						}
-						
 						$update['PROPUESTum']['estado'] = self::ESTADO_PENDIENTE_ACEPTACION_TECNICO;
 											
 					}else if ($this->request->data['action'] == 'd'){
@@ -614,8 +622,6 @@ class PROPUESTaController extends AppController {
 					}
 					
 					if (!$this->PROPUESTum->save($update)){
-						print_r($update);
-						print_r($this->PROPUESTum->invalidFields());die();
 						throw new Exception("No se ha podido actualizar el estado de la propuesta.");
 					}
 					
@@ -681,7 +687,6 @@ class PROPUESTaController extends AppController {
 		if ($this->request->is('post')) {
 			$this->PROPUESTum->create();
 			if ($this->PROPUESTum->save($this->request->data)) {
-				print_r($this->request->data);die();
 				$this->Session->setFlash(__('The p r o p u e s tum has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {

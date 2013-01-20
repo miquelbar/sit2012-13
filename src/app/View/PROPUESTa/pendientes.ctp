@@ -82,7 +82,14 @@ if (count($pROPUESTa) > 0) {
 			<?php echo $this->Html->link($pROPUESTum['TipoPro']['nombre'], array('controller' => 't_i_p_o_p_r_os', 'action' => 'view', $pROPUESTum['TipoPro']['id'])); ?>
 		</td>
 		<td class="actions">
-			<a href="/PROPUESTa/asignartec/<?=$pROPUESTum['PROPUESTum']['id']?>" class="btn btn-inverse">Valorar</a>		
+			<?
+			if ($pROPUESTum['PROPUESTum']['estado'] == PROPUEStaController::ESTADO_PENDIENTE_ASIGNAR){
+				$url = "/PROPUESTa/asignartec/".$pROPUESTum['PROPUESTum']['id'];
+			}else{
+				$url = "/PROPUESTa/valorartec/".$pROPUESTum['PROPUESTum']['id'];
+			}
+			?>
+			<a href="<?=$url?>" class="btn btn-inverse">Valorar</a>		
 		</td>
 	</tr>
 <?php endforeach; ?>

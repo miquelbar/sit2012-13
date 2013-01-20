@@ -82,7 +82,6 @@ class VALORMETRICA extends AppModel {
 						$update['metrica_id'] = intval(substr($key, 3,1));
 					}
 				}
-				print_r($update);
 				$this->save($update);
 			}
 		}
