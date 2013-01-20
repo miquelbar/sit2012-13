@@ -52,6 +52,7 @@
 			cursor: pointer;
 			overflow: hidden;
 		}
+		
 	</style>
   </head>
   <body>
