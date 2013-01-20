@@ -64,7 +64,7 @@ if (count($pROPUESTa) > 0) {
 			<? 
 			if ($pROPUESTum['PROPUESTum']['estado'] == PROPUESTaController::ESTADO_ACEPTADA) {
 			?>
-			<a class="btn btn-success" href="/PROYECTOs/add/?pr=<?=$pROPUESTum['PROPUESTum']['id']?>">Convertir en propuesta</a>			
+			<a class="btn btn-success" href="/PROYECTOs/add/?pr=<?=$pROPUESTum['PROPUESTum']['id']?>">Convertir en proyecto</a>			
 			<?
 			}
 			?>
