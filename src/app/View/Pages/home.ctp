@@ -148,9 +148,9 @@
 					<div class="box box_middle"><a href="#" id="planespoliticas" rel="tooltip">&nbsp;	</a></div>
 				</div>
 				<!--rigth-->
-				<!--<div style="position: absolute; left:328px; top: 163px;">
-					<div class="box box_middle"><a href="#middleright">&nbsp;	</a></div>
-				</div>-->
+				<div style="position: absolute; left:328px; top: 163px;">
+					<div class="box box_middle"><a href="/METRICAs">&nbsp;	</a></div>
+				</div>
 				<!--center-->
 				<div style="position: absolute; left:212px; top: 130px;">
 					<div class="box box_middle" style="width:82px; height:180px;"><a href="#" rel="tooltip" id="usosit">&nbsp;	</a></div>
@@ -162,9 +162,9 @@
 					<div class="box box_bottom"><a href="/PROYECTOs">&nbsp;	</a></div>
 				</div>
 				<!--right-->
-				<!--<div style="position: absolute; left:260px; top: 328px;">
-					<div class="box box_bottom"><a href="#bottomright">&nbsp;	</a></div>
-				</div>-->
+				<div style="position: absolute; left:260px; top: 328px;">
+					<div class="box box_bottom"><a href="/SERVICIOs">&nbsp;	</a></div>
+				</div>
 			<!--/bottom-->
 		</div>
 	</div>
