@@ -55,7 +55,7 @@
 		echo $this->Form->input('OBJETIVO');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(array('label'=>'Editar Propuesta', 'class'=>'btn btn-success btn-large')); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
