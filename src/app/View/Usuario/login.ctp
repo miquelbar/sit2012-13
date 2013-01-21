@@ -23,7 +23,6 @@
 				
 		?>
 		<div class="alert alert-error">
-			<strong>Error</strong>
 			<?=$error?>	
 		</div>
 		<?

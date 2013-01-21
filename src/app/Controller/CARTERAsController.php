@@ -65,7 +65,7 @@ class CARTERAsController extends AppController {
 			$this->CARTERA->create();
 			if ($this->CARTERA->save($this->request->data)) {
 				$this->Session->setFlash(__('The c a r t e r a has been saved'));
-				$this->redirect(array('action' => 'view', $id));
+				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The c a r t e r a could not be saved. Please, try again.'));
 			}

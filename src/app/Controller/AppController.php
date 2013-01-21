@@ -51,6 +51,7 @@ class AppController extends Controller {
 			),
 			'logoutRedirect' => '/',
 			'loginError' => 'No username and password was found with that combination.',
+			'authError' => 'Por favor, identificate para poder usar el sistema.',
 			'authenticate' => array(
 				'all' => array(
 					'userModel' => 'USUARIO',
