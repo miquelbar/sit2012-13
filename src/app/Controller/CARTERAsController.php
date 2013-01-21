@@ -122,12 +122,18 @@ class CARTERAsController extends AppController {
 		if (!$this->CARTERA->exists()) {
 			throw new NotFoundException(__('Invalid c a r t e r a'));
 		}
-		if ($this->CARTERA->delete()) {
-			$this->Session->setFlash(__('C a r t e r a deleted'));
+		try {
+			
+			if ($this->CARTERA->delete()) {
+				$this->redirect(array('action' => 'index'));
+			}
+			$this->Session->setFlash(__('La cartera no se ha podido eliminar.'));
+			$this->redirect(array('action' => 'index'));
+			
+		}catch(Exception $e){
+			$this->Session->setFlash(__('La cartera no se ha podido eliminar. Revise que su cartera no tenga proyectos, propuestas o servicios asociados.'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('C a r t e r a was not deleted'));
-		$this->redirect(array('action' => 'index'));
 	}
 
 /**

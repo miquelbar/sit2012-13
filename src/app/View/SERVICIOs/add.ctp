@@ -31,10 +31,9 @@
 <?php echo $this->Form->create('SERVICIO'); ?>
 	<fieldset>
 	<?php
-		echo $this->Form->input('fecha_inicio');
-		echo $this->Form->input('fecha_final');
-		echo $this->Form->input('responsable_id');
 		echo $this->Form->input('nombre');
+		echo $this->Form->input('responsable_id');
+		echo $this->Form->input('fecha_inicio');
 		echo $this->Form->input('AREAFUNCIONAL');
 		echo $this->Form->input('PROYECTO');
 	?>

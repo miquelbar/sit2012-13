@@ -52,6 +52,7 @@ if (count($pROPUESTa) > 0) {
 	</tr>
 	<?php
 	foreach ($pROPUESTa as $pROPUESTum): ?>
+	<?php if ($usuario['Persona']['id'] == $pROPUESTum['Tecnico']['id'] || $pROPUESTum['PROPUESTum']['estado']==PROPUESTaController::ESTADO_PENDIENTE_ASIGNAR){?>
 	<tr class="<?=$colores[$pROPUESTum['PROPUESTum']['estado']]?>">
 		<td><?php echo h($pROPUESTum['PROPUESTum']['id']); ?>&nbsp;</td>
 		<td><?php echo h($pROPUESTum['PROPUESTum']['fecha_creacion']); ?>&nbsp;</td>
@@ -85,13 +86,16 @@ if (count($pROPUESTa) > 0) {
 			<?
 			if ($pROPUESTum['PROPUESTum']['estado'] == PROPUEStaController::ESTADO_PENDIENTE_ASIGNAR){
 				$url = "/PROPUESTa/asignartec/".$pROPUESTum['PROPUESTum']['id'];
+				$texto = "Asignarmela";
 			}else{
 				$url = "/PROPUESTa/valorartec/".$pROPUESTum['PROPUESTum']['id'];
+				$texto = "Valorar";
 			}
 			?>
-			<a href="<?=$url?>" class="btn btn-inverse">Valorar</a>		
+			<a href="<?=$url?>" class="btn btn-inverse"><?=$texto?></a>		
 		</td>
 	</tr>
+	<?php } ?>
 <?php endforeach; ?>
 <tr>
 		<td colspan="11"><h4>Leyenda:</h4></td>

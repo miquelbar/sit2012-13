@@ -19,7 +19,19 @@
 		  	</div>
 		</div>
 	</div>
-
+	<?php
+	$error = $this->Session->flash();
+	if ($error){
+			
+	?>
+	<div class="alert alert-error">
+		<?=$error?>	
+	</div>
+	<?
+			
+	}
+		
+	?>
 	<!--<h2><?php echo __('C A R T E R As'); ?></h2>-->
 	<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered table-hover">
 	<tr>

@@ -350,7 +350,7 @@ class PROPUESTaController extends AppController {
 						$notificacion = array(
 							'persona_id' => $cio,
 							'tipo_notificacion_id' => self::NOTIFICACION_CAMBIOS,
-							'texto' => '<a class="btn btn-success" href="/PROPUESTa/revisarcio/'.$propuesta['PROPUESTum']['id'].'">Ir</a>'
+							'texto' => '<a class="btn btn-success" href="/PROPUESTa/valorarcio/'.$propuesta['PROPUESTum']['id'].'">Ir</a>'
 						);
 				
 	
