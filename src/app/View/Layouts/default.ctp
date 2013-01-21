@@ -90,6 +90,7 @@
 						</li>
 						<li>
 							<div class="btn-group">
+								<? if (count($usuario['perfiles']) > 0) { ?>
 				                <button class="btn btn-link dropdown-toggle" style="color:#777;" data-toggle="dropdown">Acceso a... <span class="caret"></span></button>
 				                <ul class="dropdown-menu">
 				                	<?  $perfiles = array_flip($usuario['perfiles']); 
@@ -171,6 +172,7 @@
 				                  		<li><a href="/PROPUESTa/pendientes">Propuestas pendientes de valorar</a></li>
 				                  	<? } ?>
 				                </ul>
+				                <? } ?>
 				              </div>
 						</li>
 						<? } ?>

@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			<? } ?>
-			<? if (isset($perfiles['4'])) { //T&eacute;cnico ?>
+			<? if (isset($perfiles['6'])) { //T&eacute;cnico ?>
 			<div class="accordion-group">
 				<div class="accordion-heading">
 					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#icollapseSix">
